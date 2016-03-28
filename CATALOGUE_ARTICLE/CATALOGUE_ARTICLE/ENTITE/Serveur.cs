@@ -100,10 +100,6 @@ namespace CATALOGUE_ARTICLE.ENTITE
             {
                 return false;
             }
-            if (bean.database == null || bean.database.Trim().Equals(""))
-            {
-                return false;
-            }
             if (bean.port < 0)
             {
                 return false;

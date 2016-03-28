@@ -10,6 +10,18 @@ namespace CATALOGUE_ARTICLE.BLL
 {
     class ArticlesBLL
     {
+        public static double Stock(Articles y)
+        {
+            try
+            {
+                return ArticlesDAO.stock(y);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Retour Impossible", ex);
+            }
+        }
+
         public static Int32 Current(Articles y)
         {
             try
@@ -23,6 +35,18 @@ namespace CATALOGUE_ARTICLE.BLL
         }
 
         public static Articles One(Int32 y)
+        {
+            try
+            {
+                return ArticlesDAO.oneArticles(y);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Retour Impossible", ex);
+            }
+        }
+
+        public static Articles One(string y)
         {
             try
             {

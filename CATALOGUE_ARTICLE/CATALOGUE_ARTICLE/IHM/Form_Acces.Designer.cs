@@ -29,22 +29,228 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Acces));
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgv_form = new System.Windows.Forms.DataGridView();
+            this.id_form_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code_form_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_form_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acces_form_ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgv_ress = new System.Windows.Forms.DataGridView();
+            this.id_ress_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code_ress_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_ress_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acces_ress_ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.com_niveau = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_form)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ress)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(1, 35);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(470, 325);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgv_form);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(462, 299);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Formulaires";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgv_form
+            // 
+            this.dgv_form.AllowUserToAddRows = false;
+            this.dgv_form.AllowUserToDeleteRows = false;
+            this.dgv_form.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_form.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgv_form.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_form.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_form_,
+            this.code_form_,
+            this.nom_form_,
+            this.acces_form_});
+            this.dgv_form.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_form.Location = new System.Drawing.Point(3, 3);
+            this.dgv_form.Name = "dgv_form";
+            this.dgv_form.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_form.Size = new System.Drawing.Size(456, 293);
+            this.dgv_form.TabIndex = 0;
+            this.dgv_form.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_form_CellEndEdit);
+            this.dgv_form.SelectionChanged += new System.EventHandler(this.dgv_form_SelectionChanged);
+            // 
+            // id_form_
+            // 
+            this.id_form_.HeaderText = "ID";
+            this.id_form_.Name = "id_form_";
+            this.id_form_.Visible = false;
+            // 
+            // code_form_
+            // 
+            this.code_form_.FillWeight = 134.7715F;
+            this.code_form_.HeaderText = "Code";
+            this.code_form_.Name = "code_form_";
+            this.code_form_.ReadOnly = true;
+            // 
+            // nom_form_
+            // 
+            this.nom_form_.FillWeight = 134.7715F;
+            this.nom_form_.HeaderText = "Libelle";
+            this.nom_form_.Name = "nom_form_";
+            this.nom_form_.ReadOnly = true;
+            // 
+            // acces_form_
+            // 
+            this.acces_form_.FillWeight = 30.45685F;
+            this.acces_form_.HeaderText = "Acces";
+            this.acces_form_.Name = "acces_form_";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgv_ress);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(462, 299);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Ressources";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgv_ress
+            // 
+            this.dgv_ress.AllowUserToAddRows = false;
+            this.dgv_ress.AllowUserToDeleteRows = false;
+            this.dgv_ress.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ress.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgv_ress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ress.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_ress_,
+            this.code_ress_,
+            this.nom_ress_,
+            this.acces_ress_});
+            this.dgv_ress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ress.Location = new System.Drawing.Point(3, 3);
+            this.dgv_ress.Name = "dgv_ress";
+            this.dgv_ress.Size = new System.Drawing.Size(456, 293);
+            this.dgv_ress.TabIndex = 0;
+            this.dgv_ress.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ress_CellEndEdit);
+            // 
+            // id_ress_
+            // 
+            this.id_ress_.HeaderText = "ID";
+            this.id_ress_.Name = "id_ress_";
+            this.id_ress_.Visible = false;
+            // 
+            // code_ress_
+            // 
+            this.code_ress_.FillWeight = 134.7715F;
+            this.code_ress_.HeaderText = "Code";
+            this.code_ress_.Name = "code_ress_";
+            this.code_ress_.ReadOnly = true;
+            // 
+            // nom_ress_
+            // 
+            this.nom_ress_.FillWeight = 134.7715F;
+            this.nom_ress_.HeaderText = "Libelle";
+            this.nom_ress_.Name = "nom_ress_";
+            this.nom_ress_.ReadOnly = true;
+            // 
+            // acces_ress_
+            // 
+            this.acces_ress_.FillWeight = 30.45685F;
+            this.acces_ress_.HeaderText = "Acces";
+            this.acces_ress_.Name = "acces_ress_";
+            this.acces_ress_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.acces_ress_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.com_niveau);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(471, 29);
+            this.panel1.TabIndex = 1;
+            // 
+            // com_niveau
+            // 
+            this.com_niveau.FormattingEnabled = true;
+            this.com_niveau.Location = new System.Drawing.Point(68, 5);
+            this.com_niveau.Name = "com_niveau";
+            this.com_niveau.Size = new System.Drawing.Size(176, 21);
+            this.com_niveau.TabIndex = 3;
+            this.com_niveau.SelectedIndexChanged += new System.EventHandler(this.com_niveau_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Niveau : ";
             // 
             // Form_Acces
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(471, 365);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(487, 404);
+            this.MinimumSize = new System.Drawing.Size(487, 404);
             this.Name = "Form_Acces";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autorisation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Acces_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Acces_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_form)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ress)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgv_form;
+        private System.Windows.Forms.DataGridView dgv_ress;
+        private System.Windows.Forms.ComboBox com_niveau;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_form_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code_form_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_form_;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn acces_form_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_ress_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code_ress_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_ress_;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn acces_ress_;
     }
 }

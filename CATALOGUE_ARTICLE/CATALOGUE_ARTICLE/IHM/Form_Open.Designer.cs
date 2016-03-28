@@ -258,6 +258,7 @@
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Inventaire";
+            this.groupBox7.Visible = false;
             // 
             // box_inventaire
             // 
@@ -308,7 +309,7 @@
             this.groupBox9.Size = new System.Drawing.Size(516, 166);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Gestion Users";
+            this.groupBox9.Text = "Gestion users";
             // 
             // groupBox10
             // 

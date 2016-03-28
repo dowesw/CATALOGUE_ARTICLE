@@ -16,6 +16,7 @@ namespace CATALOGUE_ARTICLE.IHM
     public partial class Form_Setting : Form
     {
         NiveauAcces current = new NiveauAcces();
+        Serveur serveur = new Serveur();
 
         public Form_Setting()
         {
@@ -31,6 +32,16 @@ namespace CATALOGUE_ARTICLE.IHM
         private void Form_Setting_Load(object sender, EventArgs e)
         {
             LoadGrille();
+            LoadServeur();
+        }
+
+        private void ResetServeur()
+        {
+            txt_adresse.Text = "127.0.0.1";
+            txt_database.Text = "catalogue_article";
+            txt_password.Text = "yves1910/";
+            txt_port.Text = "5432";
+            txt_users.Text = "postgres";
         }
 
         private void Reset()
@@ -40,9 +51,35 @@ namespace CATALOGUE_ARTICLE.IHM
             current = new NiveauAcces();
         }
 
+        private void RecopieServeur()
+        {
+            serveur.Adresse = txt_adresse.Text.Trim();
+            serveur.Database = txt_database.Text.Trim();
+            serveur.Password = txt_password.Text.Trim();
+            try
+            {
+                serveur.Port = Convert.ToInt32(txt_port.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                Messages.ShowErreur("Le port est une valeur numerique");
+                serveur.Port = 5432;
+            }
+            serveur.User = txt_users.Text.Trim();
+        }
+
         private void Recopie(){
             current.Description = txt_description.Text.Trim().Replace("'", "''");
             current.Designation = txt_designation.Text.Trim();
+        }
+
+        private void PopulateServeur(Serveur s)
+        {
+            txt_adresse.Text = s.Adresse;
+            txt_database.Text = s.Database;
+            txt_password.Text = s.Password;
+            txt_port.Text = s.Port.ToString();
+            txt_users.Text = s.User;
         }
 
         private void Populate(NiveauAcces y)
@@ -68,10 +105,19 @@ namespace CATALOGUE_ARTICLE.IHM
             dgv_liste.Rows.RemoveAt(Utils.GetRowData(dgv_liste, f.Id));
         }
 
+        private void LoadServeur()
+        {
+            Serveur s = ServeurBLL.ReturnServeur();
+            if (s != null)
+            {
+                PopulateServeur(s);
+            }
+        }
+
         private void LoadGrille()
         {
             dgv_liste.Rows.Clear();
-            string query = "select * from niveau_acces order by id";
+            string query = "select * from niveau_acces where super = false order by id";
             List<NiveauAcces> l = NiveauAccesBLL.List(query);
             foreach (NiveauAcces n in l)
             {
@@ -213,6 +259,33 @@ namespace CATALOGUE_ARTICLE.IHM
             catch (Exception ex)
             {
                 Messages.Exception(ex);
+            }
+        }
+
+        private void btn_reset_serveur_Click(object sender, EventArgs e)
+        {
+            if (txt_adresse.Text.Trim().Equals(""))
+            {
+                ResetServeur();
+            }
+            else
+            {
+                if (DialogResult.Yes == Messages.Confirmation("Annuler"))
+                {
+                    ResetServeur();
+                }
+            }
+        }
+
+        private void btn_save_serveur_Click(object sender, EventArgs e)
+        {
+            RecopieServeur();
+            if (serveur.Control())
+            {
+                if (ServeurBLL.CreateServeur(serveur))
+                {
+                    Messages.Succes();
+                }
             }
         }
     }

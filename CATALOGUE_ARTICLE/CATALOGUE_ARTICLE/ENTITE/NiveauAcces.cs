@@ -34,6 +34,14 @@ namespace CATALOGUE_ARTICLE.ENTITE
             set { description = value; }
         }
 
+        private bool super;
+
+        public bool Super
+        {
+            get { return super; }
+            set { super = value; }
+        }
+
         private bool update;
 
         public bool Update

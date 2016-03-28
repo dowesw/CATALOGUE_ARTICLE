@@ -165,5 +165,85 @@ namespace CATALOGUE_ARTICLE.TOOLS
             removeFrom(name);
             Constantes.f_first.Add(name);
         }
+
+        public static string ReferenceElement(string type)
+        {
+            if (!(type == null || type.Trim().Equals("")))
+            {
+                String reference = "";
+                String apercu = type + "/";
+                if ((int)DateTime.Now.Day > 9)
+                {
+                    apercu += (int)DateTime.Now.Day;
+                }
+                if ((int)DateTime.Now.Day < 10)
+                {
+                    apercu += ("0" + (int)DateTime.Now.Day);
+                }
+                if ((int)DateTime.Now.Month > 9)
+                {
+                    apercu += (int)DateTime.Now.Month;
+                }
+                if ((int)DateTime.Now.Month < 10)
+                {
+                    apercu += ("0" + (int)DateTime.Now.Month);
+                }
+                apercu += DateTime.Now.Year.ToString().Substring(2);
+                apercu += "/";
+                DocStock f = DocStockBLL.One(apercu + "%");
+                if ((f != null) ? !(f.Reference == null || f.Reference.Trim().Equals("")) : false)
+                {
+                    reference = f.Reference;
+                }
+                else
+                {
+                    reference = "";
+                }
+
+                if (!reference.Trim().Equals(""))
+                {
+                    String partieNum = reference.Replace(apercu, "");
+                    if (apercu.Equals(reference.Substring(0, (reference.Length - partieNum.Length))))
+                    {
+                        int num = Convert.ToInt16(partieNum);
+                        if (Convert.ToString(num + 1).Length > 4)
+                        {
+                            Messages.ShowErreur("Vous ne pouvez plus ajouter ce type de document");
+                            return "";
+                        }
+                        else
+                        {
+                            for (int i = 0; i < (4 - Convert.ToString(num + 1).Length); i++)
+                            {
+                                apercu += "0";
+                            }
+                        }
+                        apercu += Convert.ToString(Convert.ToInt16(partieNum) + 1);
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 4 - 1; i++)
+                        {
+                            apercu += "0";
+                        }
+                        apercu += "1";
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < 4 - 1; i++)
+                    {
+                        apercu += "0";
+                    }
+                    apercu += "1";
+                }
+                return apercu;
+            }
+            else
+            {
+                Messages.ShowErreur("Le type du document est incorrect!");
+            }
+            return null;
+        }
     }
 }

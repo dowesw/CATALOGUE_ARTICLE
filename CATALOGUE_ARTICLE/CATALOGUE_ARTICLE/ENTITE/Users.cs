@@ -90,6 +90,14 @@ namespace CATALOGUE_ARTICLE.ENTITE
             set { update = value; }
         }
 
+        private bool admin;
+
+        public bool Admin
+        {
+            get { return admin; }
+            set { admin = value; }
+        }
+
         public Boolean Control()
         {
             return Control(this);
@@ -130,6 +138,31 @@ namespace CATALOGUE_ARTICLE.ENTITE
             if (bean.niveau != null ? bean.niveau.Id < 1 : true)
             {
                 Messages.ShowErreur("Vous devez préciser le niveau!");
+                return false;
+            }
+            return true;
+        }
+
+        public Boolean Control_()
+        {
+            return Control_(this);
+        }
+
+        public static Boolean Control_(Users bean)
+        {
+            if (bean == null)
+            {
+                Messages.ShowErreur("Utilisateur Incorrect!");
+                return false;
+            }
+            if (bean.identifiant == null || bean.identifiant.Trim().Equals(""))
+            {
+                Messages.ShowErreur("L'identifiant ne peut pas être null!");
+                return false;
+            }
+            if (bean.password == null || bean.password.Trim().Equals(""))
+            {
+                Messages.ShowErreur("Le mot de passe ne peut pas être null!");
                 return false;
             }
             return true;

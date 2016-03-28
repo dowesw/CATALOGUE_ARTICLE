@@ -16,6 +16,9 @@ namespace CATALOGUE_ARTICLE.TOOLS
         public static string f_last = null;
         public static List<string> f_first = new List<string>();
 
+        public static Form_Parent f_parent = null;
+        public static Form_Mouvement f_mouvement = null;
+        public static Form_DocStock f_docstock = null;
         public static Form_Acces f_acces = null;
         public static Form_Licence f_licence = null;
         public static Form_Setting f_setting = null;
@@ -25,8 +28,11 @@ namespace CATALOGUE_ARTICLE.TOOLS
         public static Form_Catalogue f_catalogue = null;
         public static Form_Propos f_propos = null;
         public static Form_Users f_users = null;
+        public static Form_Photo f_photo = null;
 
-        public const string NAME_ADMIN = "A";
+        public static ENTITE.Users users;
+
+        public const string NAME_ADMIN = "MEG2710/";
 
         public const int MAX_ERROR_CONNECT = 2;
         public const int MAX_TIME_CONNECT = 30;
@@ -37,44 +43,10 @@ namespace CATALOGUE_ARTICLE.TOOLS
 
         public const string FILE_SEPARATOR = "\\";
 
-        public const string MOUV_ENTREE = "RECETTE";
-        public const string MOUV_SORTIE = "DEPENSE";
-
-        public const string TABLE_EXTERNE_PIECE = "docdevente";
-
-        public const string ETAT_EN_ATTENTE = "EDITABLE";
-        public const string ETAT_ANNULE = "ANNULE";
-        public const string ETAT_EN_COURS = "ENCOURS";
-        public const string ETAT_REGLE = "REGLE";
-        public const string ETAT_VALIDE = "VALIDE";
-        public const string ETAT_RETARD = "En Retard";
-
-        public const string TYPE_FV = "FV";
-        public const string TYPE_BCV = "BCV";
-        public const string TYPE_FV_NAME = "Facture";
-        public const string TYPE_BCV_NAME = "Commande";
-
-        public const string DOC_FACTURE = "Facture Vente";
-        public const string DOC_COMMANDE = "Bon Commande Vente";
-        public const string DOC_PIECE = "Piece Caisse";        
-
-        //Base
-        public const string BASE_CA = "CA";
-        public const string BASE_QTE = "Qte";
-
-        //Nature Montant
-        public const string NATURE_TAUX = "Taux";
-        public const string NATURE_MTANT = "Montant";
-
-        //Methode de valorisation
-        public const string FIFO = "FIFO";
-        public const string LIFO = "LIFO";
-        public const string CMPI = "CMPI";
-        public const string CMPII = "CMPII";
-
-        //Mode Inventaire
-        public const string INV_PERMANENT = "P";
-        public const string INV_INTERMITENT = "I";
+        public const string MOUV_ENTREE_NAME = "ENTREE";
+        public const string MOUV_ENTREE = "EN";
+        public const string MOUV_SORTIE_NAME = "SORTIE";
+        public const string MOUV_SORTIE = "SO";
 
     }
 }

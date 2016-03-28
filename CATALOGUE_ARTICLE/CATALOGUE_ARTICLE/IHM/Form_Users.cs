@@ -26,7 +26,7 @@ namespace CATALOGUE_ARTICLE.IHM
         private void Form_Users_FormClosed(object sender, FormClosedEventArgs e)
         {
             Constantes.f_users = null;
-            Constantes.f_last = "Users";
+            Constantes.f_last = "users";
         }
 
         private void Form_Users_Load(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace CATALOGUE_ARTICLE.IHM
         private void LoadAllNiveau()
         {
             niveaux.Clear();
-            string query = "select * from niveau_acces order by id";
+            string query = "select * from niveau_acces where super = false order by id";
             niveaux = NiveauAccesBLL.List(query);
             com_niveau.DisplayMember = "Designation";
             com_niveau.ValueMember = "Id";
@@ -265,11 +265,9 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void lk_box_photo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (DialogResult.Yes == Messages.Confirmation("Confirmer"))
+             if (DialogResult.Yes == Messages.Confirmation("Confirmer"))
             {
-                //Image i = box_photo.Image;
-                box_photo.Image.Dispose();
-                box_photo.Image = null;
+                Image i = box_photo.Image;
                 if (UsersBLL.DeletePhoto(current))
                 {
                     box_photo.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
@@ -280,8 +278,8 @@ namespace CATALOGUE_ARTICLE.IHM
                 }
                 else
                 {
-                    //box_photo.Image = i;
-                }
+                    box_photo.Image = i;
+                }  
             }
         }
 

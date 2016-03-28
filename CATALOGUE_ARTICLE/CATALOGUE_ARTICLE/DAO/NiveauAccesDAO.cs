@@ -108,7 +108,7 @@ namespace CATALOGUE_ARTICLE.DAO
             NpgsqlConnection con = Connexion.Connection();
             try
             {
-                string insert = "insert into niveau_acces (designation, description) values ('" + f.Designation + "','" + f.Description + "')";
+                string insert = "insert into niveau_acces (designation, description, super) values ('" + f.Designation + "','" + f.Description + "','" + f.Super + "')";
                 NpgsqlCommand cmd = new NpgsqlCommand(insert, con);
                 cmd.ExecuteNonQuery();
                 f.Id = currentNiveauAcces(f);
@@ -130,7 +130,7 @@ namespace CATALOGUE_ARTICLE.DAO
             NpgsqlConnection con = Connexion.Connection();
             try
             {
-                string update = @"update niveau_acces set designation ='" + f.Designation + "' , description = '" + f.Description + "' where id = " + f.Id;
+                string update = "update niveau_acces set designation ='" + f.Designation + "' , description = '" + f.Description + "' where id = " + f.Id;
                 NpgsqlCommand cmd = new NpgsqlCommand(update, con);
                 cmd.ExecuteNonQuery();
                 return true;

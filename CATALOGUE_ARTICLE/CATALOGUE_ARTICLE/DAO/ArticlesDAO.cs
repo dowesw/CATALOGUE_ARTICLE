@@ -41,6 +41,25 @@ namespace CATALOGUE_ARTICLE.DAO
             }
         }
 
+        public static double stock(Articles article)
+        {
+            NpgsqlConnection con = Connexion.Connection();
+            try
+            {
+                NpgsqlCommand Ls = new NpgsqlCommand("select public.stock(" + article.Id + ")", con);
+                return Convert.ToDouble(Ls.ExecuteScalar());
+            }
+            catch (NpgsqlException e)
+            {
+                Messages.Exception(e);
+                return 0;
+            }
+            finally
+            {
+                Connexion.Deconnection(con);
+            }
+        }
+
         public static Articles oneArticles(Int32 id)
         {
             NpgsqlConnection con = Connexion.Connection();
@@ -65,7 +84,37 @@ namespace CATALOGUE_ARTICLE.DAO
                         y.DateUpdate = (DateTime)((lect["date_update"] != null) ? (!lect["date_update"].ToString().Trim().Equals("") ? lect["date_update"] : DateTime.Now) : DateTime.Now);
                         y.Famille = BLL.FamillesArticleBLL.One((Int32)((lect["famille"] != null) ? (!lect["famille"].ToString().Trim().Equals("") ? lect["famille"] : 0) : 0));
                         y.Photos = BLL.PhotosArticleBLL.List("select * from photo_article where article = " + id);
+                        y.Stock = stock(new Articles(id));
                         y.Update = true;
+                    }
+                }
+                return y;
+            }
+            catch (NpgsqlException e)
+            {
+                Messages.Exception(e);
+                return null;
+            }
+            finally
+            {
+                Connexion.Deconnection(con);
+            }
+        }
+
+        public static Articles oneArticles(string id)
+        {
+            NpgsqlConnection con = Connexion.Connection();
+            try
+            {
+                String search = "select * from articles where designation = '" + id + "'";
+                NpgsqlCommand Lcmd = new NpgsqlCommand(search, con);
+                NpgsqlDataReader lect = Lcmd.ExecuteReader();
+                Articles y = new Articles();
+                if (lect.HasRows)
+                {
+                    while (lect.Read())
+                    {
+                        y = oneArticles((Int32)((lect["id"] != null) ? (!lect["id"].ToString().Trim().Equals("") ? lect["id"] : 0) : 0));
                     }
                 }
                 return y;

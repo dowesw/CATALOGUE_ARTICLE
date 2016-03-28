@@ -80,6 +80,8 @@
             this.btn_mosaique = new System.Windows.Forms.Button();
             this.btn_detail = new System.Windows.Forms.Button();
             this.btn_list = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel_parent.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -355,6 +357,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.textBox6);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.button2);
             this.panel4.Location = new System.Drawing.Point(6, 147);
@@ -525,6 +528,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.btn_prec);
             this.panel3.Controls.Add(this.btn_next);
             this.panel3.Location = new System.Drawing.Point(6, 127);
@@ -627,6 +631,24 @@
             this.btn_list.UseVisualStyleBackColor = true;
             this.btn_list.Click += new System.EventHandler(this.btn_list_Click);
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(29, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(80, 20);
+            this.textBox5.TabIndex = 2;
+            this.textBox5.Text = "Stock : 2";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(29, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(80, 20);
+            this.textBox6.TabIndex = 2;
+            this.textBox6.Text = "Stock : 2";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form_Catalogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,11 +684,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_art.ResumeLayout(false);
             this.panel_art.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_article)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -728,5 +752,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lb_etat;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

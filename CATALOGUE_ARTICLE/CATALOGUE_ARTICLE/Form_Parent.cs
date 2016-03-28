@@ -15,7 +15,6 @@ namespace CATALOGUE_ARTICLE
 {
     public partial class Form_Parent : Form
     {
-        private int childFormNumber = 0;
 
         public Form_Parent()
         {
@@ -38,6 +37,34 @@ namespace CATALOGUE_ARTICLE
             {
                 switch (Constantes.f_last)
                 {
+                    case "Mouvement":
+                        Form_Mouvement f_mouvement = new Form_Mouvement();
+                        if (Constantes.f_mouvement == null)
+                        {
+                            f_mouvement.MdiParent = this;
+                            f_mouvement.Show();
+                            Constantes.f_mouvement = f_mouvement;
+                        }
+                        else
+                        {
+                            Constantes.f_mouvement.WindowState = FormWindowState.Normal;
+                            Constantes.f_mouvement.BringToFront();
+                        }
+                        break;
+                    case "Stock":
+                        Form_DocStock f_docstock = new Form_DocStock();
+                        if (Constantes.f_docstock == null)
+                        {
+                            f_docstock.MdiParent = this;
+                            f_docstock.Show();
+                            Constantes.f_docstock = f_docstock;
+                        }
+                        else
+                        {
+                            Constantes.f_docstock.WindowState = FormWindowState.Normal;
+                            Constantes.f_docstock.BringToFront();
+                        }
+                        break;
                     case "Setting":
                         Form_Setting f_setting = new Form_Setting();
                         if (Constantes.f_setting == null)
@@ -52,7 +79,7 @@ namespace CATALOGUE_ARTICLE
                             Constantes.f_setting.BringToFront();
                         }
                         break;
-                    case "Users":
+                    case "users":
                         Form_Users f_users = new Form_Users();
                         if (Constantes.f_users == null)
                         {
@@ -277,6 +304,32 @@ namespace CATALOGUE_ARTICLE
                 Constantes.f_setting.BringToFront();
                 Utils.addFrom("Form_Setting");
             }
+        }
+
+        private void Form_Parent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_deconnect_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            bubble.Dispose();
+            new Form_Login().Show();
+        }
+
+        private void box_users_MouseEnter(object sender, EventArgs e)
+        {
+            Form_Photo f_photo = new Form_Photo();
+            f_photo.MdiParent = this;
+            f_photo.box_users.Image = box_users.Image;
+            f_photo.Show();
+            Constantes.f_photo = f_photo;
+        }
+
+        private void box_users_MouseLeave(object sender, EventArgs e)
+        {
+            Constantes.f_photo.Close();
         }
     }
 }

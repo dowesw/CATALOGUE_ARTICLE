@@ -9,6 +9,13 @@ namespace CATALOGUE_ARTICLE.ENTITE
 {
     class Articles
     {
+        public Articles() { }
+
+        public Articles(Int32 id)
+        {
+            this.id = id;
+        }
+
         private Int32 id;
 
         public Int32 Id
@@ -87,6 +94,14 @@ namespace CATALOGUE_ARTICLE.ENTITE
         {
             get { return famille; }
             set { famille = value; }
+        }
+
+        private double stock;
+
+        public double Stock
+        {
+            get { return stock; }
+            set { stock = value; }
         }
 
         private List<PhotosArticle> photos = new List<PhotosArticle>();

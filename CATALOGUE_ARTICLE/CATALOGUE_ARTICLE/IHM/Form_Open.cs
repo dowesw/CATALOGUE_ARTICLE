@@ -28,7 +28,6 @@ namespace CATALOGUE_ARTICLE.IHM
         private void Form_Open_Load(object sender, EventArgs e)
         {
             Utils.addFrom(this.Name);
-            grp_stock.Enabled = Constantes.ACTIVE;
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -40,6 +39,36 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             switch (txt_name_form.Text)
             {
+                case "Mouvements Stock":
+                    Form_Mouvement f_mouvement = new Form_Mouvement();
+                    if (Constantes.f_mouvement == null)
+                    {
+                        f_mouvement.MdiParent = this.MdiParent;
+                        f_mouvement.Show();
+                        Constantes.f_mouvement = f_mouvement;
+                    }
+                    else
+                    {
+                        Constantes.f_mouvement.WindowState = FormWindowState.Normal;
+                        Constantes.f_mouvement.BringToFront();
+                        Utils.addFrom("Form_Mouvement");
+                    }
+                    break;
+                case "Documents Stock":
+                    Form_DocStock f_docstock = new Form_DocStock();
+                    if (Constantes.f_docstock == null)
+                    {
+                        f_docstock.MdiParent = this.MdiParent;
+                        f_docstock.Show();
+                        Constantes.f_docstock = f_docstock;
+                    }
+                    else
+                    {
+                        Constantes.f_docstock.WindowState = FormWindowState.Normal;
+                        Constantes.f_docstock.BringToFront();
+                        Utils.addFrom("Form_DocStock");
+                    }
+                    break;
                 case "Autorisations":
                     Form_Acces f_acces = new Form_Acces();
                     if (Constantes.f_acces == null)
@@ -233,7 +262,20 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void box_doc_DoubleClick(object sender, EventArgs e)
         {
-
+            Form_DocStock f_docstock = new Form_DocStock();
+            if (Constantes.f_docstock == null)
+            {
+                f_docstock.MdiParent = this.MdiParent;
+                f_docstock.Show();
+                Constantes.f_docstock = f_docstock;
+            }
+            else
+            {
+                Constantes.f_docstock.WindowState = FormWindowState.Normal;
+                Constantes.f_docstock.BringToFront();
+                Utils.addFrom("Form_DocStock");
+            }
+            this.Close();
         }
 
         private void box_inventaire_Click(object sender, EventArgs e)
@@ -258,6 +300,20 @@ namespace CATALOGUE_ARTICLE.IHM
         private void box_mouv_DoubleClick(object sender, EventArgs e)
         {
 
+            Form_Mouvement f_mouvement = new Form_Mouvement();
+            if (Constantes.f_mouvement == null)
+            {
+                f_mouvement.MdiParent = this.MdiParent;
+                f_mouvement.Show();
+                Constantes.f_mouvement = f_mouvement;
+            }
+            else
+            {
+                Constantes.f_mouvement.WindowState = FormWindowState.Normal;
+                Constantes.f_mouvement.BringToFront();
+                Utils.addFrom("Form_Mouvement");
+            }
+            this.Close();
         }
 
         private void box_users_Click(object sender, EventArgs e)

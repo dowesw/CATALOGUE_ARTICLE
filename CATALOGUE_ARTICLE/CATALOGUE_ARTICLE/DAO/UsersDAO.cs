@@ -13,6 +13,35 @@ namespace CATALOGUE_ARTICLE.DAO
 {
     class UsersDAO
     {
+        public static Users verifytUsers(Users f)
+        {
+            NpgsqlConnection con = Connexion.Connection();
+            try
+            {
+                String search = "select * from users where mot_passe = '" + f.Password + "' and identifiant = '" + f.Identifiant + "'";
+                NpgsqlCommand Lcmd = new NpgsqlCommand(search, con);
+                NpgsqlDataReader lect = Lcmd.ExecuteReader();
+                Users u = new Users();
+                if (lect.HasRows)
+                {
+                    while (lect.Read())
+                    {
+                       Int32 id = (Int32)((lect["id"] != null) ? (!lect["id"].ToString().Trim().Equals("") ? lect["id"] : 0) : 0);
+                       u = oneUsers(id);
+                    }
+                }
+                return u;
+            }
+            catch (NpgsqlException e)
+            {
+                Messages.Exception(e);
+                return null;
+            }
+            finally
+            {
+                Connexion.Deconnection(con);
+            }
+        }
         public static Int32 currentUsers(Users f)
         {
             NpgsqlConnection con = Connexion.Connection();
@@ -175,14 +204,14 @@ namespace CATALOGUE_ARTICLE.DAO
                 NpgsqlCommand cmd = new NpgsqlCommand(delete, con);
                 cmd.ExecuteNonQuery();
 
-                string chemin = Chemins.getCheminUsers(f.Id.ToString()) + f.Photo;
-                if (File.Exists(chemin))
-                {
-                    File.Delete(chemin);
-                }
-                DirectoryInfo dossier = new DirectoryInfo(Chemins.getCheminUsers(f.Id.ToString()));
-                if (dossier.Exists)
-                    dossier.Delete();
+                //string chemin = Chemins.getCheminUsers(f.Id.ToString()) + f.Photo;
+                //if (File.Exists(chemin))
+                //{
+                //    File.Delete(chemin);
+                //}
+                //DirectoryInfo dossier = new DirectoryInfo(Chemins.getCheminUsers(f.Id.ToString()));
+                //if (dossier.Exists)
+                //    dossier.Delete();
 
                 return true;
             }
@@ -205,15 +234,6 @@ namespace CATALOGUE_ARTICLE.DAO
                 string delete = "update users set photo = '' where id = " + f.Id;
                 NpgsqlCommand cmd = new NpgsqlCommand(delete, con);
                 cmd.ExecuteNonQuery();
-
-                string chemin = Chemins.getCheminUsers(f.Id.ToString()) + f.Photo;
-                if (File.Exists(chemin))
-                {
-                    File.Delete(chemin);
-                }
-                DirectoryInfo dossier = new DirectoryInfo(Chemins.getCheminUsers(f.Id.ToString()));
-                if (dossier.Exists)
-                    dossier.Delete();
 
                 return true;
             }

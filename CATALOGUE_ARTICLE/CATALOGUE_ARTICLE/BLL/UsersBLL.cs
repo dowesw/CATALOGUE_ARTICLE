@@ -34,6 +34,18 @@ namespace CATALOGUE_ARTICLE.BLL
             }
         }
 
+        public static Users Verify(Users y)
+        {
+            try
+            {
+                return UsersDAO.verifytUsers(y);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Retour Impossible", ex);
+            }
+        }
+
         public static Users Save(Users y)
         {
             try

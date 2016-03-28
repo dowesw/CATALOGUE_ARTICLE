@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using CATALOGUE_ARTICLE.TOOLS;
 using CATALOGUE_ARTICLE.ENTITE;
 using CATALOGUE_ARTICLE.BLL;
+using CATALOGUE_ARTICLE.IHM;
 
 namespace CATALOGUE_ARTICLE
 {
@@ -20,8 +22,8 @@ namespace CATALOGUE_ARTICLE
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Licence.deleteLicence();
-            Application.Run(new IHM.Form_Users());
-            //start();
+            //Application.Run(new Form_Parent());
+            start();
         }
 
         static void start()
@@ -33,20 +35,26 @@ namespace CATALOGUE_ARTICLE
                 {
                     if (ServeurBLL.CreateServeur(Serveur.getServeurDefault()))
                     {
-                        Application.Run(new Form_Parent());
+                        new Acces();
+                        new Form_Login().Show();
+                        Application.Run();
                     }
                 }
                 else
                 {
                     if (Connexion.isConnection())
                     {
-                        Application.Run(new Form_Parent());
+                        new Acces();
+                        new Form_Login().Show();
+                        Application.Run();
                     }
                     else
                     {
                         if (Connexion.createDb())
                         {
-                            Application.Run(new Form_Parent());
+                            new Acces();
+                            new Form_Login().Show();
+                            Application.Run();
                         }
                     }
                 }

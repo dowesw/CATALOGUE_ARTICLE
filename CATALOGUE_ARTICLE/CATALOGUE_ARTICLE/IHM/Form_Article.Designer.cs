@@ -83,6 +83,8 @@
             this.box_add_2 = new System.Windows.Forms.PictureBox();
             this.box_add_5 = new System.Windows.Forms.PictureBox();
             this.box_add_1 = new System.Windows.Forms.PictureBox();
+            this.txt_stock = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
@@ -181,6 +183,7 @@
             this.dgv_liste.Location = new System.Drawing.Point(3, 16);
             this.dgv_liste.Name = "dgv_liste";
             this.dgv_liste.ReadOnly = true;
+            this.dgv_liste.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_liste.Size = new System.Drawing.Size(739, 244);
             this.dgv_liste.TabIndex = 0;
             this.dgv_liste.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_CellContentClick);
@@ -277,6 +280,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txt_stock);
             this.tabPage1.Controls.Add(this.com_famille);
             this.tabPage1.Controls.Add(this.txt_marque);
             this.tabPage1.Controls.Add(this.txt_designation);
@@ -294,6 +298,7 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -317,7 +322,7 @@
             this.txt_marque.Location = new System.Drawing.Point(100, 106);
             this.txt_marque.Name = "txt_marque";
             this.txt_marque.Size = new System.Drawing.Size(184, 20);
-            this.txt_marque.TabIndex = 34;
+            this.txt_marque.TabIndex = 36;
             // 
             // txt_designation
             // 
@@ -348,7 +353,7 @@
             0});
             this.txt_puv.Name = "txt_puv";
             this.txt_puv.Size = new System.Drawing.Size(120, 20);
-            this.txt_puv.TabIndex = 31;
+            this.txt_puv.TabIndex = 38;
             this.txt_puv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_pua
@@ -366,7 +371,7 @@
             0});
             this.txt_pua.Name = "txt_pua";
             this.txt_pua.Size = new System.Drawing.Size(120, 20);
-            this.txt_pua.TabIndex = 30;
+            this.txt_pua.TabIndex = 37;
             this.txt_pua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dat_save
@@ -390,7 +395,7 @@
             this.txt_description.Location = new System.Drawing.Point(19, 187);
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(600, 118);
-            this.txt_description.TabIndex = 27;
+            this.txt_description.TabIndex = 40;
             this.txt_description.Text = "";
             // 
             // label9
@@ -692,6 +697,27 @@
             this.box_add_1.Tag = "false";
             this.box_add_1.DoubleClick += new System.EventHandler(this.box_add_1_DoubleClick);
             // 
+            // txt_stock
+            // 
+            this.txt_stock.Enabled = false;
+            this.txt_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_stock.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_stock.Location = new System.Drawing.Point(427, 13);
+            this.txt_stock.Name = "txt_stock";
+            this.txt_stock.Size = new System.Drawing.Size(120, 20);
+            this.txt_stock.TabIndex = 41;
+            this.txt_stock.Text = "0";
+            this.txt_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(326, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Stock";
+            // 
             // Form_Article
             // 
             this.AcceptButton = this.btn_save;
@@ -791,5 +817,7 @@
         private System.Windows.Forms.LinkLabel lk_box_add_7;
         private System.Windows.Forms.LinkLabel lk_box_add_6;
         private System.Windows.Forms.LinkLabel lk_box_add_5;
+        private System.Windows.Forms.TextBox txt_stock;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -51,21 +51,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ArticlesBLL.cs" />
+    <Compile Include="BLL\ContenuStockBLL.cs" />
+    <Compile Include="BLL\AutorisationRessourceBLL.cs" />
+    <Compile Include="BLL\AutorisationFormulaireBLL.cs" />
+    <Compile Include="BLL\FormulairesBLL.cs" />
+    <Compile Include="BLL\RessourcesBLL.cs" />
+    <Compile Include="BLL\MouvementStockBLL.cs" />
+    <Compile Include="BLL\DocStockBLL.cs" />
     <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="BLL\NiveauAccesBLL.cs" />
     <Compile Include="BLL\PhotosArticleBLL.cs" />
     <Compile Include="BLL\FamillesArticleBLL.cs" />
     <Compile Include="BLL\ServeurBLL.cs" />
     <Compile Include="DAO\ArticlesDAO.cs" />
+    <Compile Include="DAO\ContenuStockDAO.cs" />
+    <Compile Include="DAO\AutorisationRessourceDAO.cs" />
+    <Compile Include="DAO\AutorisationFormulaireDAO.cs" />
+    <Compile Include="DAO\FormulairesDAO.cs" />
+    <Compile Include="DAO\RessourcesDAO.cs" />
+    <Compile Include="DAO\MouvementStockDAO.cs" />
+    <Compile Include="DAO\DocStockDAO.cs" />
     <Compile Include="DAO\NiveauAccesDAO.cs" />
     <Compile Include="DAO\UsersDAO.cs" />
     <Compile Include="DAO\PhotosArticleDAO.cs" />
     <Compile Include="DAO\FamillesArticleDAO.cs" />
     <Compile Include="DAO\ServeurDAO.cs" />
     <Compile Include="ENTITE\Articles.cs" />
+    <Compile Include="ENTITE\AutorisationFormulaire.cs" />
+    <Compile Include="ENTITE\ContenuStock.cs" />
+    <Compile Include="ENTITE\AutorisationRessource.cs" />
+    <Compile Include="ENTITE\DocStock.cs" />
     <Compile Include="ENTITE\FamillesArticle.cs" />
+    <Compile Include="ENTITE\Formulaires.cs" />
+    <Compile Include="ENTITE\MouvementStock.cs" />
     <Compile Include="ENTITE\NiveauAcces.cs" />
     <Compile Include="ENTITE\PhotosArticle.cs" />
+    <Compile Include="ENTITE\Ressources.cs" />
     <Compile Include="ENTITE\Serveur.cs" />
     <Compile Include="ENTITE\Users.cs" />
     <Compile Include="Form_Parent.cs">
@@ -92,6 +113,12 @@
     <Compile Include="IHM\Form_Catalogue.Designer.cs">
       <DependentUpon>Form_Catalogue.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM\Form_DocStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Form_DocStock.Designer.cs">
+      <DependentUpon>Form_DocStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM\Form_Famille.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,17 +131,41 @@
     <Compile Include="IHM\Form_Licence.Designer.cs">
       <DependentUpon>Form_Licence.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Form_Login.designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Form_Mouvement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Form_Mouvement.Designer.cs">
+      <DependentUpon>Form_Mouvement.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM\Form_Open.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IHM\Form_Open.Designer.cs">
       <DependentUpon>Form_Open.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM\Form_Photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Form_Photo.Designer.cs">
+      <DependentUpon>Form_Photo.cs</DependentUpon>
+    </Compile>
     <Compile Include="IHM\Form_Propos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IHM\Form_Propos.Designer.cs">
       <DependentUpon>Form_Propos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\Form_Serveur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\Form_Serveur.designer.cs">
+      <DependentUpon>Form_Serveur.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM\Form_Setting.cs">
       <SubType>Form</SubType>
@@ -130,6 +181,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TOOLS\Acces.cs" />
+    <Compile Include="TOOLS\AccesFormulaires.cs" />
+    <Compile Include="TOOLS\AccesRessources.cs" />
     <Compile Include="TOOLS\Chemins.cs" />
     <Compile Include="TOOLS\Connexion.cs" />
     <Compile Include="TOOLS\Constantes.cs" />
@@ -148,17 +202,32 @@
     <EmbeddedResource Include="IHM\Form_Catalogue.resx">
       <DependentUpon>Form_Catalogue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Form_DocStock.resx">
+      <DependentUpon>Form_DocStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Famille.resx">
       <DependentUpon>Form_Famille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Licence.resx">
       <DependentUpon>Form_Licence.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Form_Mouvement.resx">
+      <DependentUpon>Form_Mouvement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Open.resx">
       <DependentUpon>Form_Open.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Form_Photo.resx">
+      <DependentUpon>Form_Photo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Propos.resx">
       <DependentUpon>Form_Propos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\Form_Serveur.resx">
+      <DependentUpon>Form_Serveur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Setting.resx">
       <DependentUpon>Form_Setting.cs</DependentUpon>
@@ -192,22 +261,31 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="IMG\acces.png" />
+    <Content Include="IMG\ACTIONS\add.png" />
     <Content Include="IMG\ACTIONS\cancel.png" />
+    <Content Include="IMG\ACTIONS\connect.png" />
     <Content Include="IMG\ACTIONS\delete.png" />
+    <Content Include="IMG\ACTIONS\exit.png" />
+    <Content Include="IMG\ACTIONS\logout.png" />
     <Content Include="IMG\ACTIONS\next.png" />
     <Content Include="IMG\ACTIONS\prec.png" />
+    <Content Include="IMG\ACTIONS\reset.png" />
+    <Content Include="IMG\ACTIONS\restart.png" />
     <Content Include="IMG\ACTIONS\save.png" />
     <Content Include="IMG\ACTIONS\stop.png" />
     <Content Include="IMG\ajouter.png" />
     <Content Include="IMG\article.png" />
     <Content Include="IMG\catalogue.png" />
+    <Content Include="IMG\contact.png" />
     <Content Include="IMG\document.png" />
     <Content Include="IMG\famille.png" />
     <Content Include="IMG\icone.ico" />
     <Content Include="IMG\icone.png" />
+    <Content Include="IMG\in.png" />
     <Content Include="IMG\inventaire.png" />
     <Content Include="IMG\mouvement.png" />
     <Content Include="IMG\niveau.png" />
+    <Content Include="IMG\out.png" />
     <Content Include="IMG\settings.png" />
     <Content Include="IMG\users.png" />
   </ItemGroup>

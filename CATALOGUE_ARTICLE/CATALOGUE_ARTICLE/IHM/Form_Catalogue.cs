@@ -63,10 +63,13 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void LoadCatalogueDetail()
         {
+            DataGridViewImageColumn icon_ = new DataGridViewImageColumn();
+            icon_.Width = 50;
             //data.Rows.Add(new object[] { c.Id, new Bitmap(c.Article.Image, new Size(16, 16)), c.Article.Designation, c.Prix, c.Quantite, c.Remise, c.PrixTotal, null });
             panel_parent.Controls.Clear();
             DataGridView data = new DataGridView();
             data.AllowUserToAddRows = false;
+            data.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             data.AllowUserToDeleteRows = false;
             data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             data.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
@@ -74,8 +77,6 @@ namespace CATALOGUE_ARTICLE.IHM
             data.Dock = System.Windows.Forms.DockStyle.Fill;
             data.ReadOnly = true;
 
-            DataGridViewImageColumn icon_ = new DataGridViewImageColumn();
-            icon_.Width = 50;
             DataGridViewTextBoxColumn reference_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             reference_.FillWeight = 110.7445F;
             reference_.HeaderText = "Réference";
@@ -92,15 +93,20 @@ namespace CATALOGUE_ARTICLE.IHM
             marque_.Name = "marque_";
             marque_.ReadOnly = true;
             DataGridViewTextBoxColumn pua_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            pua_.FillWeight = 75.53299F;
+            pua_.FillWeight = 70.53299F;
             pua_.HeaderText = "Prix.A";
             pua_.Name = "pua_";
             pua_.ReadOnly = true;
             DataGridViewTextBoxColumn puv_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            puv_.FillWeight = 75.53299F;
+            puv_.FillWeight = 70.53299F;
             puv_.HeaderText = "Prix.V";
             puv_.Name = "puv_";
             puv_.ReadOnly = true;
+            DataGridViewTextBoxColumn stock_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            stock_.FillWeight = 70.53299F;
+            stock_.HeaderText = "Stock";
+            stock_.Name = "stock_";
+            stock_.ReadOnly = true;
             DataGridViewTextBoxColumn datesave_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             datesave_.FillWeight = 110.7445F;
             datesave_.HeaderText = "Date Création";
@@ -108,7 +114,7 @@ namespace CATALOGUE_ARTICLE.IHM
             datesave_.ReadOnly = true;
             DataGridViewTextBoxColumn dateupdate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dateupdate_.FillWeight = 110.7445F;
-            dateupdate_.HeaderText = "Date Modification";
+            dateupdate_.HeaderText = "Date Update";
             dateupdate_.Name = "dateupdate_";
             dateupdate_.ReadOnly = true;
             DataGridViewTextBoxColumn famille_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,13 +130,14 @@ namespace CATALOGUE_ARTICLE.IHM
             marque_,
             pua_,
             puv_,
+            stock_,
             famille_,
             datesave_,
             dateupdate_});
 
             foreach (Articles a in articles)
             {
-                data.Rows.Add(new object[] { a.Reference, a.Designation, a.Marque, a.Pua, a.Puv, a.Famille != null ? a.Famille.Designation : "", a.DateSave, a.DateUpdate });
+                data.Rows.Add(new object[] { a.Reference, a.Designation, a.Marque, a.Pua, a.Puv, a.Stock, a.Famille != null ? a.Famille.Designation : "", a.DateSave, a.DateUpdate });
             }
             panel_parent.Controls.Add(data);
         }
@@ -192,6 +199,13 @@ namespace CATALOGUE_ARTICLE.IHM
                 p2.Size = new Size(140, 30);
                 p2.Margin = new Padding(3, 3, 3, 3);
                 p2.Location = new Point(6, 147);
+                TextBox ts = new TextBox();
+                ts.Text = "Stock : " + a.Stock;
+                ts.TextAlign = HorizontalAlignment.Center;
+                ts.Size = new Size(80, 20);
+                ts.Margin = new Padding(3, 3, 3, 3);
+                ts.Location = new Point(29, 5);
+                p2.Controls.Add(ts);
                 Button bp = new Button();
                 bp.Size = new Size(24, 23);
                 bp.Margin = new Padding(3, 3, 3, 3);
@@ -312,6 +326,13 @@ namespace CATALOGUE_ARTICLE.IHM
                 p2.Size = new Size(140, 30);
                 p2.Margin = new Padding(3, 3, 3, 3);
                 p2.Location = new Point(6, 127);
+                TextBox ts = new TextBox();
+                ts.Text = "Stock : "+a.Stock;
+                ts.TextAlign = HorizontalAlignment.Center;
+                ts.Size = new Size(80, 20);
+                ts.Margin = new Padding(3, 3, 3, 3);
+                ts.Location = new Point(29, 5);
+                p2.Controls.Add(ts);
                 Button bp = new Button();
                 bp.Size = new Size(24, 23);
                 bp.Margin = new Padding(3, 3, 3, 3);

@@ -69,12 +69,20 @@
             this.lb_trial = new System.Windows.Forms.Label();
             this.context_bubble = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.activerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bubble = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_deconnect = new System.Windows.Forms.Button();
+            this.box_users = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_users = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.context_bubble.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box_users)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -148,6 +156,7 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.exitToolStripMenuItem.Text = "&Quitter";
@@ -192,6 +201,7 @@
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.settings;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
@@ -264,7 +274,7 @@
             // 
             // indexToolStripMenuItem
             // 
-            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
+            this.indexToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.acces;
             this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
             this.indexToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
@@ -278,6 +288,7 @@
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.inventaire;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.aboutToolStripMenuItem.Text = "&À propos du catalogue article";
@@ -408,21 +419,38 @@
             // 
             this.context_bubble.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.activerToolStripMenuItem,
+            this.settingToolStripMenuItem,
+            this.toolStripSeparator5,
             this.exitToolStripMenuItem1});
             this.context_bubble.Name = "context_bubble";
-            this.context_bubble.Size = new System.Drawing.Size(153, 70);
+            this.context_bubble.Size = new System.Drawing.Size(112, 76);
             // 
             // activerToolStripMenuItem
             // 
+            this.activerToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.acces;
             this.activerToolStripMenuItem.Name = "activerToolStripMenuItem";
-            this.activerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.activerToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.activerToolStripMenuItem.Text = "Activer";
             this.activerToolStripMenuItem.Click += new System.EventHandler(this.activerToolStripMenuItem_Click);
             // 
+            // settingToolStripMenuItem
+            // 
+            this.settingToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.settings;
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.settingToolStripMenuItem.Text = "Setting";
+            this.settingToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(108, 6);
+            // 
             // exitToolStripMenuItem1
             // 
+            this.exitToolStripMenuItem1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.exit;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
             this.exitToolStripMenuItem1.Text = "Quitter";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -435,11 +463,58 @@
             this.bubble.Text = "Catalogue Article";
             this.bubble.Visible = true;
             // 
+            // btn_deconnect
+            // 
+            this.btn_deconnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_deconnect.Image = global::CATALOGUE_ARTICLE.Properties.Resources.logout;
+            this.btn_deconnect.Location = new System.Drawing.Point(601, 0);
+            this.btn_deconnect.Name = "btn_deconnect";
+            this.btn_deconnect.Size = new System.Drawing.Size(27, 23);
+            this.btn_deconnect.TabIndex = 7;
+            this.btn_deconnect.UseVisualStyleBackColor = true;
+            this.btn_deconnect.Click += new System.EventHandler(this.btn_deconnect_Click);
+            // 
+            // box_users
+            // 
+            this.box_users.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.box_users.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.box_users.Image = global::CATALOGUE_ARTICLE.Properties.Resources.contact;
+            this.box_users.Location = new System.Drawing.Point(601, 25);
+            this.box_users.Name = "box_users";
+            this.box_users.Size = new System.Drawing.Size(27, 22);
+            this.box_users.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.box_users.TabIndex = 6;
+            this.box_users.TabStop = false;
+            this.box_users.MouseEnter += new System.EventHandler(this.box_users_MouseEnter);
+            this.box_users.MouseLeave += new System.EventHandler(this.box_users_MouseLeave);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.txt_users);
+            this.panel1.Location = new System.Drawing.Point(398, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 23);
+            this.panel1.TabIndex = 8;
+            // 
+            // txt_users
+            // 
+            this.txt_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_users.Location = new System.Drawing.Point(59, 1);
+            this.txt_users.Name = "txt_users";
+            this.txt_users.Size = new System.Drawing.Size(139, 22);
+            this.txt_users.TabIndex = 0;
+            this.txt_users.Text = "Dowes Mbella";
+            this.txt_users.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form_Parent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 453);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_deconnect);
+            this.Controls.Add(this.box_users);
             this.Controls.Add(this.lb_trial);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
@@ -450,6 +525,7 @@
             this.Name = "Form_Parent";
             this.Text = "From_Parent";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Parent_FormClosed);
             this.Load += new System.EventHandler(this.Form_Parent_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -458,6 +534,9 @@
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.context_bubble.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.box_users)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,6 +585,12 @@
         private System.Windows.Forms.ToolStripMenuItem activerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         public System.Windows.Forms.NotifyIcon bubble;
+        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.Button btn_deconnect;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox box_users;
+        public System.Windows.Forms.TextBox txt_users;
     }
 }
 

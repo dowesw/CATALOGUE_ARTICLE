@@ -92,6 +92,7 @@ namespace CATALOGUE_ARTICLE.IHM
             txt_description.ResetText();
             txt_pua.Value = 0;
             txt_puv.Value = 0;
+            txt_stock.Text = "0";
             com_famille.ResetText();
             dat_save.Value = DateTime.Now;
             dat_update.Value = DateTime.Now;
@@ -111,6 +112,7 @@ namespace CATALOGUE_ARTICLE.IHM
             {
                 com_famille.Text = a.Famille.Designation;
             }
+            txt_stock.Text = string.Format("{0:#,##0}", a.Stock);
             dat_save.Value = a.DateSave;
             dat_update.Value = a.DateUpdate;
             current = a;

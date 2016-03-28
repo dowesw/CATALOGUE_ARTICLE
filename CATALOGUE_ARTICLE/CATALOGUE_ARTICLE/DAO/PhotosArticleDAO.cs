@@ -152,7 +152,7 @@ namespace CATALOGUE_ARTICLE.DAO
             }
         }
 
-        public static bool deletePhotosArticle(PhotosArticle f)
+        public static bool  deletePhotosArticle(PhotosArticle f)
         {
             NpgsqlConnection con = Connexion.Connection();
             try
