@@ -132,6 +132,7 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     else
                     {
+                        Constantes.f_parent.InitializeComponent();
                         Constantes.f_parent.Show();
                     }
                     if (Constantes.users != null)

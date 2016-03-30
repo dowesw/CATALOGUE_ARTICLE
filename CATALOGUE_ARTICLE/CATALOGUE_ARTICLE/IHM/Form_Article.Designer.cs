@@ -48,6 +48,7 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_stock = new System.Windows.Forms.TextBox();
             this.com_famille = new System.Windows.Forms.ComboBox();
             this.txt_marque = new System.Windows.Forms.TextBox();
             this.txt_designation = new System.Windows.Forms.TextBox();
@@ -65,6 +66,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tab_photo = new System.Windows.Forms.TabPage();
             this.lk_box_add_8 = new System.Windows.Forms.LinkLabel();
@@ -83,8 +85,6 @@
             this.box_add_2 = new System.Windows.Forms.PictureBox();
             this.box_add_5 = new System.Windows.Forms.PictureBox();
             this.box_add_1 = new System.Windows.Forms.PictureBox();
-            this.txt_stock = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
@@ -308,6 +308,18 @@
             this.tabPage1.Text = "Informations";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txt_stock
+            // 
+            this.txt_stock.Enabled = false;
+            this.txt_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_stock.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txt_stock.Location = new System.Drawing.Point(427, 13);
+            this.txt_stock.Name = "txt_stock";
+            this.txt_stock.Size = new System.Drawing.Size(120, 20);
+            this.txt_stock.TabIndex = 41;
+            this.txt_stock.Text = "0";
+            this.txt_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // com_famille
             // 
             this.com_famille.FormattingEnabled = true;
@@ -469,6 +481,15 @@
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 19;
             this.label2.Text = "Réference : ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(326, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Stock";
             // 
             // label1
             // 
@@ -696,27 +717,6 @@
             this.box_add_1.TabStop = false;
             this.box_add_1.Tag = "false";
             this.box_add_1.DoubleClick += new System.EventHandler(this.box_add_1_DoubleClick);
-            // 
-            // txt_stock
-            // 
-            this.txt_stock.Enabled = false;
-            this.txt_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_stock.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txt_stock.Location = new System.Drawing.Point(427, 13);
-            this.txt_stock.Name = "txt_stock";
-            this.txt_stock.Size = new System.Drawing.Size(120, 20);
-            this.txt_stock.TabIndex = 41;
-            this.txt_stock.Text = "0";
-            this.txt_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(326, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Stock";
             // 
             // Form_Article
             // 

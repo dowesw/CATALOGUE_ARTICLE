@@ -8,7 +8,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
 {
     class Chemins
     {
-        public static string cheminDefault = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        public static string cheminDefault = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
         public static string cheminSystem = Environment.GetFolderPath(Environment.SpecialFolder.System);
         public static string cheminStart = Application.StartupPath;
         public static string domainName = Environment.UserDomainName;

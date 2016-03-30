@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+// using System.Threading.Tasks;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.IHM;
 
@@ -39,7 +39,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
 
         public static bool ACTIVE = true;
         public static int TRIAL_ESSAIE = 30;
-        public const int MAX_ESSAIE = 30;
+        public const int MAX_ESSAIE = 7;
 
         public const string FILE_SEPARATOR = "\\";
 

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.TOOLS;
 using CATALOGUE_ARTICLE.BLL;
@@ -41,7 +41,7 @@ namespace CATALOGUE_ARTICLE.IHM
         private void LoadAllNiveau()
         {
             niveaux.Clear();
-            string query = "select * from niveau_acces order by id";
+            string query = "select * from niveau_acces where super = false order by id";
             niveaux = NiveauAccesBLL.List(query);
             com_niveau.DisplayMember = "Designation";
             com_niveau.ValueMember = "Id";

@@ -26,7 +26,7 @@
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Parent));
@@ -504,7 +504,7 @@
             this.txt_users.Name = "txt_users";
             this.txt_users.Size = new System.Drawing.Size(139, 22);
             this.txt_users.TabIndex = 0;
-            this.txt_users.Text = "Dowes Mbella";
+            this.txt_users.Text = "Super Administrateur";
             this.txt_users.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form_Parent

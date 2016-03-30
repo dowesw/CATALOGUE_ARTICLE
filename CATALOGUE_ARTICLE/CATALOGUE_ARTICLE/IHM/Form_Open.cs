@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.ENTITE;
 using CATALOGUE_ARTICLE.TOOLS;
@@ -40,6 +40,11 @@ namespace CATALOGUE_ARTICLE.IHM
             switch (txt_name_form.Text)
             {
                 case "Mouvements Stock":
+                    //if (!AccesFormulaires.form_mouvement)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Mouvement f_mouvement = new Form_Mouvement();
                     if (Constantes.f_mouvement == null)
                     {
@@ -55,6 +60,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Documents Stock":
+                    //if (!AccesFormulaires.form_docstock)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_DocStock f_docstock = new Form_DocStock();
                     if (Constantes.f_docstock == null)
                     {
@@ -70,6 +80,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Autorisations":
+                    //if (!AccesFormulaires.form_acces)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Acces f_acces = new Form_Acces();
                     if (Constantes.f_acces == null)
                     {
@@ -85,6 +100,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Utilisateurs":
+                    //if (!AccesFormulaires.form_users)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Users f_users = new Form_Users();
                     if (Constantes.f_users == null)
                     {
@@ -100,6 +120,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Paramètres":
+                    //if (!AccesFormulaires.form_setting)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Setting f_setting = new Form_Setting();
                     if (Constantes.f_setting == null)
                     {
@@ -130,6 +155,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Familles Article":
+                    //if (!AccesFormulaires.form_famille)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Famille f_famille = new Form_Famille();
                     if (Constantes.f_famille == null)
                     {
@@ -145,6 +175,11 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     break;
                 case "Articles":
+                    //if (!AccesFormulaires.form_article)
+                    //{
+                    //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+                    //    return;
+                    //}
                     Form_Article f_article = new Form_Article();
                     if (Constantes.f_article == null)
                     {
@@ -187,6 +222,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void pic_famille_DoubleClick(object sender, EventArgs e)
         {
+            //if (!AccesFormulaires.form_famille)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Famille f_famille = new Form_Famille();
             if (Constantes.f_famille == null)
             {
@@ -212,6 +252,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void pic_article_DoubleClick(object sender, EventArgs e)
         {
+            //if (!AccesFormulaires.form_article)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Article f_article = new Form_Article();
             if (Constantes.f_article == null)
             {
@@ -262,6 +307,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void box_doc_DoubleClick(object sender, EventArgs e)
         {
+            //if (!AccesFormulaires.form_docstock)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_DocStock f_docstock = new Form_DocStock();
             if (Constantes.f_docstock == null)
             {
@@ -300,6 +350,11 @@ namespace CATALOGUE_ARTICLE.IHM
         private void box_mouv_DoubleClick(object sender, EventArgs e)
         {
 
+            //if (!AccesFormulaires.form_mouvement)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Mouvement f_mouvement = new Form_Mouvement();
             if (Constantes.f_mouvement == null)
             {
@@ -325,7 +380,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void box_users_DoubleClick(object sender, EventArgs e)
         {
-
+            //if (!AccesFormulaires.form_users)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Users f_users = new Form_Users();
             if (Constantes.f_users == null)
             {
@@ -351,6 +410,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void box_acces_DoubleClick(object sender, EventArgs e)
         {
+            //if (!AccesFormulaires.form_acces)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Acces f_acces = new Form_Acces();
             if (Constantes.f_acces == null)
             {
@@ -376,6 +440,11 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void box_setting_DoubleClick(object sender, EventArgs e)
         {
+            //if (!AccesFormulaires.form_users)
+            //{
+            //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
+            //    return;
+            //}
             Form_Setting f_setting = new Form_Setting();
             if (Constantes.f_setting == null)
             {

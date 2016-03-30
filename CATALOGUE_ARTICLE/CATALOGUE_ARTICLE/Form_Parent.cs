@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.ENTITE;
 using CATALOGUE_ARTICLE.IHM;
@@ -28,6 +28,7 @@ namespace CATALOGUE_ARTICLE
             indexToolStripMenuItem.Visible = !Constantes.ACTIVE;
             activerToolStripMenuItem.Visible = !Constantes.ACTIVE;
             lb_trial.Text = "Il vous reste " + Constantes.TRIAL_ESSAIE + " jr(s) d'éssai";
+            btn_deconnect.Visible = false;
             //bubble.ShowBalloonTip(10,"Catalogue Articles", "Bienvenu", System.Windows.Forms.ToolTipIcon.Info);
         }
 

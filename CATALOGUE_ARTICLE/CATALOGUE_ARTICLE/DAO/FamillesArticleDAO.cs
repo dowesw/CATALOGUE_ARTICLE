@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using Npgsql;
 using CATALOGUE_ARTICLE.ENTITE;
 using CATALOGUE_ARTICLE.TOOLS;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+////using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using CATALOGUE_ARTICLE.TOOLS;
@@ -36,7 +36,8 @@ namespace CATALOGUE_ARTICLE
                     if (ServeurBLL.CreateServeur(Serveur.getServeurDefault()))
                     {
                         new Acces();
-                        new Form_Login().Show();
+                        new Form_Parent().Show();
+                        //new Form_Login().Show();
                         Application.Run();
                     }
                 }
@@ -45,7 +46,8 @@ namespace CATALOGUE_ARTICLE
                     if (Connexion.isConnection())
                     {
                         new Acces();
-                        new Form_Login().Show();
+                        new Form_Parent().Show();
+                        //new Form_Login().Show();
                         Application.Run();
                     }
                     else
@@ -53,7 +55,8 @@ namespace CATALOGUE_ARTICLE
                         if (Connexion.createDb())
                         {
                             new Acces();
-                            new Form_Login().Show();
+                            new Form_Parent().Show();
+                            //new Form_Login().Show();
                             Application.Run();
                         }
                     }
