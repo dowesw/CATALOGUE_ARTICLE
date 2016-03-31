@@ -161,6 +161,436 @@ namespace CATALOGUE_ARTICLE.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE DATABASE catalogue_article.
+        /// </summary>
+        internal static string CREATE_DATABASE {
+            get {
+                return ResourceManager.GetString("CREATE_DATABASE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE OR REPLACE FUNCTION contenu_stock_delete()
+        ///  RETURNS trigger AS
+        ///$BODY$
+        ///DECLARE
+        ///
+        ///BEGIN
+        ///	delete from mouvements_stock where contenu = OLD.id;
+        ///	RETURN NEW;
+        ///END;
+        ///$BODY$
+        ///  LANGUAGE plpgsql VOLATILE
+        ///  COST 100;
+        ///ALTER FUNCTION contenu_stock_delete()
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_FCT_DELETECONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_FCT_DELETECONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE OR REPLACE FUNCTION contenu_stock_insert()
+        ///  RETURNS trigger AS
+        ///$BODY$
+        ///DECLARE
+        ///	type_ character varying;
+        ///BEGIN
+        ///	select into type_ type_doc from doc_stocks where id = NEW.stock;
+        ///	if(type_ = &apos;EN&apos;)then
+        ///		insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, NEW.id);
+        ///	else
+        ///		insert into mouvements_stock (entree, article, quantite, contenu) values (false, NEW.article, -NEW.quantite, NEW.id);
+        ///	end if;
+        ///	RETURN NEW;
+        ///END;
+        ///$BODY$
+        ///  LANGUAGE pl [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_FCT_INSERTCONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_FCT_INSERTCONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE OR REPLACE FUNCTION stock(article_ integer)
+        ///  RETURNS double precision AS
+        ///$BODY$
+        ///declare 
+        ///   stock_ double precision;
+        ///begin 
+        ///	select into stock_ sum(quantite) from mouvements_stock where article = article_;
+        ///	if(stock_ is null)then
+        ///		stock_ = 0;
+        ///	end if;
+        ///	RETURN stock_;
+        ///end;
+        ///$BODY$
+        ///  LANGUAGE plpgsql VOLATILE
+        ///  COST 100;
+        ///ALTER FUNCTION stock(integer)
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_FCT_STOCK {
+            get {
+                return ResourceManager.GetString("CREATE_FCT_STOCK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE OR REPLACE FUNCTION contenu_stock_update()
+        ///  RETURNS trigger AS
+        ///$BODY$
+        ///DECLARE
+        ///	type_ character varying;
+        ///	mouv_ integer;
+        ///BEGIN
+        ///	select into type_ type_doc from doc_stocks where id = NEW.stock;	
+        ///	if(type_ = &apos;EN&apos;)then
+        ///		select mouv_ id from mouvements_stock where entree = true and contenu = OLD.id;
+        ///		if(mouv_ is null)then
+        ///			insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, OLD.id);
+        ///		else
+        ///			update mouvements_stock set quantite = NE [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_FCT_UPDATECONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_FCT_UPDATECONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS autorisation_formulaire
+        ///(
+        ///  id serial NOT NULL,
+        ///  niveau integer,
+        ///  formulaire integer,
+        ///  acces boolean,
+        ///  CONSTRAINT autorisation_formulaire_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT autorisation_formulaire_formulaire_fkey FOREIGN KEY (formulaire)
+        ///      REFERENCES formulaires (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CASCADE,
+        ///  CONSTRAINT autorisation_formulaire_niveau_fkey FOREIGN KEY (niveau)
+        ///      REFERENCES niveau_acces (id) MATCH SIMPLE
+        ///      ON UPDATE CASCAD [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_TABLE_ACCESFORMULAIRE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_ACCESFORMULAIRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS autorisation_ressource
+        ///(
+        ///  id serial NOT NULL,
+        ///  niveau integer,
+        ///  ressource integer,
+        ///  acces boolean,
+        ///  CONSTRAINT autorisation_ressource_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT autorisation_ressource_niveau_fkey FOREIGN KEY (niveau)
+        ///      REFERENCES niveau_acces (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CASCADE,
+        ///  CONSTRAINT autorisation_ressource_ressource_fkey FOREIGN KEY (ressource)
+        ///      REFERENCES ressources (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DEL [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_TABLE_ACCESRESSOURCE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_ACCESRESSOURCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS articles
+        ///(
+        ///  id serial NOT NULL,
+        ///  reference character varying,
+        ///  designation character varying,
+        ///  description character varying,
+        ///  marque character varying,
+        ///  puv double precision,
+        ///  pua double precision,
+        ///  date_save timestamp without time zone DEFAULT now(),
+        ///  date_update timestamp without time zone DEFAULT now(),
+        ///  famille integer,
+        ///  CONSTRAINT articles_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT articles_famille_fkey FOREIGN KEY (famille)
+        ///      REFERENCES familles_articl [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_TABLE_ARTICLE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_ARTICLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS contenu_stock
+        ///(
+        ///  id serial NOT NULL,
+        ///  article integer,
+        ///  prix double precision,
+        ///  quantite double precision,
+        ///  stock integer,
+        ///  CONSTRAINT contenu_stock_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT contenu_stock_article_fkey FOREIGN KEY (article)
+        ///      REFERENCES articles (id) MATCH SIMPLE
+        ///      ON UPDATE NO ACTION ON DELETE NO ACTION,
+        ///  CONSTRAINT contenu_stock_stock_fkey FOREIGN KEY (stock)
+        ///      REFERENCES doc_stocks (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CAS [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_TABLE_CONTENUSTOCK {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_CONTENUSTOCK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS doc_stocks
+        ///(
+        ///  id serial NOT NULL,
+        ///  reference character varying,
+        ///  type_doc character varying,
+        ///  date_doc date,
+        ///  CONSTRAINT doc_stocks_pkey PRIMARY KEY (id)
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE doc_stocks
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_DOCSTOCK {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_DOCSTOCK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS familles_article
+        ///(
+        ///  id serial NOT NULL,
+        ///  reference character varying,
+        ///  designation character varying,
+        ///  description character varying,
+        ///  CONSTRAINT familles_article_pkey PRIMARY KEY (id)
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE familles_article
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_FAMILLE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_FAMILLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS formulaires
+        ///(
+        ///  id serial NOT NULL,
+        ///  code character varying,
+        ///  libelle character varying,
+        ///  CONSTRAINT formulaire_pkey PRIMARY KEY (id)
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE formulaires
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_FORMULAIRE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_FORMULAIRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS mouvements_stock
+        ///(
+        ///  id serial NOT NULL,
+        ///  date_save timestamp without time zone DEFAULT now(),
+        ///  article integer,
+        ///  quantite double precision,
+        ///  entree boolean,
+        ///  contenu integer,
+        ///  CONSTRAINT mouvements_stock_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT mouvements_stock_article_fkey FOREIGN KEY (article)
+        ///      REFERENCES articles (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CASCADE,
+        ///  CONSTRAINT mouvements_stock_contenu_fkey FOREIGN KEY (contenu)
+        ///      REFERENCES cont [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string CREATE_TABLE_MOUVSTOCK {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_MOUVSTOCK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS niveau_acces
+        ///(
+        ///  id serial NOT NULL,
+        ///  designation character varying,
+        ///  description character varying,
+        ///  super boolean DEFAULT false,
+        ///  CONSTRAINT niveau_acces_pkey PRIMARY KEY (id)
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE niveau_acces
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_NIVEAUACCES {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_NIVEAUACCES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS parametres
+        ///(
+        ///  id serial NOT NULL,
+        ///  affiche_pua boolean,
+        ///  affiche_puv boolean,
+        ///  affiche_date_save boolean,
+        ///  affiche_date_update boolean,
+        ///  CONSTRAINT parametres_pkey PRIMARY KEY (id)
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE parametres
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_PARAMETRE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_PARAMETRE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS photo_article
+        ///(
+        ///  id serial NOT NULL,
+        ///  nom character varying,
+        ///  article integer,
+        ///  CONSTRAINT photo_article_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT photo_article_article_fkey FOREIGN KEY (article)
+        ///      REFERENCES articles (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CASCADE
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE photo_article
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_PHOTO {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_PHOTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS ressources
+        ///(
+        ///  id serial NOT NULL,
+        ///  code character varying,
+        ///  libelle character varying,
+        ///  formulaire integer,
+        ///  CONSTRAINT ressources_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT ressources_fourmulaire_fkey FOREIGN KEY (formulaire)
+        ///      REFERENCES formulaires (id) MATCH SIMPLE
+        ///      ON UPDATE CASCADE ON DELETE CASCADE
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE ressources
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_RESSOURCE {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_RESSOURCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TABLE IF NOT EXISTS users
+        ///(
+        ///  id serial NOT NULL,
+        ///  nom character varying,
+        ///  prenom character varying,
+        ///  identifiant character varying,
+        ///  mot_passe character varying,
+        ///  actif boolean,
+        ///  niveau integer,
+        ///  photo character varying,
+        ///  CONSTRAINT users_pkey PRIMARY KEY (id),
+        ///  CONSTRAINT users_niveau_fkey FOREIGN KEY (niveau)
+        ///      REFERENCES niveau_acces (id) MATCH SIMPLE
+        ///      ON UPDATE NO ACTION ON DELETE NO ACTION
+        ///)
+        ///WITH (
+        ///  OIDS=FALSE
+        ///);
+        ///ALTER TABLE users
+        ///  OWNER TO postgres;.
+        /// </summary>
+        internal static string CREATE_TABLE_USERS {
+            get {
+                return ResourceManager.GetString("CREATE_TABLE_USERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TRIGGER delete
+        ///  BEFORE DELETE
+        ///  ON contenu_stock
+        ///  FOR EACH ROW
+        ///  EXECUTE PROCEDURE contenu_stock_delete();.
+        /// </summary>
+        internal static string CREATE_TRIG_DELETECONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_TRIG_DELETECONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TRIGGER insert
+        ///  AFTER INSERT
+        ///  ON contenu_stock
+        ///  FOR EACH ROW
+        ///  EXECUTE PROCEDURE contenu_stock_insert();.
+        /// </summary>
+        internal static string CREATE_TRIG_INSERTCONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_TRIG_INSERTCONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à CREATE TRIGGER update
+        ///  AFTER UPDATE
+        ///  ON contenu_stock
+        ///  FOR EACH ROW
+        ///  EXECUTE PROCEDURE contenu_stock_update();.
+        /// </summary>
+        internal static string CREATE_TRIG_UPDATECONTENU {
+            get {
+                return ResourceManager.GetString("CREATE_TRIG_UPDATECONTENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap delete {

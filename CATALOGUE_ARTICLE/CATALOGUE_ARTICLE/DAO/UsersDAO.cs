@@ -42,6 +42,7 @@ namespace CATALOGUE_ARTICLE.DAO
                 Connexion.Deconnection(con);
             }
         }
+
         public static Int32 currentUsers(Users f)
         {
             NpgsqlConnection con = Connexion.Connection();

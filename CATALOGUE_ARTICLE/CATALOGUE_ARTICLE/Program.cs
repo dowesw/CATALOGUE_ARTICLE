@@ -33,32 +33,26 @@ namespace CATALOGUE_ARTICLE
             {
                 if (!Utils.verifyParametre())
                 {
-                    if (ServeurBLL.CreateServeur(Serveur.getServeurDefault()))
+                    if (!ServeurBLL.CreateServeur(Serveur.getServeurDefault()))
                     {
-                        new Acces();
-                        new Form_Parent().Show();
-                        //new Form_Login().Show();
-                        Application.Run();
+                        return;
                     }
+                }
+                if (Connexion.isConnection())
+                {
+                    new Acces();
+                    new Form_Parent().Show();
+                    //new Form_Login().Show();
+                    Application.Run();
                 }
                 else
                 {
-                    if (Connexion.isConnection())
+                    if (Database.createDb())
                     {
                         new Acces();
                         new Form_Parent().Show();
                         //new Form_Login().Show();
                         Application.Run();
-                    }
-                    else
-                    {
-                        if (Connexion.createDb())
-                        {
-                            new Acces();
-                            new Form_Parent().Show();
-                            //new Form_Login().Show();
-                            Application.Run();
-                        }
                     }
                 }
             }

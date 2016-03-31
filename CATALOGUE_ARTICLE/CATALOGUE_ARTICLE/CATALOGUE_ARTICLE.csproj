@@ -189,6 +189,7 @@
     <Compile Include="TOOLS\Chemins.cs" />
     <Compile Include="TOOLS\Connexion.cs" />
     <Compile Include="TOOLS\Constantes.cs" />
+    <Compile Include="TOOLS\Database.cs" />
     <Compile Include="TOOLS\Licence.cs" />
     <Compile Include="TOOLS\Messages.cs" />
     <Compile Include="TOOLS\Utils.cs" />
