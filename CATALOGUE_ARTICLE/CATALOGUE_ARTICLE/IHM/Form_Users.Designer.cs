@@ -30,11 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Users));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grp_action = new System.Windows.Forms.GroupBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grp_infos = new System.Windows.Forms.GroupBox();
             this.chk_actif = new System.Windows.Forms.CheckBox();
             this.txt_repassword = new System.Windows.Forms.MaskedTextBox();
             this.txt_password = new System.Windows.Forms.MaskedTextBox();
@@ -45,14 +45,14 @@
             this.grp_photo = new System.Windows.Forms.GroupBox();
             this.lk_box_photo = new System.Windows.Forms.LinkLabel();
             this.box_photo = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lb_actif = new System.Windows.Forms.Label();
+            this.lb_niveau = new System.Windows.Forms.Label();
+            this.lb_confirme = new System.Windows.Forms.Label();
+            this.lb_password = new System.Windows.Forms.Label();
+            this.lb_identifiant = new System.Windows.Forms.Label();
+            this.lb_prenom = new System.Windows.Forms.Label();
+            this.lb_nom = new System.Windows.Forms.Label();
+            this.grp_liste = new System.Windows.Forms.GroupBox();
             this.dgv_liste = new System.Windows.Forms.DataGridView();
             this.id_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,28 +60,28 @@
             this.niveau_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actif_ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.supp_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grp_search = new System.Windows.Forms.GroupBox();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grp_action.SuspendLayout();
+            this.grp_infos.SuspendLayout();
             this.grp_photo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_photo)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.grp_liste.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.grp_search.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grp_action
             // 
-            this.groupBox1.Controls.Add(this.btn_delete);
-            this.groupBox1.Controls.Add(this.btn_cancel);
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Location = new System.Drawing.Point(506, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(113, 133);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
+            this.grp_action.Controls.Add(this.btn_delete);
+            this.grp_action.Controls.Add(this.btn_cancel);
+            this.grp_action.Controls.Add(this.btn_save);
+            this.grp_action.Location = new System.Drawing.Point(506, 12);
+            this.grp_action.Name = "grp_action";
+            this.grp_action.Size = new System.Drawing.Size(113, 133);
+            this.grp_action.TabIndex = 0;
+            this.grp_action.TabStop = false;
+            this.grp_action.Text = "Actions";
             // 
             // btn_delete
             // 
@@ -120,29 +120,29 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // groupBox2
+            // grp_infos
             // 
-            this.groupBox2.Controls.Add(this.chk_actif);
-            this.groupBox2.Controls.Add(this.txt_repassword);
-            this.groupBox2.Controls.Add(this.txt_password);
-            this.groupBox2.Controls.Add(this.com_niveau);
-            this.groupBox2.Controls.Add(this.txt_identifiant);
-            this.groupBox2.Controls.Add(this.txt_prenom);
-            this.groupBox2.Controls.Add(this.txt_nom);
-            this.groupBox2.Controls.Add(this.grp_photo);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(488, 251);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informations";
+            this.grp_infos.Controls.Add(this.chk_actif);
+            this.grp_infos.Controls.Add(this.txt_repassword);
+            this.grp_infos.Controls.Add(this.txt_password);
+            this.grp_infos.Controls.Add(this.com_niveau);
+            this.grp_infos.Controls.Add(this.txt_identifiant);
+            this.grp_infos.Controls.Add(this.txt_prenom);
+            this.grp_infos.Controls.Add(this.txt_nom);
+            this.grp_infos.Controls.Add(this.grp_photo);
+            this.grp_infos.Controls.Add(this.lb_actif);
+            this.grp_infos.Controls.Add(this.lb_niveau);
+            this.grp_infos.Controls.Add(this.lb_confirme);
+            this.grp_infos.Controls.Add(this.lb_password);
+            this.grp_infos.Controls.Add(this.lb_identifiant);
+            this.grp_infos.Controls.Add(this.lb_prenom);
+            this.grp_infos.Controls.Add(this.lb_nom);
+            this.grp_infos.Location = new System.Drawing.Point(12, 12);
+            this.grp_infos.Name = "grp_infos";
+            this.grp_infos.Size = new System.Drawing.Size(488, 251);
+            this.grp_infos.TabIndex = 1;
+            this.grp_infos.TabStop = false;
+            this.grp_infos.Text = "Informations";
             // 
             // chk_actif
             // 
@@ -213,6 +213,7 @@
             // lk_box_photo
             // 
             this.lk_box_photo.AutoSize = true;
+            this.lk_box_photo.BackColor = System.Drawing.Color.Transparent;
             this.lk_box_photo.Location = new System.Drawing.Point(60, 105);
             this.lk_box_photo.Name = "lk_box_photo";
             this.lk_box_photo.Size = new System.Drawing.Size(54, 13);
@@ -236,78 +237,78 @@
             this.box_photo.Tag = "false";
             this.box_photo.DoubleClick += new System.EventHandler(this.box_photo_DoubleClick);
             // 
-            // label7
+            // lb_actif
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Actif : ";
+            this.lb_actif.AutoSize = true;
+            this.lb_actif.Location = new System.Drawing.Point(27, 220);
+            this.lb_actif.Name = "lb_actif";
+            this.lb_actif.Size = new System.Drawing.Size(37, 13);
+            this.lb_actif.TabIndex = 6;
+            this.lb_actif.Text = "Actif : ";
             // 
-            // label6
+            // lb_niveau
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 186);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Niveau Acces : ";
+            this.lb_niveau.AutoSize = true;
+            this.lb_niveau.Location = new System.Drawing.Point(27, 186);
+            this.lb_niveau.Name = "lb_niveau";
+            this.lb_niveau.Size = new System.Drawing.Size(83, 13);
+            this.lb_niveau.TabIndex = 5;
+            this.lb_niveau.Text = "Niveau Acces : ";
             // 
-            // label5
+            // lb_confirme
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 153);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Confirmer : ";
+            this.lb_confirme.AutoSize = true;
+            this.lb_confirme.Location = new System.Drawing.Point(27, 153);
+            this.lb_confirme.Name = "lb_confirme";
+            this.lb_confirme.Size = new System.Drawing.Size(60, 13);
+            this.lb_confirme.TabIndex = 4;
+            this.lb_confirme.Text = "Confirmer : ";
             // 
-            // label4
+            // lb_password
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Mot Passe : ";
+            this.lb_password.AutoSize = true;
+            this.lb_password.Location = new System.Drawing.Point(27, 120);
+            this.lb_password.Name = "lb_password";
+            this.lb_password.Size = new System.Drawing.Size(66, 13);
+            this.lb_password.TabIndex = 3;
+            this.lb_password.Text = "Mot Passe : ";
             // 
-            // label3
+            // lb_identifiant
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Identifiant : ";
+            this.lb_identifiant.AutoSize = true;
+            this.lb_identifiant.Location = new System.Drawing.Point(27, 87);
+            this.lb_identifiant.Name = "lb_identifiant";
+            this.lb_identifiant.Size = new System.Drawing.Size(62, 13);
+            this.lb_identifiant.TabIndex = 2;
+            this.lb_identifiant.Text = "Identifiant : ";
             // 
-            // label2
+            // lb_prenom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Prénom : ";
+            this.lb_prenom.AutoSize = true;
+            this.lb_prenom.Location = new System.Drawing.Point(27, 59);
+            this.lb_prenom.Name = "lb_prenom";
+            this.lb_prenom.Size = new System.Drawing.Size(52, 13);
+            this.lb_prenom.TabIndex = 1;
+            this.lb_prenom.Text = "Prénom : ";
             // 
-            // label1
+            // lb_nom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom : ";
+            this.lb_nom.AutoSize = true;
+            this.lb_nom.Location = new System.Drawing.Point(27, 28);
+            this.lb_nom.Name = "lb_nom";
+            this.lb_nom.Size = new System.Drawing.Size(38, 13);
+            this.lb_nom.TabIndex = 0;
+            this.lb_nom.Text = "Nom : ";
             // 
-            // groupBox3
+            // grp_liste
             // 
-            this.groupBox3.Controls.Add(this.dgv_liste);
-            this.groupBox3.Location = new System.Drawing.Point(12, 269);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(607, 239);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Liste";
+            this.grp_liste.Controls.Add(this.dgv_liste);
+            this.grp_liste.Location = new System.Drawing.Point(12, 269);
+            this.grp_liste.Name = "grp_liste";
+            this.grp_liste.Size = new System.Drawing.Size(607, 239);
+            this.grp_liste.TabIndex = 2;
+            this.grp_liste.TabStop = false;
+            this.grp_liste.Text = "Liste";
             // 
             // dgv_liste
             // 
@@ -360,7 +361,7 @@
             // 
             // actif_
             // 
-            this.actif_.FillWeight = 25.38071F;
+            this.actif_.FillWeight = 35.38071F;
             this.actif_.HeaderText = "Actif";
             this.actif_.Name = "actif_";
             this.actif_.ReadOnly = true;
@@ -377,15 +378,15 @@
             this.supp_.Name = "supp_";
             this.supp_.ReadOnly = true;
             // 
-            // groupBox4
+            // grp_search
             // 
-            this.groupBox4.Controls.Add(this.txt_search);
-            this.groupBox4.Location = new System.Drawing.Point(12, 514);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(607, 48);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Recherche";
+            this.grp_search.Controls.Add(this.txt_search);
+            this.grp_search.Location = new System.Drawing.Point(12, 514);
+            this.grp_search.Name = "grp_search";
+            this.grp_search.Size = new System.Drawing.Size(607, 48);
+            this.grp_search.TabIndex = 3;
+            this.grp_search.TabStop = false;
+            this.grp_search.Text = "Recherche";
             // 
             // txt_search
             // 
@@ -400,12 +401,13 @@
             this.AcceptButton = this.btn_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.CancelButton = this.btn_cancel;
             this.ClientSize = new System.Drawing.Size(624, 562);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_search);
+            this.Controls.Add(this.grp_liste);
+            this.Controls.Add(this.grp_infos);
+            this.Controls.Add(this.grp_action);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(640, 601);
@@ -415,33 +417,33 @@
             this.Text = "Utilisateur";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Users_FormClosed);
             this.Load += new System.EventHandler(this.Form_Users_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grp_action.ResumeLayout(false);
+            this.grp_infos.ResumeLayout(false);
+            this.grp_infos.PerformLayout();
             this.grp_photo.ResumeLayout(false);
             this.grp_photo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_photo)).EndInit();
-            this.groupBox3.ResumeLayout(false);
+            this.grp_liste.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.grp_search.ResumeLayout(false);
+            this.grp_search.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grp_action;
+        private System.Windows.Forms.GroupBox grp_infos;
+        private System.Windows.Forms.Label lb_actif;
+        private System.Windows.Forms.Label lb_niveau;
+        private System.Windows.Forms.Label lb_confirme;
+        private System.Windows.Forms.Label lb_password;
+        private System.Windows.Forms.Label lb_identifiant;
+        private System.Windows.Forms.Label lb_prenom;
+        private System.Windows.Forms.Label lb_nom;
+        private System.Windows.Forms.GroupBox grp_liste;
+        private System.Windows.Forms.GroupBox grp_search;
         private System.Windows.Forms.GroupBox grp_photo;
         private System.Windows.Forms.PictureBox box_photo;
         private System.Windows.Forms.Button btn_delete;
@@ -456,12 +458,12 @@
         private System.Windows.Forms.MaskedTextBox txt_repassword;
         private System.Windows.Forms.DataGridView dgv_liste;
         private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.LinkLabel lk_box_photo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenom_;
         private System.Windows.Forms.DataGridViewTextBoxColumn niveau_;
         private System.Windows.Forms.DataGridViewCheckBoxColumn actif_;
         private System.Windows.Forms.DataGridViewTextBoxColumn supp_;
-        private System.Windows.Forms.LinkLabel lk_box_photo;
     }
 }

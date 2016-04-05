@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\The Npgsql Development Team\Npgsql\Npgsql-2.0.14.3-net20\Npgsql.dll</HintPath>
+    <Reference Include="Npgsql, Version=2.0.14.3, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\The Npgsql Development Team\Npgsql\Npgsql-2.0.14.3-net20\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +57,8 @@
     <Compile Include="BLL\ContenuStockBLL.cs" />
     <Compile Include="BLL\AutorisationRessourceBLL.cs" />
     <Compile Include="BLL\AutorisationFormulaireBLL.cs" />
+    <Compile Include="BLL\SerieBLL.cs" />
+    <Compile Include="BLL\MarqueBLL.cs" />
     <Compile Include="BLL\FormulairesBLL.cs" />
     <Compile Include="BLL\RessourcesBLL.cs" />
     <Compile Include="BLL\MouvementStockBLL.cs" />
@@ -69,6 +72,8 @@
     <Compile Include="DAO\ContenuStockDAO.cs" />
     <Compile Include="DAO\AutorisationRessourceDAO.cs" />
     <Compile Include="DAO\AutorisationFormulaireDAO.cs" />
+    <Compile Include="DAO\SerieDAO.cs" />
+    <Compile Include="DAO\MarqueDAO.cs" />
     <Compile Include="DAO\FormulairesDAO.cs" />
     <Compile Include="DAO\RessourcesDAO.cs" />
     <Compile Include="DAO\MouvementStockDAO.cs" />
@@ -82,9 +87,30 @@
     <Compile Include="ENTITE\AutorisationFormulaire.cs" />
     <Compile Include="ENTITE\ContenuStock.cs" />
     <Compile Include="ENTITE\AutorisationRessource.cs" />
+    <Compile Include="ENTITE\Serie.cs" />
+    <Compile Include="ENTITE\Marque.cs" />
     <Compile Include="ENTITE\DocStock.cs" />
     <Compile Include="ENTITE\FamillesArticle.cs" />
     <Compile Include="ENTITE\Formulaires.cs" />
+    <Compile Include="IHM\2ND\Form_Save_Niveau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_Save_Niveau.Designer.cs">
+      <DependentUpon>Form_Save_Niveau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_Save_Marque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_Save_Marque.Designer.cs">
+      <DependentUpon>Form_Save_Marque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_Save_Famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_Save_Famille.Designer.cs">
+      <DependentUpon>Form_Save_Famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TOOLS\Configuration.cs" />
     <Compile Include="ENTITE\MouvementStock.cs" />
     <Compile Include="ENTITE\NiveauAcces.cs" />
     <Compile Include="ENTITE\PhotosArticle.cs" />
@@ -94,7 +120,7 @@
     <Compile Include="Form_Parent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Parent.Designer.cs">
+    <Compile Include="Form_Parent.designer.cs">
       <DependentUpon>Form_Parent.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM\Form_Acces.cs">
@@ -121,11 +147,11 @@
     <Compile Include="IHM\Form_DocStock.Designer.cs">
       <DependentUpon>Form_DocStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="IHM\Form_Famille.cs">
+    <Compile Include="IHM\Form_Accessoire_Article.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IHM\Form_Famille.Designer.cs">
-      <DependentUpon>Form_Famille.cs</DependentUpon>
+    <Compile Include="IHM\Form_Accessoire_Article.Designer.cs">
+      <DependentUpon>Form_Accessoire_Article.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM\Form_Licence.cs">
       <SubType>Form</SubType>
@@ -151,10 +177,10 @@
     <Compile Include="IHM\Form_Open.Designer.cs">
       <DependentUpon>Form_Open.cs</DependentUpon>
     </Compile>
-    <Compile Include="IHM\Form_Photo.cs">
+    <Compile Include="IHM\2ND\Form_Photo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IHM\Form_Photo.Designer.cs">
+    <Compile Include="IHM\2ND\Form_Photo.Designer.cs">
       <DependentUpon>Form_Photo.cs</DependentUpon>
     </Compile>
     <Compile Include="IHM\Form_Propos.cs">
@@ -181,12 +207,20 @@
     <Compile Include="IHM\Form_Users.Designer.cs">
       <DependentUpon>Form_Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="IHM\2ND\Form_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IHM\2ND\Form_View.Designer.cs">
+      <DependentUpon>Form_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TOOLS\Acces.cs" />
     <Compile Include="TOOLS\AccesFormulaires.cs" />
     <Compile Include="TOOLS\AccesRessources.cs" />
     <Compile Include="TOOLS\Chemins.cs" />
+    <Compile Include="TOOLS\MAJ.cs" />
+    <Compile Include="TOOLS\Mots.cs" />
     <Compile Include="TOOLS\Connexion.cs" />
     <Compile Include="TOOLS\Constantes.cs" />
     <Compile Include="TOOLS\Database.cs" />
@@ -195,6 +229,15 @@
     <Compile Include="TOOLS\Utils.cs" />
     <EmbeddedResource Include="Form_Parent.resx">
       <DependentUpon>Form_Parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\2ND\Form_Save_Niveau.resx">
+      <DependentUpon>Form_Save_Niveau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\2ND\Form_Save_Marque.resx">
+      <DependentUpon>Form_Save_Marque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\2ND\Form_Save_Famille.resx">
+      <DependentUpon>Form_Save_Famille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Acces.resx">
       <DependentUpon>Form_Acces.cs</DependentUpon>
@@ -208,8 +251,8 @@
     <EmbeddedResource Include="IHM\Form_DocStock.resx">
       <DependentUpon>Form_DocStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IHM\Form_Famille.resx">
-      <DependentUpon>Form_Famille.cs</DependentUpon>
+    <EmbeddedResource Include="IHM\Form_Accessoire_Article.resx">
+      <DependentUpon>Form_Accessoire_Article.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Licence.resx">
       <DependentUpon>Form_Licence.cs</DependentUpon>
@@ -223,7 +266,7 @@
     <EmbeddedResource Include="IHM\Form_Open.resx">
       <DependentUpon>Form_Open.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IHM\Form_Photo.resx">
+    <EmbeddedResource Include="IHM\2ND\Form_Photo.resx">
       <DependentUpon>Form_Photo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Propos.resx">
@@ -237,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IHM\Form_Users.resx">
       <DependentUpon>Form_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IHM\2ND\Form_View.resx">
+      <DependentUpon>Form_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -280,17 +326,27 @@
     <Content Include="IMG\article.png" />
     <Content Include="IMG\catalogue.png" />
     <Content Include="IMG\contact.png" />
+    <Content Include="IMG\database.png" />
     <Content Include="IMG\document.png" />
     <Content Include="IMG\famille.png" />
     <Content Include="IMG\icone.ico" />
     <Content Include="IMG\icone.png" />
     <Content Include="IMG\in.png" />
     <Content Include="IMG\inventaire.png" />
+    <Content Include="IMG\LANGUE\En.jpg" />
+    <Content Include="IMG\LANGUE\Fr.jpg" />
     <Content Include="IMG\mouvement.png" />
     <Content Include="IMG\niveau.png" />
     <Content Include="IMG\out.png" />
+    <Content Include="IMG\pc.png" />
+    <Content Include="IMG\remote.png" />
     <Content Include="IMG\settings.png" />
+    <Content Include="IMG\THEMES\Basique.JPG" />
+    <Content Include="IMG\THEMES\BlackClass.JPG" />
+    <Content Include="IMG\THEMES\BlueTrack.JPG" />
+    <Content Include="IMG\THEMES\Classique.JPG" />
     <Content Include="IMG\users.png" />
+    <Content Include="IMG\vue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,8 +7,20 @@ using CATALOGUE_ARTICLE.TOOLS;
 
 namespace CATALOGUE_ARTICLE.ENTITE
 {
-    class FamillesArticle
+    public class FamillesArticle
     {
+        public FamillesArticle() { }
+
+        public FamillesArticle(Int32 id) {
+            this.id = id;
+        }
+
+        public FamillesArticle(Int32 id, string designation)
+        {
+            this.id = id;
+            this.designation = designation;
+        }
+
         private Int32 id;
 
         public Int32 Id
@@ -47,6 +59,22 @@ namespace CATALOGUE_ARTICLE.ENTITE
         {
             get { return update; }
             set { update = value; }
+        }
+
+        private FamillesArticle parent;
+
+        public FamillesArticle Parent
+        {
+            get { return parent; }
+            set { parent = value; }
+        }
+
+        private List<FamillesArticle> sous = new List<FamillesArticle>();
+
+        public List<FamillesArticle> Sous
+        {
+            get { return sous; }
+            set { sous = value; }
         }
 
         public Boolean Control()

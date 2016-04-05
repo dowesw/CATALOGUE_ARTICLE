@@ -118,290 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="famille" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\famille.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ajouter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ajouter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\prec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="acces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\acces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mouvement" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\mouvement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="catalogue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\catalogue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="article" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\article.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\inventaire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="niveau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\niveau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\IMG\ACTIONS\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CREATE_DATABASE" xml:space="preserve">
-    <value>CREATE DATABASE catalogue_article</value>
-  </data>
-  <data name="CREATE_FCT_DELETECONTENU" xml:space="preserve">
-    <value>CREATE OR REPLACE FUNCTION contenu_stock_delete()
-  RETURNS trigger AS
-$BODY$
-DECLARE
-
-BEGIN
-	delete from mouvements_stock where contenu = OLD.id;
-	RETURN NEW;
-END;
-$BODY$
-  LANGUAGE plpgsql VOLATILE
-  COST 100;
-ALTER FUNCTION contenu_stock_delete()
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_FCT_INSERTCONTENU" xml:space="preserve">
-    <value>CREATE OR REPLACE FUNCTION contenu_stock_insert()
-  RETURNS trigger AS
-$BODY$
-DECLARE
-	type_ character varying;
-BEGIN
-	select into type_ type_doc from doc_stocks where id = NEW.stock;
-	if(type_ = 'EN')then
-		insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, NEW.id);
-	else
-		insert into mouvements_stock (entree, article, quantite, contenu) values (false, NEW.article, -NEW.quantite, NEW.id);
-	end if;
-	RETURN NEW;
-END;
-$BODY$
-  LANGUAGE plpgsql VOLATILE
-  COST 100;
-ALTER FUNCTION contenu_stock_insert()
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_FCT_UPDATECONTENU" xml:space="preserve">
-    <value>CREATE OR REPLACE FUNCTION contenu_stock_update()
-  RETURNS trigger AS
-$BODY$
-DECLARE
-	type_ character varying;
-	mouv_ integer;
-BEGIN
-	select into type_ type_doc from doc_stocks where id = NEW.stock;	
-	if(type_ = 'EN')then
-		select mouv_ id from mouvements_stock where entree = true and contenu = OLD.id;
-		if(mouv_ is null)then
-			insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, OLD.id);
-		else
-			update mouvements_stock set quantite = NEW.quantite where contenu = OLD.id;
-		end if;
-	else
-		select mouv_ id from mouvements_stock where entree = false and contenu = OLD.id;
-		if(mouv_ is null)then
-			insert into mouvements_stock (entree, article, quantite, contenu) values (false, NEW.article, -NEW.quantite, OLD.id);
-		else
-			update mouvements_stock set quantite = -NEW.quantite where contenu = OLD.id;
-		end if;
-	end if;
-	RETURN NEW;
-END;
-$BODY$
-  LANGUAGE plpgsql VOLATILE
-  COST 100;
-ALTER FUNCTION contenu_stock_update()
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_ACCESFORMULAIRE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS autorisation_formulaire
-(
-  id serial NOT NULL,
-  niveau integer,
-  formulaire integer,
-  acces boolean,
-  CONSTRAINT autorisation_formulaire_pkey PRIMARY KEY (id),
-  CONSTRAINT autorisation_formulaire_formulaire_fkey FOREIGN KEY (formulaire)
-      REFERENCES formulaires (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE,
-  CONSTRAINT autorisation_formulaire_niveau_fkey FOREIGN KEY (niveau)
-      REFERENCES niveau_acces (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE autorisation_formulaire
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_ACCESRESSOURCE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS autorisation_ressource
-(
-  id serial NOT NULL,
-  niveau integer,
-  ressource integer,
-  acces boolean,
-  CONSTRAINT autorisation_ressource_pkey PRIMARY KEY (id),
-  CONSTRAINT autorisation_ressource_niveau_fkey FOREIGN KEY (niveau)
-      REFERENCES niveau_acces (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE,
-  CONSTRAINT autorisation_ressource_ressource_fkey FOREIGN KEY (ressource)
-      REFERENCES ressources (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE autorisation_ressource
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_ARTICLE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS articles
-(
-  id serial NOT NULL,
-  reference character varying,
-  designation character varying,
-  description character varying,
-  marque character varying,
-  puv double precision,
-  pua double precision,
-  date_save timestamp without time zone DEFAULT now(),
-  date_update timestamp without time zone DEFAULT now(),
-  famille integer,
-  CONSTRAINT articles_pkey PRIMARY KEY (id),
-  CONSTRAINT articles_famille_fkey FOREIGN KEY (famille)
-      REFERENCES familles_article (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE NO ACTION
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE articles
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_CONTENUSTOCK" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS contenu_stock
-(
-  id serial NOT NULL,
-  article integer,
-  prix double precision,
-  quantite double precision,
-  stock integer,
-  CONSTRAINT contenu_stock_pkey PRIMARY KEY (id),
-  CONSTRAINT contenu_stock_article_fkey FOREIGN KEY (article)
-      REFERENCES articles (id) MATCH SIMPLE
-      ON UPDATE NO ACTION ON DELETE NO ACTION,
-  CONSTRAINT contenu_stock_stock_fkey FOREIGN KEY (stock)
-      REFERENCES doc_stocks (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE contenu_stock
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_DOCSTOCK" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS doc_stocks
-(
-  id serial NOT NULL,
-  reference character varying,
-  type_doc character varying,
-  date_doc date,
-  CONSTRAINT doc_stocks_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE doc_stocks
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_FAMILLE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS familles_article
-(
-  id serial NOT NULL,
-  reference character varying,
-  designation character varying,
-  description character varying,
-  CONSTRAINT familles_article_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE familles_article
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_FORMULAIRE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS formulaires
-(
-  id serial NOT NULL,
-  code character varying,
-  libelle character varying,
-  CONSTRAINT formulaire_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE formulaires
-  OWNER TO postgres;</value>
   </data>
   <data name="CREATE_TABLE_MOUVSTOCK" xml:space="preserve">
     <value>CREATE TABLE IF NOT EXISTS mouvements_stock
@@ -426,71 +144,82 @@ WITH (
 ALTER TABLE mouvements_stock
   OWNER TO postgres;</value>
   </data>
-  <data name="CREATE_TABLE_NIVEAUACCES" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS niveau_acces
-(
-  id serial NOT NULL,
-  designation character varying,
-  description character varying,
-  super boolean DEFAULT false,
-  CONSTRAINT niveau_acces_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE niveau_acces
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\prec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\vue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_FCT_DELETECONTENU" xml:space="preserve">
+    <value>CREATE OR REPLACE FUNCTION contenu_stock_delete()
+  RETURNS trigger AS
+$BODY$
+DECLARE
+
+BEGIN
+	delete from mouvements_stock where contenu = OLD.id;
+	RETURN NEW;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION contenu_stock_delete()
   OWNER TO postgres;</value>
   </data>
-  <data name="CREATE_TABLE_PARAMETRE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS parametres
-(
-  id serial NOT NULL,
-  affiche_pua boolean,
-  affiche_puv boolean,
-  affiche_date_save boolean,
-  affiche_date_update boolean,
-  CONSTRAINT parametres_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE parametres
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_PHOTO" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS photo_article
-(
-  id serial NOT NULL,
-  nom character varying,
-  article integer,
-  CONSTRAINT photo_article_pkey PRIMARY KEY (id),
-  CONSTRAINT photo_article_article_fkey FOREIGN KEY (article)
-      REFERENCES articles (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE photo_article
-  OWNER TO postgres;</value>
-  </data>
-  <data name="CREATE_TABLE_RESSOURCE" xml:space="preserve">
-    <value>CREATE TABLE IF NOT EXISTS ressources
+  <data name="CREATE_TABLE_FORMULAIRE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS formulaires
 (
   id serial NOT NULL,
   code character varying,
   libelle character varying,
-  formulaire integer,
-  CONSTRAINT ressources_pkey PRIMARY KEY (id),
-  CONSTRAINT ressources_fourmulaire_fkey FOREIGN KEY (formulaire)
-      REFERENCES formulaires (id) MATCH SIMPLE
-      ON UPDATE CASCADE ON DELETE CASCADE
+  CONSTRAINT formulaire_pkey PRIMARY KEY (id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE ressources
+ALTER TABLE formulaires
   OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_TRIG_DELETECONTENU" xml:space="preserve">
+    <value>CREATE TRIGGER delete
+  BEFORE DELETE
+  ON contenu_stock
+  FOR EACH ROW
+  EXECUTE PROCEDURE contenu_stock_delete();</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TRIG_INSERTCONTENU" xml:space="preserve">
+    <value>CREATE TRIGGER insert
+  AFTER INSERT
+  ON contenu_stock
+  FOR EACH ROW
+  EXECUTE PROCEDURE contenu_stock_insert();</value>
+  </data>
+  <data name="mouvement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\mouvement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CREATE_TABLE_USERS" xml:space="preserve">
     <value>CREATE TABLE IF NOT EXISTS users
@@ -514,19 +243,32 @@ WITH (
 ALTER TABLE users
   OWNER TO postgres;</value>
   </data>
-  <data name="CREATE_TRIG_DELETECONTENU" xml:space="preserve">
-    <value>CREATE TRIGGER delete
-  BEFORE DELETE
-  ON contenu_stock
-  FOR EACH ROW
-  EXECUTE PROCEDURE contenu_stock_delete();</value>
+  <data name="Classique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\THEMES\Classique.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CREATE_TRIG_INSERTCONTENU" xml:space="preserve">
-    <value>CREATE TRIGGER insert
-  AFTER INSERT
-  ON contenu_stock
-  FOR EACH ROW
-  EXECUTE PROCEDURE contenu_stock_insert();</value>
+  <data name="CREATE_TABLE_ACCESRESSOURCE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS autorisation_ressource
+(
+  id serial NOT NULL,
+  niveau integer,
+  ressource integer,
+  acces boolean,
+  CONSTRAINT autorisation_ressource_pkey PRIMARY KEY (id),
+  CONSTRAINT autorisation_ressource_niveau_fkey FOREIGN KEY (niveau)
+      REFERENCES niveau_acces (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT autorisation_ressource_ressource_fkey FOREIGN KEY (ressource)
+      REFERENCES ressources (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE autorisation_ressource
+  OWNER TO postgres;</value>
+  </data>
+  <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CREATE_TRIG_UPDATECONTENU" xml:space="preserve">
     <value>CREATE TRIGGER update
@@ -534,6 +276,90 @@ ALTER TABLE users
   ON contenu_stock
   FOR EACH ROW
   EXECUTE PROCEDURE contenu_stock_update();</value>
+  </data>
+  <data name="CREATE_TABLE_PHOTO" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS photo_article
+(
+  id serial NOT NULL,
+  nom character varying,
+  article integer,
+  CONSTRAINT photo_article_pkey PRIMARY KEY (id),
+  CONSTRAINT photo_article_article_fkey FOREIGN KEY (article)
+      REFERENCES articles (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE photo_article
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_TABLE_ACCESFORMULAIRE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS autorisation_formulaire
+(
+  id serial NOT NULL,
+  niveau integer,
+  formulaire integer,
+  acces boolean,
+  CONSTRAINT autorisation_formulaire_pkey PRIMARY KEY (id),
+  CONSTRAINT autorisation_formulaire_formulaire_fkey FOREIGN KEY (formulaire)
+      REFERENCES formulaires (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT autorisation_formulaire_niveau_fkey FOREIGN KEY (niveau)
+      REFERENCES niveau_acces (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE autorisation_formulaire
+  OWNER TO postgres;</value>
+  </data>
+  <data name="niveau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\niveau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TABLE_FAMILLE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS familles_article
+(
+  id serial NOT NULL,
+  reference character varying,
+  designation character varying,
+  description character varying,
+  parent integer,
+  CONSTRAINT familles_article_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE familles_article
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_TABLE_DOCSTOCK" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS doc_stocks
+(
+  id serial NOT NULL,
+  reference character varying,
+  type_doc character varying,
+  date_doc timestamp ,
+  CONSTRAINT doc_stocks_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE doc_stocks
+  OWNER TO postgres;</value>
+  </data>
+  <data name="BlueTrack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\THEMES\BlueTrack.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\connect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CREATE_FCT_STOCK" xml:space="preserve">
     <value>CREATE OR REPLACE FUNCTION stock(article_ integer)
@@ -552,6 +378,254 @@ $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
 ALTER FUNCTION stock(integer)
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_TABLE_ARTICLE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS articles
+(
+  id serial NOT NULL,
+  reference character varying,
+  designation character varying,
+  description character varying,
+  marque integer,
+  puv double precision,
+  pua double precision,
+  date_save timestamp without time zone DEFAULT now(),
+  date_update timestamp without time zone DEFAULT now(),
+  famille integer,
+  CONSTRAINT articles_pkey PRIMARY KEY (id),
+  CONSTRAINT articles_famille_fkey FOREIGN KEY (famille)
+      REFERENCES familles_article (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE NO ACTION,
+  CONSTRAINT articles_marque_fkey FOREIGN KEY (marque)
+      REFERENCES marque (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE articles
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_FCT_UPDATECONTENU" xml:space="preserve">
+    <value>CREATE OR REPLACE FUNCTION contenu_stock_update()
+  RETURNS trigger AS
+$BODY$
+DECLARE
+	type_ character varying;
+	mouv_ integer;
+BEGIN
+	select into type_ type_doc from doc_stocks where id = NEW.stock;	
+	if(type_ = 'EN')then
+		select into mouv_ id from mouvements_stock where entree = true and contenu = OLD.id;
+		if(mouv_ is null)then
+			insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, OLD.id);
+		else
+			update mouvements_stock set quantite = NEW.quantite where contenu = OLD.id;
+		end if;
+	else
+		select into mouv_ id from mouvements_stock where entree = false and contenu = OLD.id;
+		if(mouv_ is null)then
+			insert into mouvements_stock (entree, article, quantite, contenu) values (false, NEW.article, -NEW.quantite, OLD.id);
+		else
+			update mouvements_stock set quantite = -NEW.quantite where contenu = OLD.id;
+		end if;
+	end if;
+	RETURN NEW;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION contenu_stock_update()
+  OWNER TO postgres;</value>
+  </data>
+  <data name="acces" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\acces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Basique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\THEMES\Basique.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\inventaire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TABLE_PARAMETRE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS parametres
+(
+  id serial NOT NULL,
+  affiche_pua boolean,
+  affiche_puv boolean,
+  affiche_date_save boolean,
+  affiche_date_update boolean,
+  CONSTRAINT parametres_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE parametres
+  OWNER TO postgres;</value>
+  </data>
+  <data name="article" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\article.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="En" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\LANGUE\En.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\LANGUE\Fr.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TABLE_CONTENUSTOCK" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS contenu_stock
+(
+  id serial NOT NULL,
+  article integer,
+  prix double precision,
+  quantite double precision,
+  stock integer,
+  CONSTRAINT contenu_stock_pkey PRIMARY KEY (id),
+  CONSTRAINT contenu_stock_article_fkey FOREIGN KEY (article)
+      REFERENCES articles (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT contenu_stock_stock_fkey FOREIGN KEY (stock)
+      REFERENCES doc_stocks (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE contenu_stock
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_DATABASE" xml:space="preserve">
+    <value>CREATE DATABASE catalogue_article</value>
+  </data>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ACTIONS\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TABLE_RESSOURCE" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS ressources
+(
+  id serial NOT NULL,
+  code character varying,
+  libelle character varying,
+  formulaire integer,
+  CONSTRAINT ressources_pkey PRIMARY KEY (id),
+  CONSTRAINT ressources_fourmulaire_fkey FOREIGN KEY (formulaire)
+      REFERENCES formulaires (id) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE ressources
+  OWNER TO postgres;</value>
+  </data>
+  <data name="catalogue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\catalogue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ajouter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\ajouter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="famille" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\famille.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_FCT_INSERTCONTENU" xml:space="preserve">
+    <value>CREATE OR REPLACE FUNCTION contenu_stock_insert()
+  RETURNS trigger AS
+$BODY$
+DECLARE
+	type_ character varying;
+BEGIN
+	select into type_ type_doc from doc_stocks where id = NEW.stock;
+	if(type_ = 'EN')then
+		insert into mouvements_stock (entree, article, quantite, contenu) values (true, NEW.article, NEW.quantite, NEW.id);
+	else
+		insert into mouvements_stock (entree, article, quantite, contenu) values (false, NEW.article, -NEW.quantite, NEW.id);
+	end if;
+	RETURN NEW;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION contenu_stock_insert()
+  OWNER TO postgres;</value>
+  </data>
+  <data name="CREATE_TABLE_NIVEAUACCES" xml:space="preserve">
+    <value>CREATE TABLE IF NOT EXISTS niveau_acces
+(
+  id serial NOT NULL,
+  designation character varying,
+  description character varying,
+  super boolean DEFAULT false,
+  CONSTRAINT niveau_acces_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE niveau_acces
+  OWNER TO postgres;</value>
+  </data>
+  <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\THEMES\BlackClass.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\database.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\pc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\remote.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CREATE_TABLE_MARQUE" xml:space="preserve">
+    <value>CREATE TABLE marque
+(
+  id serial NOT NULL,
+  reference character varying,
+  designation character varying,
+  description character varying,
+  CONSTRAINT marque_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE marque
+  OWNER TO postgres;</value>
+  </data>
+  <data name="ALTER_TABLE_FAMILLE" xml:space="preserve">
+    <value>ALTER TABLE familles_article
+  ADD CONSTRAINT familles_article_parent_fkey FOREIGN KEY (parent)
+      REFERENCES familles_article (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION;</value>
+  </data>
+  <data name="CREATE_TABLE_SERIE" xml:space="preserve">
+    <value>CREATE TABLE serie
+(
+  id serial NOT NULL,
+  reference character varying,
+  designation character varying,
+  description character varying,
+  marque integer,
+  CONSTRAINT serie_pkey PRIMARY KEY (id),
+  CONSTRAINT serie_marque_fkey FOREIGN KEY (marque)
+      REFERENCES marque (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE serie
   OWNER TO postgres;</value>
   </data>
 </root>

@@ -45,6 +45,23 @@ namespace CATALOGUE_ARTICLE.IHM
             txt_pwd.Text = s.Password;
             txt_port.Text = s.Port.ToString();
             txt_user.Text = s.User;
+
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Serveur;
+            lb_database.Text = Mots.Database + " :";
+            lb_password.Text = Mots.Password + " :";
+            lb_port.Text = Mots.Port + " :";
+            lb_serveur.Text = Mots.Serveur + " :";
+            lb_users.Text = Mots.Utilisateur + " :";
         }
 
         private void btn_save_Click(object sender, EventArgs e)

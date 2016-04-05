@@ -37,6 +37,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.redémarerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +47,6 @@
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tileVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,19 +69,18 @@
             this.context_bubble = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.activerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redémarerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bubble = new System.Windows.Forms.NotifyIcon(this.components);
             this.btn_deconnect = new System.Windows.Forms.Button();
             this.box_users = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txt_users = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.context_bubble.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_users)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -108,6 +106,7 @@
             this.toolStripSeparator3,
             this.saveToolStripMenuItem,
             this.toolStripSeparator4,
+            this.redémarerToolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
@@ -153,6 +152,14 @@
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(167, 6);
+            // 
+            // redémarerToolStripMenuItem1
+            // 
+            this.redémarerToolStripMenuItem1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.restart;
+            this.redémarerToolStripMenuItem1.Name = "redémarerToolStripMenuItem1";
+            this.redémarerToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
+            this.redémarerToolStripMenuItem1.Text = "Redémarer";
+            this.redémarerToolStripMenuItem1.Click += new System.EventHandler(this.redémarerToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -212,8 +219,6 @@
             this.windowsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newWindowToolStripMenuItem,
             this.cascadeToolStripMenuItem,
-            this.tileVerticalToolStripMenuItem,
-            this.tileHorizontalToolStripMenuItem,
             this.closeAllToolStripMenuItem,
             this.arrangeIconsToolStripMenuItem});
             this.windowsMenu.Name = "windowsMenu";
@@ -233,20 +238,6 @@
             this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.cascadeToolStripMenuItem.Text = "&Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
-            // 
-            // tileVerticalToolStripMenuItem
-            // 
-            this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.tileVerticalToolStripMenuItem.Text = "Mosaïque &verticale";
-            this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
-            // 
-            // tileHorizontalToolStripMenuItem
-            // 
-            this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.tileHorizontalToolStripMenuItem.Text = "Mosaïque &horizontale";
-            this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
@@ -420,16 +411,17 @@
             this.context_bubble.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.activerToolStripMenuItem,
             this.settingToolStripMenuItem,
+            this.redémarerToolStripMenuItem,
             this.toolStripSeparator5,
             this.exitToolStripMenuItem1});
             this.context_bubble.Name = "context_bubble";
-            this.context_bubble.Size = new System.Drawing.Size(112, 76);
+            this.context_bubble.Size = new System.Drawing.Size(132, 98);
             // 
             // activerToolStripMenuItem
             // 
             this.activerToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.acces;
             this.activerToolStripMenuItem.Name = "activerToolStripMenuItem";
-            this.activerToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.activerToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.activerToolStripMenuItem.Text = "Activer";
             this.activerToolStripMenuItem.Click += new System.EventHandler(this.activerToolStripMenuItem_Click);
             // 
@@ -437,20 +429,28 @@
             // 
             this.settingToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.settings;
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.settingToolStripMenuItem.Text = "Setting";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+            // 
+            // redémarerToolStripMenuItem
+            // 
+            this.redémarerToolStripMenuItem.Image = global::CATALOGUE_ARTICLE.Properties.Resources.restart;
+            this.redémarerToolStripMenuItem.Name = "redémarerToolStripMenuItem";
+            this.redémarerToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.redémarerToolStripMenuItem.Text = "Redémarer";
+            this.redémarerToolStripMenuItem.Click += new System.EventHandler(this.redémarerToolStripMenuItem1_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(128, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.exit;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.exitToolStripMenuItem1.Text = "Quitter";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -488,22 +488,15 @@
             this.box_users.MouseEnter += new System.EventHandler(this.box_users_MouseEnter);
             this.box_users.MouseLeave += new System.EventHandler(this.box_users_MouseLeave);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.txt_users);
-            this.panel1.Location = new System.Drawing.Point(398, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 23);
-            this.panel1.TabIndex = 8;
-            // 
             // txt_users
             // 
+            this.txt_users.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_users.Location = new System.Drawing.Point(59, 1);
+            this.txt_users.Location = new System.Drawing.Point(458, 24);
             this.txt_users.Name = "txt_users";
+            this.txt_users.ReadOnly = true;
             this.txt_users.Size = new System.Drawing.Size(139, 22);
-            this.txt_users.TabIndex = 0;
+            this.txt_users.TabIndex = 10;
             this.txt_users.Text = "Super Administrateur";
             this.txt_users.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -512,7 +505,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 453);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txt_users);
             this.Controls.Add(this.btn_deconnect);
             this.Controls.Add(this.box_users);
             this.Controls.Add(this.lb_trial);
@@ -535,8 +528,6 @@
             this.statusStrip.PerformLayout();
             this.context_bubble.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_users)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,7 +545,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -568,7 +558,6 @@
         private System.Windows.Forms.ToolStripMenuItem windowsMenu;
         private System.Windows.Forms.ToolStripMenuItem newWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tileVerticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrangeIconsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
@@ -588,9 +577,10 @@
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.Button btn_deconnect;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox box_users;
         public System.Windows.Forms.TextBox txt_users;
+        private System.Windows.Forms.ToolStripMenuItem redémarerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem redémarerToolStripMenuItem;
     }
 }
 

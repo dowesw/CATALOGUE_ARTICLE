@@ -8,7 +8,7 @@ using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CATALOGUE_ARTICLE.IHM
+namespace CATALOGUE_ARTICLE.IHM._2ND
 {
     public partial class Form_Photo : Form
     {

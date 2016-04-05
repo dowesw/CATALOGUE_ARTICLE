@@ -17,10 +17,12 @@ namespace CATALOGUE_ARTICLE.IHM
     {
         List<Articles> articles = new List<Articles>();
         Articles current = new Articles();
+        string etat = "M";
 
         public Form_Catalogue()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Catalogue_FormClosed(object sender, FormClosedEventArgs e)
@@ -32,37 +34,55 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void Form_Catalogue_Load(object sender, EventArgs e)
         {
+            lb_etat.Text = Mots.Etat + " : " + Mots.Vue + " " + Mots.Mosaique;
             Utils.addFrom(this.Name);
-            LoadArticle();
-            LoadCatalogueMosaique();
+            txt_search.ResetText();
+            LoadCatalogueMosaique("select * from articles order by reference");
+            LoadConfig();
         }
 
-        private void LoadArticle()
+        private void LoadConfig()
         {
-            string query = "select * from articles order by id";
-            articles = ArticlesBLL.List(query);
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Catalogue;
+            grp_affichage.Text = Mots.Affichage;
+            grp_search.Text = Mots.Recherche;
+            btn_detail.Text = Mots.Detail;
+            btn_list.Text = Mots.Liste;
+            btn_mosaique.Text = Mots.Mosaique;
         }
 
         private void btn_list_Click(object sender, EventArgs e)
         {
-            lb_etat.Text = "Etat : Vue liste";
-            LoadCatalogueList();
+            lb_etat.Text = Mots.Etat +" : " + Mots.Vue + " "+Mots.Liste;
+            etat = "L";
+            txt_search.ResetText();
+            LoadCatalogueList("select * from articles order by reference");
         }
 
         private void btn_detail_Click(object sender, EventArgs e)
         {
-            lb_etat.Text = "Etat : Vue détail";
-            LoadCatalogueDetail();
+            lb_etat.Text = Mots.Etat + " : " + Mots.Vue + " " + Mots.Detail;
+            etat = "D";
+            txt_search.ResetText();
+            LoadCatalogueDetail("select * from articles order by reference");
         }
 
         private void btn_mosaique_Click(object sender, EventArgs e)
         {
-            lb_etat.Text = "Etat : Vue mosaïque";
-            LoadCatalogueMosaique();
+            lb_etat.Text = Mots.Etat + " : " + Mots.Vue + " " + Mots.Mosaique;
+            etat = "M";
+            txt_search.ResetText();
+            LoadCatalogueMosaique("select * from articles order by reference");
         }
 
-        private void LoadCatalogueDetail()
+        private void LoadCatalogueDetail(string query)
         {
+            articles = ArticlesBLL.List(query);
             DataGridViewImageColumn icon_ = new DataGridViewImageColumn();
             icon_.Width = 50;
             //data.Rows.Add(new object[] { c.Id, new Bitmap(c.Article.Image, new Size(16, 16)), c.Article.Designation, c.Prix, c.Quantite, c.Remise, c.PrixTotal, null });
@@ -79,37 +99,37 @@ namespace CATALOGUE_ARTICLE.IHM
 
             DataGridViewTextBoxColumn reference_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             reference_.FillWeight = 110.7445F;
-            reference_.HeaderText = "Réference";
+            reference_.HeaderText = Mots.Reference;
             reference_.Name = "reference_";
             reference_.ReadOnly = true;
             DataGridViewTextBoxColumn designation_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             designation_.FillWeight = 110.7445F;
-            designation_.HeaderText = "Désignation";
+            designation_.HeaderText = Mots.Designation;
             designation_.Name = "designation_";
             designation_.ReadOnly = true;
             DataGridViewTextBoxColumn marque_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             marque_.FillWeight = 110.7445F;
-            marque_.HeaderText = "Marque";
+            marque_.HeaderText = Mots.Marque;
             marque_.Name = "marque_";
             marque_.ReadOnly = true;
             DataGridViewTextBoxColumn pua_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pua_.FillWeight = 70.53299F;
-            pua_.HeaderText = "Prix.A";
+            pua_.HeaderText = Mots.Prix+".A";
             pua_.Name = "pua_";
             pua_.ReadOnly = true;
             DataGridViewTextBoxColumn puv_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             puv_.FillWeight = 70.53299F;
-            puv_.HeaderText = "Prix.V";
+            puv_.HeaderText = Mots.Prix+".V";
             puv_.Name = "puv_";
             puv_.ReadOnly = true;
             DataGridViewTextBoxColumn stock_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             stock_.FillWeight = 70.53299F;
-            stock_.HeaderText = "Stock";
+            stock_.HeaderText = Mots.Stock;
             stock_.Name = "stock_";
             stock_.ReadOnly = true;
             DataGridViewTextBoxColumn datesave_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             datesave_.FillWeight = 110.7445F;
-            datesave_.HeaderText = "Date Création";
+            datesave_.HeaderText = Mots.Date_Creation;
             datesave_.Name = "datesave_";
             datesave_.ReadOnly = true;
             DataGridViewTextBoxColumn dateupdate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -119,7 +139,7 @@ namespace CATALOGUE_ARTICLE.IHM
             dateupdate_.ReadOnly = true;
             DataGridViewTextBoxColumn famille_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             famille_.FillWeight = 110.7445F;
-            famille_.HeaderText = "Famille";
+            famille_.HeaderText = Mots.Famille;
             famille_.Name = "famille_";
             famille_.ReadOnly = true;
             famille_.Visible = false;
@@ -142,8 +162,9 @@ namespace CATALOGUE_ARTICLE.IHM
             panel_parent.Controls.Add(data);
         }
 
-        private void LoadCatalogueMosaique()
+        private void LoadCatalogueMosaique(string query)
         {
+            articles = ArticlesBLL.List(query);
             panel_parent.Controls.Clear();
             int x = 0, y = 0, x_ = 0, y_ = 0, c = 0;
             for (int i = 0; i < articles.Count; i++)
@@ -179,18 +200,31 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     else
                     {
-                        b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
+                        b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.article;
                     }
                     b.Tag = 0;
                 }
                 else
                 {
-                    b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
+                    b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.article;
                 }
                 b.SizeMode = PictureBoxSizeMode.StretchImage;
                 b.Size = new Size(140, 118);
                 b.Margin = new Padding(3, 3, 3, 3);
                 b.Location = new Point(0, 0);
+                ContextMenuStrip co = new System.Windows.Forms.ContextMenuStrip(this.components);
+                ToolStripMenuItem to = new ToolStripMenuItem();
+                to.Text = Mots.Vue;
+                to.Image = global::CATALOGUE_ARTICLE.Properties.Resources.vue;
+                to.Click += delegate(object sender, EventArgs e)
+                {
+                    if (a != null ? a.Id > 0 : false)
+                    {
+                        new _2ND.Form_View(a).ShowDialog();
+                    }
+                };
+                co.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {to});
+                b.ContextMenuStrip = co;
                 p1.Controls.Add(b);
                 p.Controls.Add(p1);
 
@@ -205,6 +239,7 @@ namespace CATALOGUE_ARTICLE.IHM
                 ts.Size = new Size(80, 20);
                 ts.Margin = new Padding(3, 3, 3, 3);
                 ts.Location = new Point(29, 5);
+                ts.ReadOnly = true;
                 p2.Controls.Add(ts);
                 Button bp = new Button();
                 bp.Size = new Size(24, 23);
@@ -278,8 +313,9 @@ namespace CATALOGUE_ARTICLE.IHM
             }
         }
 
-        private void LoadCatalogueList()
+        private void LoadCatalogueList(string query)
         {
+            articles = ArticlesBLL.List(query);
             panel_parent.Controls.Clear();
             int i = 0 , y =0;
             foreach (Articles a in articles)
@@ -306,13 +342,13 @@ namespace CATALOGUE_ARTICLE.IHM
                     }
                     else
                     {
-                        b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
+                        b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.article;
                     }
                     b.Tag = 0;
                 }
                 else
                 {
-                    b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
+                    b.Image = global::CATALOGUE_ARTICLE.Properties.Resources.article;
                 }
                 b.SizeMode = PictureBoxSizeMode.StretchImage;
                 b.Size = new Size(140, 118);
@@ -327,11 +363,12 @@ namespace CATALOGUE_ARTICLE.IHM
                 p2.Margin = new Padding(3, 3, 3, 3);
                 p2.Location = new Point(6, 127);
                 TextBox ts = new TextBox();
-                ts.Text = "Stock : "+a.Stock;
+                ts.Text = Mots.Stock + " : " + a.Stock;
                 ts.TextAlign = HorizontalAlignment.Center;
                 ts.Size = new Size(80, 20);
                 ts.Margin = new Padding(3, 3, 3, 3);
                 ts.Location = new Point(29, 5);
+                ts.ReadOnly = true;
                 p2.Controls.Add(ts);
                 Button bp = new Button();
                 bp.Size = new Size(24, 23);
@@ -390,7 +427,7 @@ namespace CATALOGUE_ARTICLE.IHM
                 p.Controls.Add(p2);
 
                 Label ld = new Label();
-                ld.Text = "Désignation : ";
+                ld.Text = Mots.Designation+ " : ";
                 ld.Size = new Size(72, 13);
                 ld.Margin = new Padding(3, 0, 3, 0);
                 ld.Location = new Point(152, 7);
@@ -402,19 +439,22 @@ namespace CATALOGUE_ARTICLE.IHM
                 ld_.Location = new Point(236, 7);
                 p.Controls.Add(ld_);
                 Label lm = new Label();
-                lm.Text = "Marque : ";
+                lm.Text = Mots.Marque+ " : ";
                 lm.Size = new Size(52, 13);
                 lm.Margin = new Padding(3, 0, 3, 0);
                 lm.Location = new Point(152, 29);
                 p.Controls.Add(lm);
                 Label lm_ = new Label();
-                lm_.Text = a.Marque;
+                if (a.Marque != null ? a.Marque.Id > 0 : false)
+                {
+                    lm_.Text = a.Marque.Designation;
+                }
                 lm_.Size = new Size(130, 13);
                 lm_.Margin = new Padding(3, 0, 3, 0);
                 lm_.Location = new Point(236, 29);
                 p.Controls.Add(lm_);
                 Label lc = new Label();
-                lc.Text = "Date Création : ";
+                lc.Text = Mots.Date_Creation+" : ";
                 lc.Size = new Size(81, 13);
                 lc.Margin = new Padding(3, 0, 3, 0);
                 lc.Location = new Point(152, 52);
@@ -426,7 +466,7 @@ namespace CATALOGUE_ARTICLE.IHM
                 lc_.Location = new Point(236, 52);
                 p.Controls.Add(lc_);
                 Label lp = new Label();
-                lp.Text = "Prix Vente : ";
+                lp.Text = Mots.Prix_Vente +" : ";
                 lp.Size = new Size(64, 13);
                 lp.Margin = new Padding(3, 0, 3, 0);
                 lp.Location = new Point(152, 77);
@@ -438,7 +478,7 @@ namespace CATALOGUE_ARTICLE.IHM
                 lp_.Location = new Point(236, 77);
                 p.Controls.Add(lp_);
                 Label lf = new Label();
-                lf.Text = "Famille : ";
+                lf.Text = Mots.Famille +" : ";
                 lf.Size = new Size(48, 13);
                 lf.Margin = new Padding(3, 0, 3, 0);
                 lf.Location = new Point(152, 101);
@@ -450,13 +490,19 @@ namespace CATALOGUE_ARTICLE.IHM
                 lf_.Location = new Point(236, 101);
                 p.Controls.Add(lf_);
 
+                GroupBox g = new GroupBox();
+                g.Text = Mots.Description;
+                g.Size = new Size(375, 100);
+                g.Margin = new Padding(3, 3, 3, 3);
+                g.Location = new Point(391, 7);
                 RichTextBox r = new RichTextBox();
                 r.Text = a.Description;
-                r.Size = new Size(404, 118);
+                r.Size = new Size(363, 75);
                 r.Margin = new Padding(3, 3, 3, 3);
-                r.Location = new Point(368, 7);
+                r.Location = new Point(6, 19);
                 r.ReadOnly = true;
-                p.Controls.Add(r);
+                g.Controls.Add(r);
+                p.Controls.Add(g);
 
                 panel_parent.Controls.Add(p);
                 i++;
@@ -469,7 +515,10 @@ namespace CATALOGUE_ARTICLE.IHM
             {
                 current = articles[0];
                 lb_designation.Text = current.Designation;
-                lb_marque.Text = current.Marque;
+                if (current.Marque != null ? current.Marque.Id > 0 : false)
+                {
+                    lb_marque.Text = current.Marque.Designation;
+                }
                 lb_datesave.Text = current.DateSave.ToShortDateString();
                 lb_puv.Text = current.Puv.ToString();
                 lb_famille.Text = current.Famille != null ? current.Famille.Designation : "";
@@ -511,6 +560,25 @@ namespace CATALOGUE_ARTICLE.IHM
                     box_article.Image = Image.FromFile(chemin + current.Photos[i].Nom);
                     box_article.Tag = i;
                 }
+            }
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            string search = txt_search.Text.Trim();
+            switch (etat)
+            {
+                case "M":
+                    LoadCatalogueMosaique("select * from articles where reference like '" + search + "%' or designation like '" + search + "%' order by reference");
+                    break;
+                case "D":
+                    LoadCatalogueDetail("select * from articles where reference like '" + search + "%' or designation like '" + search + "%' order by reference");
+                    break;
+                case "L":
+                    LoadCatalogueList("select * from articles where reference like '" + search + "%' or designation like '" + search + "%' order by reference");
+                    break;
+                default:
+                    break;
             }
         }
 

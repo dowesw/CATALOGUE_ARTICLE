@@ -21,6 +21,7 @@ namespace CATALOGUE_ARTICLE.IHM
         public Form_Users()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Users_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,6 +34,34 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             LoadAllNiveau();
             LoadGrille();
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Utilisateurs;
+            grp_action.Text = Mots.Actions;
+            grp_infos.Text = Mots.Informations;
+            grp_liste.Text = Mots.Liste;
+            grp_photo.Text = Mots.Photo;
+            grp_search.Text = Mots.Recherche;
+            lb_actif.Text = Mots.Actif +" :";
+            lb_confirme.Text = Mots.Confirmer + " :";
+            lb_identifiant.Text = Mots.Identifiant + " :";
+            lb_niveau.Text = Mots.Niveau_Access + " :";
+            lb_nom.Text = Mots.Noms + " :";
+            lb_password.Text = Mots.Password + " :";
+            lb_prenom.Text = Mots.Prenoms + " :";
+            nom_.HeaderText = Mots.Noms;
+            prenom_.HeaderText = Mots.Prenoms;
+            niveau_.HeaderText = Mots.Niveau_Access;
+            actif_.HeaderText = Mots.Actif;
+            lk_box_photo.Text = Mots.Supprimer;
         }
 
         private void Reset()
@@ -101,6 +130,7 @@ namespace CATALOGUE_ARTICLE.IHM
         private void UpdateRow(Users a)
         {
             dgv_liste.Rows.RemoveAt(Utils.GetRowData(dgv_liste, a.Id));
+            a = UsersBLL.One(a.Id);
             AddRow(a);
         }
 
@@ -168,6 +198,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         Messages.Succes();
                     }
                 }
+                Reset();
             }
         }
 
@@ -179,7 +210,7 @@ namespace CATALOGUE_ARTICLE.IHM
             }
             else
             {
-                if (DialogResult.Yes == Messages.Confirmation("Annuler"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Annuler))
                 {
                     Reset();
                 }
@@ -190,7 +221,7 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             if (current != null ? current.Id > 0 : false)
             {
-                if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer))
                 {
                     if (UsersBLL.Delete(current))
                     {
@@ -238,7 +269,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         current.Photo = path;
                         if (current != null ? current.Id > 0 : false)
                         {
-                            if (DialogResult.Yes == Messages.Confirmation("Enregistrer"))
+                            if (DialogResult.Yes == Messages.Confirmation(Mots.Enregistrer))
                             {
                                 if (UsersBLL.UpdatePhoto(current))
                                 {
@@ -259,13 +290,13 @@ namespace CATALOGUE_ARTICLE.IHM
             }
             else
             {
-                Messages.Information("Vous avez déja associé cette photo");
+                Messages.Information(Mots.Msg_Photo_exist);
             }
         }
 
         private void lk_box_photo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-             if (DialogResult.Yes == Messages.Confirmation("Confirmer"))
+            if (DialogResult.Yes == Messages.Confirmation(Mots.Confirmer))
             {
                 Image i = box_photo.Image;
                 if (UsersBLL.DeletePhoto(current))
@@ -295,7 +326,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         Users f = UsersBLL.One(id);
                         if (e.ColumnIndex == 5)
                         {
-                            if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                            if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer))
                             {
                                 LoadPhoto(null);
                                 if (UsersBLL.Delete(f))

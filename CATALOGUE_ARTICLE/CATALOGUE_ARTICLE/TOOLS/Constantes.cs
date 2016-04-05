@@ -5,6 +5,7 @@ using System.Text;
 // using System.Threading.Tasks;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.IHM;
+using CATALOGUE_ARTICLE.IHM._2ND;
 
 namespace CATALOGUE_ARTICLE.TOOLS
 {
@@ -23,7 +24,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
         public static Form_Licence f_licence = null;
         public static Form_Setting f_setting = null;
         public static Form_Open f_open = null;
-        public static Form_Famille f_famille = null;
+        public static Form_Accessoire_Article f_famille = null;
         public static Form_Article f_article = null;
         public static Form_Catalogue f_catalogue = null;
         public static Form_Propos f_propos = null;
@@ -39,7 +40,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
 
         public static bool ACTIVE = true;
         public static int TRIAL_ESSAIE = 30;
-        public const int MAX_ESSAIE = 7;
+        public const int MAX_ESSAIE = 30;
 
         public const string FILE_SEPARATOR = "\\";
 
@@ -47,6 +48,11 @@ namespace CATALOGUE_ARTICLE.TOOLS
         public const string MOUV_ENTREE = "EN";
         public const string MOUV_SORTIE_NAME = "SORTIE";
         public const string MOUV_SORTIE = "SO";
+
+        public const string LANGUE_FRANCAIS_NAME = "Français";
+        public const string LANGUE_FRANCAIS = "Fr";
+        public const string LANGUE_ANGLAIS_NAME = "English";
+        public const string LANGUE_ANGLAIS = "En";
 
     }
 }

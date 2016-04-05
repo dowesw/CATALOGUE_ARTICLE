@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Catalogue));
             this.panel_parent = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -54,11 +55,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.vueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_art = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_description = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,17 +76,18 @@
             this.lb_marque = new System.Windows.Forms.Label();
             this.lb_designation = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.btn_prec = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.box_article = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grp_affichage = new System.Windows.Forms.GroupBox();
             this.lb_etat = new System.Windows.Forms.Label();
             this.btn_mosaique = new System.Windows.Forms.Button();
             this.btn_detail = new System.Windows.Forms.Button();
             this.btn_list = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.grp_search = new System.Windows.Forms.GroupBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.panel_parent.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -99,11 +105,14 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel_art.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_article)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grp_affichage.SuspendLayout();
+            this.grp_search.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_parent
@@ -117,7 +126,7 @@
             this.panel_parent.Controls.Add(this.panel_art);
             this.panel_parent.Location = new System.Drawing.Point(3, 44);
             this.panel_parent.Name = "panel_parent";
-            this.panel_parent.Size = new System.Drawing.Size(809, 503);
+            this.panel_parent.Size = new System.Drawing.Size(809, 514);
             this.panel_parent.TabIndex = 0;
             // 
             // panel12
@@ -365,6 +374,15 @@
             this.panel4.Size = new System.Drawing.Size(140, 30);
             this.panel4.TabIndex = 1;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(29, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(80, 20);
+            this.textBox6.TabIndex = 2;
+            this.textBox6.Text = "Stock : 2";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button1
             // 
             this.button1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.prec;
@@ -396,18 +414,33 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(140, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vueToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 26);
+            // 
+            // vueToolStripMenuItem
+            // 
+            this.vueToolStripMenuItem.Name = "vueToolStripMenuItem";
+            this.vueToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.vueToolStripMenuItem.Text = "Vue";
+            // 
             // panel_art
             // 
             this.panel_art.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_art.Controls.Add(this.txt_description);
+            this.panel_art.Controls.Add(this.groupBox1);
             this.panel_art.Controls.Add(this.label5);
             this.panel_art.Controls.Add(this.label4);
             this.panel_art.Controls.Add(this.label3);
@@ -426,13 +459,23 @@
             this.panel_art.TabIndex = 0;
             this.panel_art.Visible = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txt_description);
+            this.groupBox1.Location = new System.Drawing.Point(391, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(375, 100);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Description";
+            // 
             // txt_description
             // 
-            this.txt_description.Location = new System.Drawing.Point(368, 7);
+            this.txt_description.Location = new System.Drawing.Point(6, 19);
             this.txt_description.Name = "txt_description";
             this.txt_description.ReadOnly = true;
-            this.txt_description.Size = new System.Drawing.Size(404, 118);
-            this.txt_description.TabIndex = 3;
+            this.txt_description.Size = new System.Drawing.Size(363, 75);
+            this.txt_description.TabIndex = 4;
             this.txt_description.Text = "";
             // 
             // label5
@@ -536,6 +579,15 @@
             this.panel3.Size = new System.Drawing.Size(140, 30);
             this.panel3.TabIndex = 1;
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(29, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(80, 20);
+            this.textBox5.TabIndex = 2;
+            this.textBox5.Text = "Stock : 2";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btn_prec
             // 
             this.btn_prec.Image = global::CATALOGUE_ARTICLE.Properties.Resources.prec;
@@ -576,23 +628,23 @@
             this.box_article.TabIndex = 2;
             this.box_article.TabStop = false;
             // 
-            // groupBox1
+            // grp_affichage
             // 
-            this.groupBox1.Controls.Add(this.lb_etat);
-            this.groupBox1.Controls.Add(this.btn_mosaique);
-            this.groupBox1.Controls.Add(this.btn_detail);
-            this.groupBox1.Controls.Add(this.btn_list);
-            this.groupBox1.Location = new System.Drawing.Point(0, -2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(815, 45);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Affichage";
+            this.grp_affichage.Controls.Add(this.lb_etat);
+            this.grp_affichage.Controls.Add(this.btn_mosaique);
+            this.grp_affichage.Controls.Add(this.btn_detail);
+            this.grp_affichage.Controls.Add(this.btn_list);
+            this.grp_affichage.Location = new System.Drawing.Point(0, -2);
+            this.grp_affichage.Name = "grp_affichage";
+            this.grp_affichage.Size = new System.Drawing.Size(815, 45);
+            this.grp_affichage.TabIndex = 1;
+            this.grp_affichage.TabStop = false;
+            this.grp_affichage.Text = "Affichage";
             // 
             // lb_etat
             // 
             this.lb_etat.AutoSize = true;
-            this.lb_etat.Location = new System.Drawing.Point(699, 19);
+            this.lb_etat.Location = new System.Drawing.Point(683, 19);
             this.lb_etat.Name = "lb_etat";
             this.lb_etat.Size = new System.Drawing.Size(104, 13);
             this.lb_etat.TabIndex = 1;
@@ -600,7 +652,6 @@
             // 
             // btn_mosaique
             // 
-            this.btn_mosaique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mosaique.Location = new System.Drawing.Point(252, 14);
             this.btn_mosaique.Name = "btn_mosaique";
             this.btn_mosaique.Size = new System.Drawing.Size(75, 23);
@@ -611,7 +662,6 @@
             // 
             // btn_detail
             // 
-            this.btn_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_detail.Location = new System.Drawing.Point(154, 14);
             this.btn_detail.Name = "btn_detail";
             this.btn_detail.Size = new System.Drawing.Size(75, 23);
@@ -622,7 +672,6 @@
             // 
             // btn_list
             // 
-            this.btn_list.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_list.Location = new System.Drawing.Point(53, 14);
             this.btn_list.Name = "btn_list";
             this.btn_list.Size = new System.Drawing.Size(75, 23);
@@ -631,35 +680,36 @@
             this.btn_list.UseVisualStyleBackColor = true;
             this.btn_list.Click += new System.EventHandler(this.btn_list_Click);
             // 
-            // textBox5
+            // grp_search
             // 
-            this.textBox5.Location = new System.Drawing.Point(29, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(80, 20);
-            this.textBox5.TabIndex = 2;
-            this.textBox5.Text = "Stock : 2";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.grp_search.Controls.Add(this.txt_search);
+            this.grp_search.Location = new System.Drawing.Point(3, 564);
+            this.grp_search.Name = "grp_search";
+            this.grp_search.Size = new System.Drawing.Size(809, 38);
+            this.grp_search.TabIndex = 2;
+            this.grp_search.TabStop = false;
+            this.grp_search.Text = "Recherche";
             // 
-            // textBox6
+            // txt_search
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(80, 20);
-            this.textBox6.TabIndex = 2;
-            this.textBox6.Text = "Stock : 2";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_search.Location = new System.Drawing.Point(66, 13);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(258, 20);
+            this.txt_search.TabIndex = 0;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // Form_Catalogue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 552);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(815, 606);
+            this.Controls.Add(this.grp_search);
+            this.Controls.Add(this.grp_affichage);
             this.Controls.Add(this.panel_parent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(831, 591);
-            this.MinimumSize = new System.Drawing.Size(831, 591);
+            this.MaximumSize = new System.Drawing.Size(831, 645);
+            this.MinimumSize = new System.Drawing.Size(831, 645);
             this.Name = "Form_Catalogue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogue";
@@ -687,14 +737,18 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel_art.ResumeLayout(false);
             this.panel_art.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_article)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grp_affichage.ResumeLayout(false);
+            this.grp_affichage.PerformLayout();
+            this.grp_search.ResumeLayout(false);
+            this.grp_search.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -718,8 +772,7 @@
         private System.Windows.Forms.Label lb_puv;
         private System.Windows.Forms.Label lb_datesave;
         private System.Windows.Forms.Label lb_marque;
-        private System.Windows.Forms.RichTextBox txt_description;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grp_affichage;
         private System.Windows.Forms.Button btn_mosaique;
         private System.Windows.Forms.Button btn_detail;
         private System.Windows.Forms.Button btn_list;
@@ -754,5 +807,11 @@
         private System.Windows.Forms.Label lb_etat;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.GroupBox grp_search;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem vueToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RichTextBox txt_description;
     }
 }

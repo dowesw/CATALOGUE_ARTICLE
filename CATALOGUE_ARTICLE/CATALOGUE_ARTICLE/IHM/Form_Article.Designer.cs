@@ -30,11 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Article));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grp_action = new System.Windows.Forms.GroupBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grp_liste = new System.Windows.Forms.GroupBox();
             this.dgv_liste = new System.Windows.Forms.DataGridView();
             this.id_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reference_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,13 +44,14 @@
             this.puv_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.famille_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txt_search = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tab_infos = new System.Windows.Forms.TabPage();
+            this.btn_add_marque = new System.Windows.Forms.Button();
+            this.btn_add_famille = new System.Windows.Forms.Button();
+            this.box_photo = new System.Windows.Forms.PictureBox();
             this.txt_stock = new System.Windows.Forms.TextBox();
+            this.com_marque = new System.Windows.Forms.ComboBox();
             this.com_famille = new System.Windows.Forms.ComboBox();
-            this.txt_marque = new System.Windows.Forms.TextBox();
             this.txt_designation = new System.Windows.Forms.TextBox();
             this.txt_reference = new System.Windows.Forms.TextBox();
             this.txt_puv = new System.Windows.Forms.NumericUpDown();
@@ -58,16 +59,16 @@
             this.dat_save = new System.Windows.Forms.DateTimePicker();
             this.dat_update = new System.Windows.Forms.DateTimePicker();
             this.txt_description = new System.Windows.Forms.RichTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_dateupdate = new System.Windows.Forms.Label();
+            this.lb_datesave = new System.Windows.Forms.Label();
+            this.lb_prixv = new System.Windows.Forms.Label();
+            this.lb_famille = new System.Windows.Forms.Label();
+            this.lb_marque = new System.Windows.Forms.Label();
+            this.lb_description = new System.Windows.Forms.Label();
+            this.lb_designation = new System.Windows.Forms.Label();
+            this.lb_reference = new System.Windows.Forms.Label();
+            this.lb_stock = new System.Windows.Forms.Label();
+            this.lb_prixa = new System.Windows.Forms.Label();
             this.tab_photo = new System.Windows.Forms.TabPage();
             this.lk_box_add_8 = new System.Windows.Forms.LinkLabel();
             this.lk_box_add_7 = new System.Windows.Forms.LinkLabel();
@@ -85,12 +86,18 @@
             this.box_add_2 = new System.Windows.Forms.PictureBox();
             this.box_add_5 = new System.Windows.Forms.PictureBox();
             this.box_add_1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grp_search = new System.Windows.Forms.GroupBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.lb_by_marque = new System.Windows.Forms.Label();
+            this.txt_search_marque = new System.Windows.Forms.TextBox();
+            this.lb_by_famille = new System.Windows.Forms.Label();
+            this.txt_search_famille = new System.Windows.Forms.TextBox();
+            this.grp_action.SuspendLayout();
+            this.grp_liste.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tab_infos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box_photo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_puv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_pua)).BeginInit();
             this.tab_photo.SuspendLayout();
@@ -102,19 +109,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.box_add_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box_add_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.box_add_1)).BeginInit();
+            this.grp_search.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grp_action
             // 
-            this.groupBox1.Controls.Add(this.btn_delete);
-            this.groupBox1.Controls.Add(this.btn_cancel);
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Location = new System.Drawing.Point(651, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(106, 125);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
+            this.grp_action.Controls.Add(this.btn_delete);
+            this.grp_action.Controls.Add(this.btn_cancel);
+            this.grp_action.Controls.Add(this.btn_save);
+            this.grp_action.Location = new System.Drawing.Point(849, 12);
+            this.grp_action.Name = "grp_action";
+            this.grp_action.Size = new System.Drawing.Size(105, 125);
+            this.grp_action.TabIndex = 0;
+            this.grp_action.TabStop = false;
+            this.grp_action.Text = "Actions";
             // 
             // btn_delete
             // 
@@ -153,15 +161,15 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // groupBox3
+            // grp_liste
             // 
-            this.groupBox3.Controls.Add(this.dgv_liste);
-            this.groupBox3.Location = new System.Drawing.Point(12, 357);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(745, 263);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Liste";
+            this.grp_liste.Controls.Add(this.dgv_liste);
+            this.grp_liste.Location = new System.Drawing.Point(12, 381);
+            this.grp_liste.Name = "grp_liste";
+            this.grp_liste.Size = new System.Drawing.Size(942, 263);
+            this.grp_liste.TabIndex = 2;
+            this.grp_liste.TabStop = false;
+            this.grp_liste.Text = "Liste";
             // 
             // dgv_liste
             // 
@@ -184,7 +192,7 @@
             this.dgv_liste.Name = "dgv_liste";
             this.dgv_liste.ReadOnly = true;
             this.dgv_liste.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_liste.Size = new System.Drawing.Size(739, 244);
+            this.dgv_liste.Size = new System.Drawing.Size(936, 244);
             this.dgv_liste.TabIndex = 0;
             this.dgv_liste.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_CellContentClick);
             this.dgv_liste.SelectionChanged += new System.EventHandler(this.dgv_list_SelectionChanged);
@@ -250,63 +258,79 @@
             this.supp.Name = "supp";
             this.supp.ReadOnly = true;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.txt_search);
-            this.groupBox4.Location = new System.Drawing.Point(12, 626);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(725, 46);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Recherche";
-            // 
-            // txt_search
-            // 
-            this.txt_search.Location = new System.Drawing.Point(35, 16);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(598, 20);
-            this.txt_search.TabIndex = 33;
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tab_infos);
             this.tabControl1.Controls.Add(this.tab_photo);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(633, 339);
+            this.tabControl1.Size = new System.Drawing.Size(831, 305);
             this.tabControl1.TabIndex = 4;
             // 
-            // tabPage1
+            // tab_infos
             // 
-            this.tabPage1.Controls.Add(this.txt_stock);
-            this.tabPage1.Controls.Add(this.com_famille);
-            this.tabPage1.Controls.Add(this.txt_marque);
-            this.tabPage1.Controls.Add(this.txt_designation);
-            this.tabPage1.Controls.Add(this.txt_reference);
-            this.tabPage1.Controls.Add(this.txt_puv);
-            this.tabPage1.Controls.Add(this.txt_pua);
-            this.tabPage1.Controls.Add(this.dat_save);
-            this.tabPage1.Controls.Add(this.dat_update);
-            this.tabPage1.Controls.Add(this.txt_description);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(625, 313);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Informations";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tab_infos.Controls.Add(this.btn_add_marque);
+            this.tab_infos.Controls.Add(this.btn_add_famille);
+            this.tab_infos.Controls.Add(this.box_photo);
+            this.tab_infos.Controls.Add(this.txt_stock);
+            this.tab_infos.Controls.Add(this.com_marque);
+            this.tab_infos.Controls.Add(this.com_famille);
+            this.tab_infos.Controls.Add(this.txt_designation);
+            this.tab_infos.Controls.Add(this.txt_reference);
+            this.tab_infos.Controls.Add(this.txt_puv);
+            this.tab_infos.Controls.Add(this.txt_pua);
+            this.tab_infos.Controls.Add(this.dat_save);
+            this.tab_infos.Controls.Add(this.dat_update);
+            this.tab_infos.Controls.Add(this.txt_description);
+            this.tab_infos.Controls.Add(this.lb_dateupdate);
+            this.tab_infos.Controls.Add(this.lb_datesave);
+            this.tab_infos.Controls.Add(this.lb_prixv);
+            this.tab_infos.Controls.Add(this.lb_famille);
+            this.tab_infos.Controls.Add(this.lb_marque);
+            this.tab_infos.Controls.Add(this.lb_description);
+            this.tab_infos.Controls.Add(this.lb_designation);
+            this.tab_infos.Controls.Add(this.lb_reference);
+            this.tab_infos.Controls.Add(this.lb_stock);
+            this.tab_infos.Controls.Add(this.lb_prixa);
+            this.tab_infos.Location = new System.Drawing.Point(4, 22);
+            this.tab_infos.Name = "tab_infos";
+            this.tab_infos.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_infos.Size = new System.Drawing.Size(823, 279);
+            this.tab_infos.TabIndex = 0;
+            this.tab_infos.Text = "Informations";
+            this.tab_infos.UseVisualStyleBackColor = true;
+            // 
+            // btn_add_marque
+            // 
+            this.btn_add_marque.Image = global::CATALOGUE_ARTICLE.Properties.Resources.add;
+            this.btn_add_marque.Location = new System.Drawing.Point(261, 105);
+            this.btn_add_marque.Name = "btn_add_marque";
+            this.btn_add_marque.Size = new System.Drawing.Size(23, 23);
+            this.btn_add_marque.TabIndex = 43;
+            this.btn_add_marque.UseVisualStyleBackColor = true;
+            this.btn_add_marque.Click += new System.EventHandler(this.btn_add_marque_Click);
+            // 
+            // btn_add_famille
+            // 
+            this.btn_add_famille.Image = global::CATALOGUE_ARTICLE.Properties.Resources.add;
+            this.btn_add_famille.Location = new System.Drawing.Point(261, 74);
+            this.btn_add_famille.Name = "btn_add_famille";
+            this.btn_add_famille.Size = new System.Drawing.Size(23, 23);
+            this.btn_add_famille.TabIndex = 43;
+            this.btn_add_famille.UseVisualStyleBackColor = true;
+            this.btn_add_famille.Click += new System.EventHandler(this.btn_add_famille_Click);
+            // 
+            // box_photo
+            // 
+            this.box_photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.box_photo.Image = global::CATALOGUE_ARTICLE.Properties.Resources.article;
+            this.box_photo.Location = new System.Drawing.Point(656, 16);
+            this.box_photo.Name = "box_photo";
+            this.box_photo.Size = new System.Drawing.Size(149, 138);
+            this.box_photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.box_photo.TabIndex = 42;
+            this.box_photo.TabStop = false;
             // 
             // txt_stock
             // 
@@ -320,21 +344,23 @@
             this.txt_stock.Text = "0";
             this.txt_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // com_marque
+            // 
+            this.com_marque.FormattingEnabled = true;
+            this.com_marque.Location = new System.Drawing.Point(100, 106);
+            this.com_marque.Name = "com_marque";
+            this.com_marque.Size = new System.Drawing.Size(155, 21);
+            this.com_marque.TabIndex = 35;
+            this.com_marque.SelectedIndexChanged += new System.EventHandler(this.com_marque_SelectedIndexChanged);
+            // 
             // com_famille
             // 
             this.com_famille.FormattingEnabled = true;
             this.com_famille.Location = new System.Drawing.Point(100, 75);
             this.com_famille.Name = "com_famille";
-            this.com_famille.Size = new System.Drawing.Size(184, 21);
+            this.com_famille.Size = new System.Drawing.Size(155, 21);
             this.com_famille.TabIndex = 35;
             this.com_famille.SelectedIndexChanged += new System.EventHandler(this.com_famille_SelectedIndexChanged);
-            // 
-            // txt_marque
-            // 
-            this.txt_marque.Location = new System.Drawing.Point(100, 106);
-            this.txt_marque.Name = "txt_marque";
-            this.txt_marque.Size = new System.Drawing.Size(184, 20);
-            this.txt_marque.TabIndex = 36;
             // 
             // txt_designation
             // 
@@ -406,99 +432,101 @@
             // 
             this.txt_description.Location = new System.Drawing.Point(19, 187);
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(600, 118);
+            this.txt_description.Size = new System.Drawing.Size(786, 71);
             this.txt_description.TabIndex = 40;
             this.txt_description.Text = "";
+            this.txt_description.Enter += new System.EventHandler(this.txt_description_Enter);
+            this.txt_description.Leave += new System.EventHandler(this.txt_description_Leave);
             // 
-            // label9
+            // lb_dateupdate
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(326, 141);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 13);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Date Modification : ";
+            this.lb_dateupdate.AutoSize = true;
+            this.lb_dateupdate.Location = new System.Drawing.Point(326, 141);
+            this.lb_dateupdate.Name = "lb_dateupdate";
+            this.lb_dateupdate.Size = new System.Drawing.Size(99, 13);
+            this.lb_dateupdate.TabIndex = 26;
+            this.lb_dateupdate.Text = "Date Modification : ";
             // 
-            // label8
+            // lb_datesave
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Date Création : ";
+            this.lb_datesave.AutoSize = true;
+            this.lb_datesave.Location = new System.Drawing.Point(16, 141);
+            this.lb_datesave.Name = "lb_datesave";
+            this.lb_datesave.Size = new System.Drawing.Size(81, 13);
+            this.lb_datesave.TabIndex = 25;
+            this.lb_datesave.Text = "Date Création : ";
             // 
-            // label7
+            // lb_prixv
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(326, 109);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Prix.V : ";
+            this.lb_prixv.AutoSize = true;
+            this.lb_prixv.Location = new System.Drawing.Point(326, 109);
+            this.lb_prixv.Name = "lb_prixv";
+            this.lb_prixv.Size = new System.Drawing.Size(43, 13);
+            this.lb_prixv.TabIndex = 24;
+            this.lb_prixv.Text = "Prix.V : ";
             // 
-            // label6
+            // lb_famille
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Famille : ";
+            this.lb_famille.AutoSize = true;
+            this.lb_famille.Location = new System.Drawing.Point(16, 78);
+            this.lb_famille.Name = "lb_famille";
+            this.lb_famille.Size = new System.Drawing.Size(48, 13);
+            this.lb_famille.TabIndex = 23;
+            this.lb_famille.Text = "Famille : ";
             // 
-            // label5
+            // lb_marque
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Marque : ";
+            this.lb_marque.AutoSize = true;
+            this.lb_marque.Location = new System.Drawing.Point(16, 109);
+            this.lb_marque.Name = "lb_marque";
+            this.lb_marque.Size = new System.Drawing.Size(52, 13);
+            this.lb_marque.TabIndex = 22;
+            this.lb_marque.Text = "Marque : ";
             // 
-            // label4
+            // lb_description
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Déscription : ";
+            this.lb_description.AutoSize = true;
+            this.lb_description.Location = new System.Drawing.Point(16, 171);
+            this.lb_description.Name = "lb_description";
+            this.lb_description.Size = new System.Drawing.Size(69, 13);
+            this.lb_description.TabIndex = 21;
+            this.lb_description.Text = "Description : ";
             // 
-            // label3
+            // lb_designation
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Désignation : ";
+            this.lb_designation.AutoSize = true;
+            this.lb_designation.Location = new System.Drawing.Point(16, 47);
+            this.lb_designation.Name = "lb_designation";
+            this.lb_designation.Size = new System.Drawing.Size(72, 13);
+            this.lb_designation.TabIndex = 20;
+            this.lb_designation.Text = "Désignation : ";
             // 
-            // label2
+            // lb_reference
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Réference : ";
+            this.lb_reference.AutoSize = true;
+            this.lb_reference.Location = new System.Drawing.Point(16, 16);
+            this.lb_reference.Name = "lb_reference";
+            this.lb_reference.Size = new System.Drawing.Size(66, 13);
+            this.lb_reference.TabIndex = 19;
+            this.lb_reference.Text = "Reférence : ";
             // 
-            // label10
+            // lb_stock
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(326, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Stock";
+            this.lb_stock.AutoSize = true;
+            this.lb_stock.Location = new System.Drawing.Point(326, 16);
+            this.lb_stock.Name = "lb_stock";
+            this.lb_stock.Size = new System.Drawing.Size(35, 13);
+            this.lb_stock.TabIndex = 18;
+            this.lb_stock.Text = "Stock";
             // 
-            // label1
+            // lb_prixa
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Prix.A : ";
+            this.lb_prixa.AutoSize = true;
+            this.lb_prixa.Location = new System.Drawing.Point(326, 78);
+            this.lb_prixa.Name = "lb_prixa";
+            this.lb_prixa.Size = new System.Drawing.Size(43, 13);
+            this.lb_prixa.TabIndex = 18;
+            this.lb_prixa.Text = "Prix.A : ";
             // 
             // tab_photo
             // 
@@ -521,7 +549,7 @@
             this.tab_photo.Location = new System.Drawing.Point(4, 22);
             this.tab_photo.Name = "tab_photo";
             this.tab_photo.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_photo.Size = new System.Drawing.Size(625, 313);
+            this.tab_photo.Size = new System.Drawing.Size(823, 279);
             this.tab_photo.TabIndex = 1;
             this.tab_photo.Text = "Photos";
             this.tab_photo.UseVisualStyleBackColor = true;
@@ -529,7 +557,7 @@
             // lk_box_add_8
             // 
             this.lk_box_add_8.AutoSize = true;
-            this.lk_box_add_8.Location = new System.Drawing.Point(558, 294);
+            this.lk_box_add_8.Location = new System.Drawing.Point(731, 254);
             this.lk_box_add_8.Name = "lk_box_add_8";
             this.lk_box_add_8.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_8.TabIndex = 1;
@@ -540,7 +568,7 @@
             // lk_box_add_7
             // 
             this.lk_box_add_7.AutoSize = true;
-            this.lk_box_add_7.Location = new System.Drawing.Point(403, 294);
+            this.lk_box_add_7.Location = new System.Drawing.Point(525, 254);
             this.lk_box_add_7.Name = "lk_box_add_7";
             this.lk_box_add_7.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_7.TabIndex = 1;
@@ -551,7 +579,7 @@
             // lk_box_add_4
             // 
             this.lk_box_add_4.AutoSize = true;
-            this.lk_box_add_4.Location = new System.Drawing.Point(558, 120);
+            this.lk_box_add_4.Location = new System.Drawing.Point(732, 120);
             this.lk_box_add_4.Name = "lk_box_add_4";
             this.lk_box_add_4.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_4.TabIndex = 1;
@@ -562,7 +590,7 @@
             // lk_box_add_6
             // 
             this.lk_box_add_6.AutoSize = true;
-            this.lk_box_add_6.Location = new System.Drawing.Point(247, 294);
+            this.lk_box_add_6.Location = new System.Drawing.Point(314, 254);
             this.lk_box_add_6.Name = "lk_box_add_6";
             this.lk_box_add_6.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_6.TabIndex = 1;
@@ -573,7 +601,7 @@
             // lk_box_add_3
             // 
             this.lk_box_add_3.AutoSize = true;
-            this.lk_box_add_3.Location = new System.Drawing.Point(403, 120);
+            this.lk_box_add_3.Location = new System.Drawing.Point(526, 120);
             this.lk_box_add_3.Name = "lk_box_add_3";
             this.lk_box_add_3.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_3.TabIndex = 1;
@@ -584,7 +612,7 @@
             // lk_box_add_5
             // 
             this.lk_box_add_5.AutoSize = true;
-            this.lk_box_add_5.Location = new System.Drawing.Point(86, 294);
+            this.lk_box_add_5.Location = new System.Drawing.Point(114, 255);
             this.lk_box_add_5.Name = "lk_box_add_5";
             this.lk_box_add_5.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_5.TabIndex = 1;
@@ -595,7 +623,7 @@
             // lk_box_add_2
             // 
             this.lk_box_add_2.AutoSize = true;
-            this.lk_box_add_2.Location = new System.Drawing.Point(247, 120);
+            this.lk_box_add_2.Location = new System.Drawing.Point(315, 120);
             this.lk_box_add_2.Name = "lk_box_add_2";
             this.lk_box_add_2.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_2.TabIndex = 1;
@@ -606,7 +634,7 @@
             // lk_box_add_1
             // 
             this.lk_box_add_1.AutoSize = true;
-            this.lk_box_add_1.Location = new System.Drawing.Point(86, 120);
+            this.lk_box_add_1.Location = new System.Drawing.Point(114, 120);
             this.lk_box_add_1.Name = "lk_box_add_1";
             this.lk_box_add_1.Size = new System.Drawing.Size(54, 13);
             this.lk_box_add_1.TabIndex = 1;
@@ -618,7 +646,7 @@
             // 
             this.box_add_8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_8.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_8.Location = new System.Drawing.Point(474, 178);
+            this.box_add_8.Location = new System.Drawing.Point(651, 142);
             this.box_add_8.Name = "box_add_8";
             this.box_add_8.Size = new System.Drawing.Size(138, 129);
             this.box_add_8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -631,7 +659,7 @@
             // 
             this.box_add_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_4.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_4.Location = new System.Drawing.Point(475, 6);
+            this.box_add_4.Location = new System.Drawing.Point(652, 6);
             this.box_add_4.Name = "box_add_4";
             this.box_add_4.Size = new System.Drawing.Size(138, 129);
             this.box_add_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -644,7 +672,7 @@
             // 
             this.box_add_7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_7.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_7.Location = new System.Drawing.Point(318, 178);
+            this.box_add_7.Location = new System.Drawing.Point(444, 142);
             this.box_add_7.Name = "box_add_7";
             this.box_add_7.Size = new System.Drawing.Size(138, 129);
             this.box_add_7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -657,7 +685,7 @@
             // 
             this.box_add_6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_6.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_6.Location = new System.Drawing.Point(163, 178);
+            this.box_add_6.Location = new System.Drawing.Point(234, 142);
             this.box_add_6.Name = "box_add_6";
             this.box_add_6.Size = new System.Drawing.Size(138, 129);
             this.box_add_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -670,7 +698,7 @@
             // 
             this.box_add_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_3.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_3.Location = new System.Drawing.Point(319, 7);
+            this.box_add_3.Location = new System.Drawing.Point(445, 7);
             this.box_add_3.Name = "box_add_3";
             this.box_add_3.Size = new System.Drawing.Size(138, 129);
             this.box_add_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -683,7 +711,7 @@
             // 
             this.box_add_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_2.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_2.Location = new System.Drawing.Point(164, 6);
+            this.box_add_2.Location = new System.Drawing.Point(235, 6);
             this.box_add_2.Name = "box_add_2";
             this.box_add_2.Size = new System.Drawing.Size(138, 129);
             this.box_add_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -696,7 +724,7 @@
             // 
             this.box_add_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_5.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_5.Location = new System.Drawing.Point(6, 179);
+            this.box_add_5.Location = new System.Drawing.Point(34, 143);
             this.box_add_5.Name = "box_add_5";
             this.box_add_5.Size = new System.Drawing.Size(138, 129);
             this.box_add_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -709,7 +737,7 @@
             // 
             this.box_add_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box_add_1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.ajouter;
-            this.box_add_1.Location = new System.Drawing.Point(6, 7);
+            this.box_add_1.Location = new System.Drawing.Point(34, 7);
             this.box_add_1.Name = "box_add_1";
             this.box_add_1.Size = new System.Drawing.Size(138, 129);
             this.box_add_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -718,34 +746,92 @@
             this.box_add_1.Tag = "false";
             this.box_add_1.DoubleClick += new System.EventHandler(this.box_add_1_DoubleClick);
             // 
+            // grp_search
+            // 
+            this.grp_search.Controls.Add(this.txt_search);
+            this.grp_search.Controls.Add(this.txt_search_famille);
+            this.grp_search.Controls.Add(this.lb_by_famille);
+            this.grp_search.Controls.Add(this.txt_search_marque);
+            this.grp_search.Controls.Add(this.lb_by_marque);
+            this.grp_search.Location = new System.Drawing.Point(15, 327);
+            this.grp_search.Name = "grp_search";
+            this.grp_search.Size = new System.Drawing.Size(828, 46);
+            this.grp_search.TabIndex = 5;
+            this.grp_search.TabStop = false;
+            this.grp_search.Text = "Recherche";
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(35, 16);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(195, 20);
+            this.txt_search.TabIndex = 33;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            // 
+            // lb_by_marque
+            // 
+            this.lb_by_marque.AutoSize = true;
+            this.lb_by_marque.Location = new System.Drawing.Point(263, 19);
+            this.lb_by_marque.Name = "lb_by_marque";
+            this.lb_by_marque.Size = new System.Drawing.Size(71, 13);
+            this.lb_by_marque.TabIndex = 19;
+            this.lb_by_marque.Text = "Par Marque : ";
+            // 
+            // txt_search_marque
+            // 
+            this.txt_search_marque.Location = new System.Drawing.Point(347, 16);
+            this.txt_search_marque.Name = "txt_search_marque";
+            this.txt_search_marque.Size = new System.Drawing.Size(184, 20);
+            this.txt_search_marque.TabIndex = 32;
+            this.txt_search_marque.TextChanged += new System.EventHandler(this.txt_search_marque_TextChanged);
+            // 
+            // lb_by_famille
+            // 
+            this.lb_by_famille.AutoSize = true;
+            this.lb_by_famille.Location = new System.Drawing.Point(554, 19);
+            this.lb_by_famille.Name = "lb_by_famille";
+            this.lb_by_famille.Size = new System.Drawing.Size(67, 13);
+            this.lb_by_famille.TabIndex = 19;
+            this.lb_by_famille.Text = "Par Famille : ";
+            // 
+            // txt_search_famille
+            // 
+            this.txt_search_famille.Location = new System.Drawing.Point(638, 16);
+            this.txt_search_famille.Name = "txt_search_famille";
+            this.txt_search_famille.Size = new System.Drawing.Size(184, 20);
+            this.txt_search_famille.TabIndex = 32;
+            this.txt_search_famille.TextChanged += new System.EventHandler(this.txt_search_famille_TextChanged);
+            // 
             // Form_Article
             // 
             this.AcceptButton = this.btn_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.CancelButton = this.btn_cancel;
-            this.ClientSize = new System.Drawing.Size(762, 671);
+            this.ClientSize = new System.Drawing.Size(956, 650);
+            this.Controls.Add(this.grp_search);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_liste);
+            this.Controls.Add(this.grp_action);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(778, 710);
-            this.MinimumSize = new System.Drawing.Size(778, 710);
+            this.MaximumSize = new System.Drawing.Size(972, 689);
+            this.MinimumSize = new System.Drawing.Size(972, 689);
             this.Name = "Form_Article";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articles";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Article_FormClosed);
             this.Load += new System.EventHandler(this.Form_Article_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.Enter += new System.EventHandler(this.Form_Article_Enter);
+            this.grp_action.ResumeLayout(false);
+            this.grp_liste.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tab_infos.ResumeLayout(false);
+            this.tab_infos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box_photo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_puv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_pua)).EndInit();
             this.tab_photo.ResumeLayout(false);
@@ -758,22 +844,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.box_add_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box_add_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.box_add_1)).EndInit();
+            this.grp_search.ResumeLayout(false);
+            this.grp_search.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grp_action;
+        private System.Windows.Forms.GroupBox grp_liste;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox com_famille;
-        private System.Windows.Forms.TextBox txt_marque;
+        private System.Windows.Forms.TabPage tab_infos;
         private System.Windows.Forms.TextBox txt_designation;
         private System.Windows.Forms.TextBox txt_reference;
         private System.Windows.Forms.NumericUpDown txt_puv;
@@ -781,15 +866,15 @@
         private System.Windows.Forms.DateTimePicker dat_save;
         private System.Windows.Forms.DateTimePicker dat_update;
         private System.Windows.Forms.RichTextBox txt_description;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_dateupdate;
+        private System.Windows.Forms.Label lb_datesave;
+        private System.Windows.Forms.Label lb_prixv;
+        private System.Windows.Forms.Label lb_famille;
+        private System.Windows.Forms.Label lb_marque;
+        private System.Windows.Forms.Label lb_description;
+        private System.Windows.Forms.Label lb_designation;
+        private System.Windows.Forms.Label lb_reference;
+        private System.Windows.Forms.Label lb_prixa;
         private System.Windows.Forms.TabPage tab_photo;
         private System.Windows.Forms.PictureBox box_add_8;
         private System.Windows.Forms.PictureBox box_add_4;
@@ -808,7 +893,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn puv_;
         private System.Windows.Forms.DataGridViewTextBoxColumn famille_;
         private System.Windows.Forms.DataGridViewTextBoxColumn supp;
-        private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.LinkLabel lk_box_add_1;
         private System.Windows.Forms.LinkLabel lk_box_add_4;
         private System.Windows.Forms.LinkLabel lk_box_add_3;
@@ -818,6 +902,17 @@
         private System.Windows.Forms.LinkLabel lk_box_add_6;
         private System.Windows.Forms.LinkLabel lk_box_add_5;
         private System.Windows.Forms.TextBox txt_stock;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lb_stock;
+        private System.Windows.Forms.PictureBox box_photo;
+        private System.Windows.Forms.GroupBox grp_search;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Button btn_add_marque;
+        private System.Windows.Forms.Button btn_add_famille;
+        public System.Windows.Forms.ComboBox com_famille;
+        public System.Windows.Forms.ComboBox com_marque;
+        private System.Windows.Forms.TextBox txt_search_famille;
+        private System.Windows.Forms.Label lb_by_famille;
+        private System.Windows.Forms.TextBox txt_search_marque;
+        private System.Windows.Forms.Label lb_by_marque;
     }
 }

@@ -77,12 +77,12 @@ namespace CATALOGUE_ARTICLE.DAO
                         y.Reference = lect["reference"].ToString();
                         y.Designation = lect["designation"].ToString();
                         y.Description = lect["description"].ToString();
-                        y.Marque = lect["marque"].ToString();
                         y.Puv = (Double)((lect["puv"] != null) ? (!lect["puv"].ToString().Trim().Equals("") ? lect["puv"] : 0) : 0);
                         y.Pua = (Double)((lect["pua"] != null) ? (!lect["pua"].ToString().Trim().Equals("") ? lect["pua"] : 0) : 0);
                         y.DateSave = (DateTime)((lect["date_save"] != null) ? (!lect["date_save"].ToString().Trim().Equals("") ? lect["date_save"] : DateTime.Now) : DateTime.Now);
                         y.DateUpdate = (DateTime)((lect["date_update"] != null) ? (!lect["date_update"].ToString().Trim().Equals("") ? lect["date_update"] : DateTime.Now) : DateTime.Now);
                         y.Famille = BLL.FamillesArticleBLL.One((Int32)((lect["famille"] != null) ? (!lect["famille"].ToString().Trim().Equals("") ? lect["famille"] : 0) : 0));
+                        y.Marque = BLL.MarqueBLL.One((Int32)((lect["marque"] != null) ? (!lect["marque"].ToString().Trim().Equals("") ? lect["marque"] : 0) : 0));
                         y.Photos = BLL.PhotosArticleBLL.List("select * from photo_article where article = " + id);
                         y.Stock = stock(new Articles(id));
                         y.Update = true;
@@ -165,11 +165,11 @@ namespace CATALOGUE_ARTICLE.DAO
             try
             {
                 string insert = "insert into articles (reference, designation, description, marque, puv, pua, date_save, date_update) values "
-                    + "('" + f.Reference + "','" + f.Designation + "','" + f.Description + "','" + f.Marque + "'," + f.Puv + "," + f.Pua + ",'" + f.DateSave + "','" + f.DateUpdate + "')";
+                    + "('" + f.Reference + "','" + f.Designation + "','" + f.Description + "'," + f.Marque.Id + "," + f.Puv + "," + f.Pua + ",'" + f.DateSave + "','" + f.DateUpdate + "')";
                 if (f.Famille != null ? f.Famille.Id > 0 : false)
                 {
                     insert = "insert into articles (reference, designation, description, marque, puv, pua, date_save, date_update, famille) values "
-                    + "('" + f.Reference + "','" + f.Designation + "','" + f.Description + "','" + f.Marque + "'," + f.Puv + "," + f.Pua + ",'" + f.DateSave + "','" + f.DateUpdate + "'," + f.Famille.Id + ")";
+                    + "('" + f.Reference + "','" + f.Designation + "','" + f.Description + "'," + f.Marque.Id + "," + f.Puv + "," + f.Pua + ",'" + f.DateSave + "','" + f.DateUpdate + "'," + f.Famille.Id + ")";
                 }
                 NpgsqlCommand cmd = new NpgsqlCommand(insert, con);
                 cmd.ExecuteNonQuery();
@@ -193,12 +193,12 @@ namespace CATALOGUE_ARTICLE.DAO
             try
             {
                 string update = "update articles set reference = '" + f.Reference + "', designation = '" + f.Designation + "', description = '" + f.Description + "',"
-                        + " marque = '" + f.Marque + "', puv = " + f.Puv + ", pua = " + f.Pua + ", date_save = '" + f.DateSave + "', date_update = '" + f.DateUpdate + "',"
+                        + " marque = " + f.Marque.Id + ", puv = " + f.Puv + ", pua = " + f.Pua + ", date_save = '" + f.DateSave + "', date_update = '" + f.DateUpdate + "',"
                         + " where id = " + f.Id;
                 if (f.Famille != null ? f.Famille.Id > 0 : false)
                 {
                     update = "update articles set reference = '" + f.Reference + "', designation = '" + f.Designation + "', description = '" + f.Description + "',"
-                        + " marque = '" + f.Marque + "', puv = " + f.Puv + ", pua = " + f.Pua + ", date_save = '" + f.DateSave + "', date_update = '" + f.DateUpdate + "',"
+                        + " marque = " + f.Marque.Id + ", puv = " + f.Puv + ", pua = " + f.Pua + ", date_save = '" + f.DateSave + "', date_update = '" + f.DateUpdate + "',"
                         + " famille = " + f.Famille.Id + " where id = " + f.Id;
                 }
                 NpgsqlCommand cmd = new NpgsqlCommand(update, con);

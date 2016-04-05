@@ -22,6 +22,7 @@ namespace CATALOGUE_ARTICLE.IHM
         public Form_DocStock()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_DocStock_FormClosed(object sender, FormClosedEventArgs e)
@@ -34,6 +35,37 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             LoadAllArticles();
             LoadGrille();
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Document_Stock;
+            grp_action.Text = Mots.Actions;
+            grp_contenu.Text = Mots.Contenu;
+            grp_document.Text = Mots.Document;
+            grp_liste.Text = Mots.Liste;
+            grp_search.Text = Mots.Recherche;
+            grp_type.Text = Mots.Type;
+            lb_reference.Text = Mots.Reference + " :";
+            lb_article.Text = Mots.Article + " :";
+            lb_datesave.Text = Mots.Date_Creation + " :";
+            lb_qte.Text = Mots.Quantite + " :";
+            lb_prix.Text = Mots.Prix + " :";
+            rbtn_entree.Text = Mots.Entree;
+            rbtn_sortie.Text = Mots.Sortie;
+            lb_search.Text = Mots.Recherche + " :";
+            reference_.HeaderText = Mots.Reference;
+            date_.HeaderText = Mots.Date_Creation;
+            type_.HeaderText = Mots.Type;
+            article_.HeaderText = Mots.Article;
+            qte_.HeaderText = Mots.Quantite;
+            prix_.HeaderText = Mots.Prix;
         }
 
         private void LoadAllArticles()
@@ -55,13 +87,17 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void AddRow(DocStock f)
         {
-            dgv_liste.Rows.Add(new object[] { f.Id, f.Icon, f.Reference, f.Date, f.Type.ToString(), null });
+            dgv_liste.Rows.Add(new object[] { f.Id, f.Icon, f.Reference, f.Date, f.Type.Equals(Constantes.MOUV_ENTREE) ? Constantes.MOUV_ENTREE_NAME : Constantes.MOUV_SORTIE_NAME, null });
         }
 
         private void UpdateRow(DocStock f)
         {
-            dgv_liste.Rows.RemoveAt(Utils.GetRowData(dgv_liste, f.Id));
-            AddRow(f);
+            int i = Utils.GetRowData(dgv_liste, f.Id);
+            if (i < 0)
+            {
+                dgv_liste.Rows.RemoveAt(i);
+                AddRow(f);
+            }
         }
 
         private void DeleteRow(DocStock f)
@@ -76,8 +112,12 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void UpdateRowContenu(ContenuStock f)
         {
-            dgv_contenu.Rows.RemoveAt(Utils.GetRowData(dgv_contenu, f.Id));
-            AddRowContenu(f);
+            int i = Utils.GetRowData(dgv_contenu, f.Id);
+            if (i < 0)
+            {
+                dgv_contenu.Rows.RemoveAt(Utils.GetRowData(dgv_contenu, f.Id));
+                AddRowContenu(f);
+            }
         }
 
         private void DeleteRowContenu(ContenuStock f)
@@ -117,6 +157,7 @@ namespace CATALOGUE_ARTICLE.IHM
             rbtn_entree.Enabled = true;
             rbtn_sortie.Enabled = true;
             current = new DocStock();
+            date_save.Focus();
             dgv_contenu.Rows.Clear();
             ResetContenu();
         }
@@ -134,6 +175,7 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             current.Reference = txt_reference.Text.Trim();
             current.Date = date_save.Value;
+
         }
 
         private void RecopieContenu()
@@ -202,6 +244,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         Messages.Succes();
                     }
                 }
+                Reset();
             }
         }
 
@@ -213,7 +256,7 @@ namespace CATALOGUE_ARTICLE.IHM
             }
             else
             {
-                if (DialogResult.Yes == Messages.Confirmation("Annuler"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Annuler.ToLower()))
                 {
                     Reset();
                 }
@@ -224,7 +267,7 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             if (current != null ? current.Id > 0 : false)
             {
-                if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer.ToLower()))
                 {
                     if (DocStockBLL.Delete(current))
                     {
@@ -246,8 +289,8 @@ namespace CATALOGUE_ARTICLE.IHM
                     ContenuStock f = ContenuStockBLL.Save(current_contenu);
                     if (f != null ? f.Id > 0 : false)
                     {
-                        current.Id = f.Id;
-                        current.Update = true;
+                        current_contenu.Id = f.Id;
+                        current_contenu.Update = true;
                         AddRowContenu(f);
                         Messages.Succes();
                         ResetContenu();
@@ -324,7 +367,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         DocStock f = DocStockBLL.One(id);
                         if (e.ColumnIndex == 5)
                         {
-                            if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                            if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer.ToLower()))
                             {
                                 if (DocStockBLL.Delete(f))
                                 {
@@ -382,7 +425,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         ContenuStock f = ContenuStockBLL.One(id);
                         if (e.ColumnIndex == 4)
                         {
-                            if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                            if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer.ToLower()))
                             {
                                 if (ContenuStockBLL.Delete(f))
                                 {
@@ -426,6 +469,36 @@ namespace CATALOGUE_ARTICLE.IHM
             {
                 Messages.Exception(ex);
             }
+        }
+
+        private void com_article_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_add;
+        }
+
+        private void txt_qte_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_add;
+        }
+
+        private void txt_prix_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_add;
+        }
+
+        private void txt_prix_Leave(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_save;
+        }
+
+        private void txt_qte_Leave(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_save;
+        }
+
+        private void com_article_Leave(object sender, EventArgs e)
+        {
+            this.AcceptButton = btn_save;
         }
     }
 }

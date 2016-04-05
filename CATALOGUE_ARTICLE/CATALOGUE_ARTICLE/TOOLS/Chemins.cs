@@ -24,6 +24,11 @@ namespace CATALOGUE_ARTICLE.TOOLS
             return "Software" + Constantes.FILE_SEPARATOR + Constantes.APP_NAME + Constantes.FILE_SEPARATOR + "Parametres";
         }
 
+        public static string getCheminConfiguration()
+        {
+            return "Software" + Constantes.FILE_SEPARATOR + Constantes.APP_NAME + Constantes.FILE_SEPARATOR + "Configurations";
+        }
+
         public static string getCheminArticle()
         {
             string chemin = cheminDefault + Constantes.FILE_SEPARATOR + Constantes.APP_NAME;

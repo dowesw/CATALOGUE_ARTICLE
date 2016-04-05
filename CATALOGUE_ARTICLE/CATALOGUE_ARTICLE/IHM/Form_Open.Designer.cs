@@ -29,77 +29,77 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Open));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grp_gestion_article = new System.Windows.Forms.GroupBox();
+            this.grp_article = new System.Windows.Forms.GroupBox();
             this.box_article = new System.Windows.Forms.PictureBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grp_accessoire = new System.Windows.Forms.GroupBox();
             this.box_famille = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grp_catalogue = new System.Windows.Forms.GroupBox();
             this.box_catalogue = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_open = new System.Windows.Forms.Button();
             this.txt_name_form = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grp_stock = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lb_nom = new System.Windows.Forms.Label();
+            this.grp_gestion_stock = new System.Windows.Forms.GroupBox();
+            this.grp_mouv_stock = new System.Windows.Forms.GroupBox();
             this.box_mouv = new System.Windows.Forms.PictureBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.grp_inventaire = new System.Windows.Forms.GroupBox();
             this.box_inventaire = new System.Windows.Forms.PictureBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.grp_doc_stock = new System.Windows.Forms.GroupBox();
             this.box_doc = new System.Windows.Forms.PictureBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.grp_gestion_user = new System.Windows.Forms.GroupBox();
+            this.grp_parametre = new System.Windows.Forms.GroupBox();
             this.box_setting = new System.Windows.Forms.PictureBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.grp_autorisation = new System.Windows.Forms.GroupBox();
             this.box_acces = new System.Windows.Forms.PictureBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.grp_users = new System.Windows.Forms.GroupBox();
             this.box_users = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grp_gestion_article.SuspendLayout();
+            this.grp_article.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_article)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.grp_accessoire.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_famille)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.grp_catalogue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_catalogue)).BeginInit();
             this.panel1.SuspendLayout();
-            this.grp_stock.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.grp_gestion_stock.SuspendLayout();
+            this.grp_mouv_stock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_mouv)).BeginInit();
-            this.groupBox7.SuspendLayout();
+            this.grp_inventaire.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_inventaire)).BeginInit();
-            this.groupBox8.SuspendLayout();
+            this.grp_doc_stock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_doc)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
+            this.grp_gestion_user.SuspendLayout();
+            this.grp_parametre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_setting)).BeginInit();
-            this.groupBox11.SuspendLayout();
+            this.grp_autorisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_acces)).BeginInit();
-            this.groupBox12.SuspendLayout();
+            this.grp_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_users)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grp_gestion_article
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(516, 166);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Gestion Articles";
+            this.grp_gestion_article.Controls.Add(this.grp_article);
+            this.grp_gestion_article.Controls.Add(this.grp_accessoire);
+            this.grp_gestion_article.Controls.Add(this.grp_catalogue);
+            this.grp_gestion_article.Location = new System.Drawing.Point(12, 12);
+            this.grp_gestion_article.Name = "grp_gestion_article";
+            this.grp_gestion_article.Size = new System.Drawing.Size(516, 166);
+            this.grp_gestion_article.TabIndex = 0;
+            this.grp_gestion_article.TabStop = false;
+            this.grp_gestion_article.Text = "Gestion Articles";
             // 
-            // groupBox3
+            // grp_article
             // 
-            this.groupBox3.Controls.Add(this.box_article);
-            this.groupBox3.Location = new System.Drawing.Point(360, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(149, 141);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Articles";
+            this.grp_article.Controls.Add(this.box_article);
+            this.grp_article.Location = new System.Drawing.Point(360, 19);
+            this.grp_article.Name = "grp_article";
+            this.grp_article.Size = new System.Drawing.Size(149, 141);
+            this.grp_article.TabIndex = 0;
+            this.grp_article.TabStop = false;
+            this.grp_article.Text = "Articles";
             // 
             // box_article
             // 
@@ -115,15 +115,15 @@
             this.box_article.Click += new System.EventHandler(this.pic_article_Click);
             this.box_article.DoubleClick += new System.EventHandler(this.pic_article_DoubleClick);
             // 
-            // groupBox4
+            // grp_accessoire
             // 
-            this.groupBox4.Controls.Add(this.box_famille);
-            this.groupBox4.Location = new System.Drawing.Point(181, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(149, 141);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Familles Article";
+            this.grp_accessoire.Controls.Add(this.box_famille);
+            this.grp_accessoire.Location = new System.Drawing.Point(181, 19);
+            this.grp_accessoire.Name = "grp_accessoire";
+            this.grp_accessoire.Size = new System.Drawing.Size(149, 141);
+            this.grp_accessoire.TabIndex = 0;
+            this.grp_accessoire.TabStop = false;
+            this.grp_accessoire.Text = "Accessoires Article";
             // 
             // box_famille
             // 
@@ -139,15 +139,15 @@
             this.box_famille.Click += new System.EventHandler(this.pic_famille_Click);
             this.box_famille.DoubleClick += new System.EventHandler(this.pic_famille_DoubleClick);
             // 
-            // groupBox2
+            // grp_catalogue
             // 
-            this.groupBox2.Controls.Add(this.box_catalogue);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(149, 141);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Catalogue Article";
+            this.grp_catalogue.Controls.Add(this.box_catalogue);
+            this.grp_catalogue.Location = new System.Drawing.Point(6, 19);
+            this.grp_catalogue.Name = "grp_catalogue";
+            this.grp_catalogue.Size = new System.Drawing.Size(149, 141);
+            this.grp_catalogue.TabIndex = 0;
+            this.grp_catalogue.TabStop = false;
+            this.grp_catalogue.Text = "Catalogue Article";
             // 
             // box_catalogue
             // 
@@ -170,7 +170,7 @@
             this.panel1.Controls.Add(this.btn_cancel);
             this.panel1.Controls.Add(this.btn_open);
             this.panel1.Controls.Add(this.txt_name_form);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lb_nom);
             this.panel1.Location = new System.Drawing.Point(-1, 535);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(537, 33);
@@ -204,36 +204,36 @@
             this.txt_name_form.Size = new System.Drawing.Size(300, 20);
             this.txt_name_form.TabIndex = 1;
             // 
-            // label1
+            // lb_nom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom : ";
+            this.lb_nom.AutoSize = true;
+            this.lb_nom.Location = new System.Drawing.Point(7, 11);
+            this.lb_nom.Name = "lb_nom";
+            this.lb_nom.Size = new System.Drawing.Size(38, 13);
+            this.lb_nom.TabIndex = 0;
+            this.lb_nom.Text = "Nom : ";
             // 
-            // grp_stock
+            // grp_gestion_stock
             // 
-            this.grp_stock.Controls.Add(this.groupBox6);
-            this.grp_stock.Controls.Add(this.groupBox7);
-            this.grp_stock.Controls.Add(this.groupBox8);
-            this.grp_stock.Location = new System.Drawing.Point(12, 184);
-            this.grp_stock.Name = "grp_stock";
-            this.grp_stock.Size = new System.Drawing.Size(516, 166);
-            this.grp_stock.TabIndex = 0;
-            this.grp_stock.TabStop = false;
-            this.grp_stock.Text = "Gestion Stock";
+            this.grp_gestion_stock.Controls.Add(this.grp_mouv_stock);
+            this.grp_gestion_stock.Controls.Add(this.grp_inventaire);
+            this.grp_gestion_stock.Controls.Add(this.grp_doc_stock);
+            this.grp_gestion_stock.Location = new System.Drawing.Point(12, 184);
+            this.grp_gestion_stock.Name = "grp_gestion_stock";
+            this.grp_gestion_stock.Size = new System.Drawing.Size(516, 166);
+            this.grp_gestion_stock.TabIndex = 0;
+            this.grp_gestion_stock.TabStop = false;
+            this.grp_gestion_stock.Text = "Gestion Stock";
             // 
-            // groupBox6
+            // grp_mouv_stock
             // 
-            this.groupBox6.Controls.Add(this.box_mouv);
-            this.groupBox6.Location = new System.Drawing.Point(360, 19);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(149, 141);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Mouvement Stock";
+            this.grp_mouv_stock.Controls.Add(this.box_mouv);
+            this.grp_mouv_stock.Location = new System.Drawing.Point(360, 19);
+            this.grp_mouv_stock.Name = "grp_mouv_stock";
+            this.grp_mouv_stock.Size = new System.Drawing.Size(149, 141);
+            this.grp_mouv_stock.TabIndex = 0;
+            this.grp_mouv_stock.TabStop = false;
+            this.grp_mouv_stock.Text = "Mouvement Stock";
             // 
             // box_mouv
             // 
@@ -249,16 +249,16 @@
             this.box_mouv.Click += new System.EventHandler(this.box_mouv_Click);
             this.box_mouv.DoubleClick += new System.EventHandler(this.box_mouv_DoubleClick);
             // 
-            // groupBox7
+            // grp_inventaire
             // 
-            this.groupBox7.Controls.Add(this.box_inventaire);
-            this.groupBox7.Location = new System.Drawing.Point(181, 19);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(149, 141);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Inventaire";
-            this.groupBox7.Visible = false;
+            this.grp_inventaire.Controls.Add(this.box_inventaire);
+            this.grp_inventaire.Location = new System.Drawing.Point(181, 19);
+            this.grp_inventaire.Name = "grp_inventaire";
+            this.grp_inventaire.Size = new System.Drawing.Size(149, 141);
+            this.grp_inventaire.TabIndex = 0;
+            this.grp_inventaire.TabStop = false;
+            this.grp_inventaire.Text = "Inventaire";
+            this.grp_inventaire.Visible = false;
             // 
             // box_inventaire
             // 
@@ -274,15 +274,15 @@
             this.box_inventaire.Click += new System.EventHandler(this.box_inventaire_Click);
             this.box_inventaire.DoubleClick += new System.EventHandler(this.box_inventaire_DoubleClick);
             // 
-            // groupBox8
+            // grp_doc_stock
             // 
-            this.groupBox8.Controls.Add(this.box_doc);
-            this.groupBox8.Location = new System.Drawing.Point(6, 19);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(149, 141);
-            this.groupBox8.TabIndex = 0;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Document Stock";
+            this.grp_doc_stock.Controls.Add(this.box_doc);
+            this.grp_doc_stock.Location = new System.Drawing.Point(6, 19);
+            this.grp_doc_stock.Name = "grp_doc_stock";
+            this.grp_doc_stock.Size = new System.Drawing.Size(149, 141);
+            this.grp_doc_stock.TabIndex = 0;
+            this.grp_doc_stock.TabStop = false;
+            this.grp_doc_stock.Text = "Document Stock";
             // 
             // box_doc
             // 
@@ -299,27 +299,27 @@
             this.box_doc.Click += new System.EventHandler(this.box_doc_Click);
             this.box_doc.DoubleClick += new System.EventHandler(this.box_doc_DoubleClick);
             // 
-            // groupBox9
+            // grp_gestion_user
             // 
-            this.groupBox9.Controls.Add(this.groupBox10);
-            this.groupBox9.Controls.Add(this.groupBox11);
-            this.groupBox9.Controls.Add(this.groupBox12);
-            this.groupBox9.Location = new System.Drawing.Point(12, 356);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(516, 166);
-            this.groupBox9.TabIndex = 0;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Gestion users";
+            this.grp_gestion_user.Controls.Add(this.grp_parametre);
+            this.grp_gestion_user.Controls.Add(this.grp_autorisation);
+            this.grp_gestion_user.Controls.Add(this.grp_users);
+            this.grp_gestion_user.Location = new System.Drawing.Point(12, 356);
+            this.grp_gestion_user.Name = "grp_gestion_user";
+            this.grp_gestion_user.Size = new System.Drawing.Size(516, 166);
+            this.grp_gestion_user.TabIndex = 0;
+            this.grp_gestion_user.TabStop = false;
+            this.grp_gestion_user.Text = "Gestion users";
             // 
-            // groupBox10
+            // grp_parametre
             // 
-            this.groupBox10.Controls.Add(this.box_setting);
-            this.groupBox10.Location = new System.Drawing.Point(360, 19);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(149, 141);
-            this.groupBox10.TabIndex = 0;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Paramètres";
+            this.grp_parametre.Controls.Add(this.box_setting);
+            this.grp_parametre.Location = new System.Drawing.Point(360, 19);
+            this.grp_parametre.Name = "grp_parametre";
+            this.grp_parametre.Size = new System.Drawing.Size(149, 141);
+            this.grp_parametre.TabIndex = 0;
+            this.grp_parametre.TabStop = false;
+            this.grp_parametre.Text = "Paramètres";
             // 
             // box_setting
             // 
@@ -335,15 +335,15 @@
             this.box_setting.Click += new System.EventHandler(this.box_setting_Click);
             this.box_setting.DoubleClick += new System.EventHandler(this.box_setting_DoubleClick);
             // 
-            // groupBox11
+            // grp_autorisation
             // 
-            this.groupBox11.Controls.Add(this.box_acces);
-            this.groupBox11.Location = new System.Drawing.Point(181, 19);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(149, 141);
-            this.groupBox11.TabIndex = 0;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Autorisation";
+            this.grp_autorisation.Controls.Add(this.box_acces);
+            this.grp_autorisation.Location = new System.Drawing.Point(181, 19);
+            this.grp_autorisation.Name = "grp_autorisation";
+            this.grp_autorisation.Size = new System.Drawing.Size(149, 141);
+            this.grp_autorisation.TabIndex = 0;
+            this.grp_autorisation.TabStop = false;
+            this.grp_autorisation.Text = "Autorisation";
             // 
             // box_acces
             // 
@@ -359,15 +359,15 @@
             this.box_acces.Click += new System.EventHandler(this.box_acces_Click);
             this.box_acces.DoubleClick += new System.EventHandler(this.box_acces_DoubleClick);
             // 
-            // groupBox12
+            // grp_users
             // 
-            this.groupBox12.Controls.Add(this.box_users);
-            this.groupBox12.Location = new System.Drawing.Point(6, 19);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(149, 141);
-            this.groupBox12.TabIndex = 0;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Utilisateurs";
+            this.grp_users.Controls.Add(this.box_users);
+            this.grp_users.Location = new System.Drawing.Point(6, 19);
+            this.grp_users.Name = "grp_users";
+            this.grp_users.Size = new System.Drawing.Size(149, 141);
+            this.grp_users.TabIndex = 0;
+            this.grp_users.TabStop = false;
+            this.grp_users.Text = "Utilisateurs";
             // 
             // box_users
             // 
@@ -389,12 +389,13 @@
             this.AcceptButton = this.btn_open;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.CancelButton = this.btn_cancel;
             this.ClientSize = new System.Drawing.Size(535, 568);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox9);
-            this.Controls.Add(this.grp_stock);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_gestion_user);
+            this.Controls.Add(this.grp_gestion_stock);
+            this.Controls.Add(this.grp_gestion_article);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(551, 607);
@@ -404,28 +405,28 @@
             this.Text = "Ouvrir";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Open_FormClosed);
             this.Load += new System.EventHandler(this.Form_Open_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.grp_gestion_article.ResumeLayout(false);
+            this.grp_article.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_article)).EndInit();
-            this.groupBox4.ResumeLayout(false);
+            this.grp_accessoire.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_famille)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.grp_catalogue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_catalogue)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.grp_stock.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
+            this.grp_gestion_stock.ResumeLayout(false);
+            this.grp_mouv_stock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_mouv)).EndInit();
-            this.groupBox7.ResumeLayout(false);
+            this.grp_inventaire.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_inventaire)).EndInit();
-            this.groupBox8.ResumeLayout(false);
+            this.grp_doc_stock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_doc)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
+            this.grp_gestion_user.ResumeLayout(false);
+            this.grp_parametre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_setting)).EndInit();
-            this.groupBox11.ResumeLayout(false);
+            this.grp_autorisation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_acces)).EndInit();
-            this.groupBox12.ResumeLayout(false);
+            this.grp_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.box_users)).EndInit();
             this.ResumeLayout(false);
 
@@ -433,31 +434,31 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grp_gestion_article;
+        private System.Windows.Forms.GroupBox grp_catalogue;
         private System.Windows.Forms.PictureBox box_catalogue;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grp_article;
         private System.Windows.Forms.PictureBox box_article;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grp_accessoire;
         private System.Windows.Forms.PictureBox box_famille;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_open;
         private System.Windows.Forms.TextBox txt_name_form;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox grp_stock;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label lb_nom;
+        private System.Windows.Forms.GroupBox grp_gestion_stock;
+        private System.Windows.Forms.GroupBox grp_mouv_stock;
         private System.Windows.Forms.PictureBox box_mouv;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox grp_inventaire;
         private System.Windows.Forms.PictureBox box_inventaire;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox grp_doc_stock;
         private System.Windows.Forms.PictureBox box_doc;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox grp_gestion_user;
+        private System.Windows.Forms.GroupBox grp_parametre;
         private System.Windows.Forms.PictureBox box_setting;
-        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox grp_autorisation;
         private System.Windows.Forms.PictureBox box_acces;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox grp_users;
         private System.Windows.Forms.PictureBox box_users;
     }
 }

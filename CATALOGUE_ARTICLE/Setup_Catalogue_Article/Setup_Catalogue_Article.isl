@@ -340,7 +340,6 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>CATALOGUE_ARTICLE.Sortie_principale</td><td>{45A80E73-97CB-4165-B046-E5740E8394CB}</td><td>INSTALLDIR</td><td>2</td><td/><td>catalogue_article.sortie_pri</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{79DB0B67-8404-47DD-8D62-3232E65714DB}</td><td>PARAMETRES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{BA34B228-FF8F-48FC-9E77-CFAE27133429}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1153,7 +1152,6 @@
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NOM_DE_VOTRE_SOCI_T_</td><td>ProgramFilesFolder</td><td>NOMDEV~1|Nom de votre société</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
-		<row><td>PARAMETRES</td><td>INSTALLDIR</td><td>PARAME~1|Parametres</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
 		<row><td>PrimaryVolumePath</td><td>TARGETDIR</td><td>.:Primar~1|PrimaryVolumePath</td><td/><td>0</td><td/></row>
 		<row><td>PrintHoodFolder</td><td>TARGETDIR</td><td>.:PRINTH~1|PrintHood</td><td/><td>0</td><td/></row>
@@ -1867,7 +1865,6 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>CATALOGUE_ARTICLE.Sortie_principale</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 	</table>
 
@@ -1884,8 +1881,6 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>catalogue_article.sortie_pri</td><td>CATALOGUE_ARTICLE.Sortie_principale</td><td>CATALOGUE_ARTICLE.Sortie principale</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;CATALOGUE_ARTICLE&gt;|Built</td><td>3</td><td/></row>
-		<row><td>create_db.bat</td><td>ISX_DEFAULTCOMPONENT</td><td>CREATE~1.BAT|create_db.bat</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Lymytz\Google Drive\Mes projets\Catalogue Article\CATALOGUE_ARTICLE\CATALOGUE_ARTICLE\CATALOGUE_ARTICLE\bin\Release\Parametres\create_db.bat</td><td>1</td><td/></row>
-		<row><td>db.sql</td><td>ISX_DEFAULTCOMPONENT</td><td>db.sql</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Lymytz\Google Drive\Mes projets\Catalogue Article\CATALOGUE_ARTICLE\CATALOGUE_ARTICLE\CATALOGUE_ARTICLE\bin\Release\Parametres\db.sql</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2032,7 +2027,6 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>CATALOGUE_ARTICLE.Sortie_principale</td><td/><td/><td>_7618AC30_358C_4AEC_BB93_028B8321FC5F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_DF2B4CA6_D36F_4125_A90B_F18DDE565316_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_DFAA13E3_9919_4B45_834E_CF9683EAA735_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -3999,7 +3993,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{5004C7EA-3C46-476C-B00D-D22933172F70}</td></row>
 		<row><td>ISUSSignature</td><td>{B5795291-996A-4539-A153-E7562C507A21}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewFeatureFiles,viewAppFiles,viewObjects,viewEnvironmentVariables,viewSystemSearch,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewFeatureFiles,viewAppFiles,viewObjects,viewEnvironmentVariables,viewSystemSearch,viewRelease,viewSetupDesign</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>

@@ -15,14 +15,15 @@ namespace CATALOGUE_ARTICLE.IHM
 {
     public partial class Form_Acces : Form
     {
-        NiveauAcces current = new NiveauAcces();
-        List<NiveauAcces> niveaux = new List<NiveauAcces>();
+        public NiveauAcces current = new NiveauAcces();
+        public List<NiveauAcces> niveaux = new List<NiveauAcces>();
 
         bool first;
 
         public Form_Acces()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Acces_FormClosed(object sender, FormClosedEventArgs e)
@@ -36,6 +37,21 @@ namespace CATALOGUE_ARTICLE.IHM
             LoadAllNiveau();
             com_niveau.Text = "";
             first = true;
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            this.Text = Mots.Autorisation;
+            lb_niveau.Text = Mots.Niveau;
+            code_form_.HeaderText = Mots.Code;
+            code_ress_.HeaderText = Mots.Code;
+            nom_form_.HeaderText = Mots.Libelle;
+            nom_ress_.HeaderText = Mots.Libelle;
+            acces_form_.HeaderText = Mots.Acces;
+            acces_ress_.HeaderText = Mots.Acces;
+            tab_form.Text = Mots.Formulaire;
+            tab_ress.Text = Mots.Ressource;
         }
 
         private void LoadAllNiveau()
@@ -55,7 +71,7 @@ namespace CATALOGUE_ARTICLE.IHM
             com_niveau.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
-        private void com_niveau_SelectedIndexChanged(object sender, EventArgs e)
+        public void com_niveau_SelectedIndexChanged(object sender, EventArgs e)
         {
             NiveauAcces a = com_niveau.SelectedItem as NiveauAcces;
             a = niveaux.Find(x => x.Id == a.Id);
@@ -185,6 +201,11 @@ namespace CATALOGUE_ARTICLE.IHM
             {
                 Messages.Exception(ex);
             }
+        }
+
+        private void btn_add_niveau_Click(object sender, EventArgs e)
+        {
+            new _2ND.Form_Save_Niveau(this).ShowDialog();
         }
     }
 }

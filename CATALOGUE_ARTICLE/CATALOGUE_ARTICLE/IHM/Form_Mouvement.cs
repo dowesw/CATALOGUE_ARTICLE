@@ -18,6 +18,7 @@ namespace CATALOGUE_ARTICLE.IHM
         public Form_Mouvement()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Mouvement_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,6 +31,21 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             LoadGrille();
             date_search.Value = Convert.ToDateTime("01/01/1970 00:00:00");
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Mouvement_Stock;
+            grp_search.Text = Mots.Recherche;
+            article_.HeaderText = Mots.Article;
+            qte_.HeaderText = Mots.Quantite;
+            date_.HeaderText = Mots.Date_Creation;
         }
 
         private void AddRow(MouvementStock m)

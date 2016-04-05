@@ -28,6 +28,30 @@ namespace CATALOGUE_ARTICLE.IHM
         private void Form_Open_Load(object sender, EventArgs e)
         {
             Utils.addFrom(this.Name);
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Ouvrir;
+            lb_nom.Text = Mots.Nom;
+            grp_article.Text = Mots.Article;
+            grp_autorisation.Text = Mots.Autorisation;
+            grp_catalogue.Text = Mots.Catalogue_Article;
+            grp_doc_stock.Text = Mots.Document_Stock;
+            grp_accessoire.Text = Mots.Accessoire_Article;
+            grp_gestion_article.Text = Mots.Gestion_Article;
+            grp_gestion_stock.Text = Mots.Gestion_Stock;
+            grp_gestion_user.Text = Mots.Gestion_Utilisateur;
+            grp_inventaire.Text = Mots.Inventaire;
+            grp_mouv_stock.Text = Mots.Mouvement_Stock;
+            grp_parametre.Text = Mots.Parametre;
+            grp_users.Text = Mots.Utilisateurs;
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -154,13 +178,13 @@ namespace CATALOGUE_ARTICLE.IHM
                         Utils.addFrom("Form_Catalogue");
                     }
                     break;
-                case "Familles Article":
+                case "Accessoire Article":
                     //if (!AccesFormulaires.form_famille)
                     //{
                     //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
                     //    return;
                     //}
-                    Form_Famille f_famille = new Form_Famille();
+                    Form_Accessoire_Article f_famille = new Form_Accessoire_Article();
                     if (Constantes.f_famille == null)
                     {
                         f_famille.MdiParent = this.MdiParent;
@@ -215,7 +239,7 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void pic_famille_Click(object sender, EventArgs e)
         {
-            txt_name_form.Text = "Familles Article";
+            txt_name_form.Text = "Accessoire Article";
             resetAllPicture();
             box_famille.BackColor = Color.LightSkyBlue;
         }
@@ -227,7 +251,7 @@ namespace CATALOGUE_ARTICLE.IHM
             //    Messages.ShowErreur("Vous ne disposez pas des droits pour accéder à ce formulaire");
             //    return;
             //}
-            Form_Famille f_famille = new Form_Famille();
+            Form_Accessoire_Article f_famille = new Form_Accessoire_Article();
             if (Constantes.f_famille == null)
             {
                 f_famille.MdiParent = this.MdiParent;

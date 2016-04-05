@@ -160,12 +160,15 @@ namespace CATALOGUE_ARTICLE.DAO
                 string delete = "delete from photo_article where id = " + f.Id;
                 NpgsqlCommand cmd = new NpgsqlCommand(delete, con);
                 cmd.ExecuteNonQuery();
-
-                string chemin = Chemins.getCheminArticle(f.Article.Id.ToString()) + f.Nom;
-                if (File.Exists(chemin))
+                try
                 {
-                    File.Delete(chemin);
+                    string chemin = Chemins.getCheminArticle(f.Article.Id.ToString()) + f.Nom;
+                    if (File.Exists(chemin))
+                    {
+                        File.Delete(chemin);
+                    }
                 }
+                catch (Exception ex) { }
                 return true;
             }
             catch (NpgsqlException e)

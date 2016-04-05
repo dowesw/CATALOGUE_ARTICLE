@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using CATALOGUE_ARTICLE.ENTITE;
 using CATALOGUE_ARTICLE.IHM;
+using CATALOGUE_ARTICLE.IHM._2ND;
 using CATALOGUE_ARTICLE.TOOLS;
 
 namespace CATALOGUE_ARTICLE
@@ -23,13 +24,46 @@ namespace CATALOGUE_ARTICLE
 
         private void Form_Parent_Load(object sender, EventArgs e)
         {
-            this.Text = Constantes.APP_NAME;
             lb_trial.Visible = !Constantes.ACTIVE;
             indexToolStripMenuItem.Visible = !Constantes.ACTIVE;
             activerToolStripMenuItem.Visible = !Constantes.ACTIVE;
-            lb_trial.Text = "Il vous reste " + Constantes.TRIAL_ESSAIE + " jr(s) d'éssai";
             btn_deconnect.Visible = false;
+            bubble.Text = Mots.Catalogue_Article;
             //bubble.ShowBalloonTip(10,"Catalogue Articles", "Bienvenu", System.Windows.Forms.ToolTipIcon.Info);
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            this.Text = Mots.Catalogue_Article;
+            lb_trial.Text = Constantes.TRIAL_ESSAIE + Mots.Delai;
+            fileMenu.Text = Mots.Fichier;
+            viewMenu.Text = Mots.Affichage;
+            toolsMenu.Text = Mots.Outil;
+            windowsMenu.Text = Mots.Fenetre;
+            helpMenu.Text = Mots.Aide;
+            newToolStripMenuItem.Text = Mots.Nouveau;
+            newToolStripButton.Text = Mots.Nouveau;
+            openToolStripButton.Text = Mots.Ouvrir;
+            openToolStripMenuItem.Text = Mots.Ouvrir;
+            saveToolStripButton.Text = Mots.Enregistrer;
+            saveToolStripMenuItem.Text = Mots.Enregistrer;
+            exitToolStripMenuItem.Text = Mots.Quitter;
+            exitToolStripMenuItem1.Text = Mots.Quitter;
+            toolStripStatusLabel.Text = Mots.Etat;
+            toolBarToolStripMenuItem.Text = Mots.BarOutil;
+            statusBarToolStripMenuItem.Text = Mots.BarEtat;
+            optionsToolStripMenuItem.Text = Mots.Parametre;
+            activerToolStripMenuItem.Text = Mots.Activer;
+            settingToolStripMenuItem.Text = Mots.Parametre;
+            newWindowToolStripMenuItem.Text = Mots.Nouv_Fenetre;
+            cascadeToolStripMenuItem.Text = Mots.Cascade;
+            closeAllToolStripMenuItem.Text = Mots.Fermer_Tout;
+            arrangeIconsToolStripMenuItem.Text = Mots.Reorganiser_Fenetre;
+            indexToolStripMenuItem.Text = Mots.Licence;
+            aboutToolStripMenuItem.Text = Mots.A_Propos;
+            redémarerToolStripMenuItem.Text = Mots.Restart;
+            redémarerToolStripMenuItem1.Text = Mots.Restart;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -137,7 +171,7 @@ namespace CATALOGUE_ARTICLE
                         }
                         break;
                     case "Familles":
-                        Form_Famille f_famille = new Form_Famille();
+                        Form_Accessoire_Article f_famille = new Form_Accessoire_Article();
                         if (Constantes.f_famille == null)
                         {
                             f_famille.MdiParent = this;
@@ -331,6 +365,11 @@ namespace CATALOGUE_ARTICLE
         private void box_users_MouseLeave(object sender, EventArgs e)
         {
             Constantes.f_photo.Close();
+        }
+
+        private void redémarerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

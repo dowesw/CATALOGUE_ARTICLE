@@ -7,7 +7,7 @@ using CATALOGUE_ARTICLE.TOOLS;
 
 namespace CATALOGUE_ARTICLE.ENTITE
 {
-    class Articles
+    public class Articles
     {
         public Articles() { }
 
@@ -48,9 +48,9 @@ namespace CATALOGUE_ARTICLE.ENTITE
             set { description = value; }
         }
 
-        private string marque;
+        private Marque marque;
 
-        public string Marque
+        internal Marque Marque
         {
             get { return marque; }
             set { marque = value; }
@@ -140,6 +140,11 @@ namespace CATALOGUE_ARTICLE.ENTITE
             if (bean.designation == null || bean.designation.Trim().Equals(""))
             {
                 Messages.ShowErreur("La désignation ne peut pas être null!");
+                return false;
+            }
+            if (bean.marque != null ? bean.marque.Id < 1 : true)
+            {
+                Messages.ShowErreur("La marque ne peut pas être null!");
                 return false;
             }
             return true;

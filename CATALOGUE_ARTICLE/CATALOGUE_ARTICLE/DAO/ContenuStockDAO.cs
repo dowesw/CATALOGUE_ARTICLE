@@ -131,7 +131,7 @@ namespace CATALOGUE_ARTICLE.DAO
             NpgsqlConnection con = Connexion.Connection();
             try
             {
-                string update = "update contenu_stock set prix =" + f.Prix + " , quantite =" + f.Quantite + " , article =" + f.Article.Id + " , stock =" + f.Stock.Id + " where id = " + f.Id;
+                string update = "update contenu_stock set prix =" + f.Prix + " , quantite =" + f.Quantite + " where id = " + f.Id;
                 NpgsqlCommand cmd = new NpgsqlCommand(update, con);
                 cmd.ExecuteNonQuery();
                 return true;

@@ -7,7 +7,7 @@ using CATALOGUE_ARTICLE.TOOLS;
 
 namespace CATALOGUE_ARTICLE.ENTITE
 {
-    class NiveauAcces
+    public class NiveauAcces
     {
 
         private Int32 id;

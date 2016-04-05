@@ -32,6 +32,21 @@ namespace CATALOGUE_ARTICLE.IHM
             txt_identifiant.Focus();
             Constantes.users = null;
             //timer2.Start();
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Login;
+            lb_connexion.Text = Mots.Connexion;
+            lb_identifiant.Text = Mots.Identifiant + " :";
+            lb_password.Text = Mots.Password + " :";
+            lb_temps.Text = Mots.Temps_Connexion;
         }
 
         private Users RecopiewView()
@@ -74,12 +89,12 @@ namespace CATALOGUE_ARTICLE.IHM
                             }
                             else
                             {
-                                Messages.ShowErreur("Votre compte est désactiver...Veuillez contacter votre administrateur!");
+                                Messages.ShowErreur(Mots.Msg_Compte_Erreur);
                             }
                         }
                         else
                         {
-                            Messages.ShowErreur("Code ou Mot de passe incorrect!");
+                            Messages.ShowErreur(Mots.Msg_identfiant_Erreur);
                         }
                     }
 
@@ -171,7 +186,7 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             if (i != Constantes.MAX_TIME_CONNECT)
             {
-                temps.Text = "Il reste " + (Constantes.MAX_TIME_CONNECT - i).ToString() + " secondes";
+                lb_temps.Text = "Il reste " + (Constantes.MAX_TIME_CONNECT - i).ToString() + " secondes";
                 timer1.Stop();
                 timer2.Start();
                 System.Threading.Thread.Sleep(1000);

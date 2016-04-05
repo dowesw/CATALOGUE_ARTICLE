@@ -44,6 +44,12 @@ namespace CATALOGUE_ARTICLE.TOOLS
                 Lcmd.ExecuteNonQuery();
                 Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.CREATE_TABLE_FAMILLE, con);
                 Lcmd.ExecuteNonQuery();
+                Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.ALTER_TABLE_FAMILLE, con);
+                Lcmd.ExecuteNonQuery();
+                Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.CREATE_TABLE_MARQUE, con);
+                Lcmd.ExecuteNonQuery();
+                Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.CREATE_TABLE_SERIE, con);
+                Lcmd.ExecuteNonQuery();
                 Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.CREATE_TABLE_ARTICLE, con);
                 Lcmd.ExecuteNonQuery();
                 Lcmd = new NpgsqlCommand(global::CATALOGUE_ARTICLE.Properties.Resources.CREATE_TABLE_PHOTO, con);

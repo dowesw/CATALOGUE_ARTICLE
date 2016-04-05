@@ -38,14 +38,14 @@
             this.icon_ = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grp_search = new System.Windows.Forms.GroupBox();
             this.date_search = new System.Windows.Forms.DateTimePicker();
             this.context_date = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.reinitialiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grp_search.SuspendLayout();
             this.context_date.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,16 +122,16 @@
             this.panel2.Size = new System.Drawing.Size(559, 345);
             this.panel2.TabIndex = 2;
             // 
-            // groupBox1
+            // grp_search
             // 
-            this.groupBox1.Controls.Add(this.date_search);
-            this.groupBox1.Controls.Add(this.txt_search);
-            this.groupBox1.Location = new System.Drawing.Point(0, 351);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(556, 39);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Recherche";
+            this.grp_search.Controls.Add(this.date_search);
+            this.grp_search.Controls.Add(this.txt_search);
+            this.grp_search.Location = new System.Drawing.Point(0, 351);
+            this.grp_search.Name = "grp_search";
+            this.grp_search.Size = new System.Drawing.Size(556, 39);
+            this.grp_search.TabIndex = 0;
+            this.grp_search.TabStop = false;
+            this.grp_search.Text = "Recherche";
             // 
             // date_search
             // 
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 390);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grp_search);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,8 +183,8 @@
             this.Load += new System.EventHandler(this.Form_Mouvement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grp_search.ResumeLayout(false);
+            this.grp_search.PerformLayout();
             this.context_date.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -200,7 +200,7 @@
         private System.Windows.Forms.DataGridViewImageColumn icon_;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grp_search;
         private System.Windows.Forms.DateTimePicker date_search;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.ContextMenuStrip context_date;

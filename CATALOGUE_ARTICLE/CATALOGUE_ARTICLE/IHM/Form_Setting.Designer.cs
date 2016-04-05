@@ -31,27 +31,39 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Setting));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tab_niveau = new System.Windows.Forms.TabPage();
+            this.grp_search = new System.Windows.Forms.GroupBox();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grp_liste = new System.Windows.Forms.GroupBox();
             this.dgv_liste = new System.Windows.Forms.DataGridView();
             this.id_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.designation_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supp_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grp_infos = new System.Windows.Forms.GroupBox();
             this.txt_description = new System.Windows.Forms.RichTextBox();
             this.txt_designation = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lb_description = new System.Windows.Forms.Label();
+            this.lb_designation = new System.Windows.Forms.Label();
+            this.grp_action = new System.Windows.Forms.GroupBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tab_parametre = new System.Windows.Forms.TabPage();
+            this.box_template = new System.Windows.Forms.PictureBox();
+            this.box_langue = new System.Windows.Forms.PictureBox();
+            this.grp_action_ = new System.Windows.Forms.GroupBox();
+            this.btn_reset_setting = new System.Windows.Forms.Button();
+            this.btn_save_setting = new System.Windows.Forms.Button();
+            this.com_template = new System.Windows.Forms.ComboBox();
+            this.lb_template = new System.Windows.Forms.Label();
+            this.com_langue = new System.Windows.Forms.ComboBox();
+            this.lb_langue = new System.Windows.Forms.Label();
+            this.tab_serveur = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.grp_action_s = new System.Windows.Forms.GroupBox();
             this.btn_reset_serveur = new System.Windows.Forms.Button();
             this.btn_save_serveur = new System.Windows.Forms.Button();
             this.txt_password = new System.Windows.Forms.TextBox();
@@ -59,28 +71,37 @@
             this.txt_database = new System.Windows.Forms.TextBox();
             this.txt_port = new System.Windows.Forms.TextBox();
             this.txt_adresse = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_password = new System.Windows.Forms.Label();
+            this.lb_user = new System.Windows.Forms.Label();
+            this.lb_database = new System.Windows.Forms.Label();
+            this.lb_port = new System.Windows.Forms.Label();
+            this.lb_adresse = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.tab_niveau.SuspendLayout();
+            this.grp_search.SuspendLayout();
+            this.grp_liste.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.grp_infos.SuspendLayout();
+            this.grp_action.SuspendLayout();
+            this.tab_parametre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box_template)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box_langue)).BeginInit();
+            this.grp_action_.SuspendLayout();
+            this.tab_serveur.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grp_action_s.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tab_niveau);
+            this.tabControl1.Controls.Add(this.tab_parametre);
+            this.tabControl1.Controls.Add(this.tab_serveur);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Multiline = true;
@@ -89,29 +110,29 @@
             this.tabControl1.Size = new System.Drawing.Size(581, 427);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tab_niveau
             // 
-            this.tabPage1.Controls.Add(this.groupBox4);
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(23, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(554, 419);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Niveau Acces";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tab_niveau.Controls.Add(this.grp_search);
+            this.tab_niveau.Controls.Add(this.grp_liste);
+            this.tab_niveau.Controls.Add(this.grp_infos);
+            this.tab_niveau.Controls.Add(this.grp_action);
+            this.tab_niveau.Location = new System.Drawing.Point(23, 4);
+            this.tab_niveau.Name = "tab_niveau";
+            this.tab_niveau.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_niveau.Size = new System.Drawing.Size(554, 419);
+            this.tab_niveau.TabIndex = 0;
+            this.tab_niveau.Text = "Niveau Acces";
+            this.tab_niveau.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // grp_search
             // 
-            this.groupBox4.Controls.Add(this.txt_search);
-            this.groupBox4.Location = new System.Drawing.Point(6, 368);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(537, 43);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Recherche";
+            this.grp_search.Controls.Add(this.txt_search);
+            this.grp_search.Location = new System.Drawing.Point(6, 368);
+            this.grp_search.Name = "grp_search";
+            this.grp_search.Size = new System.Drawing.Size(537, 43);
+            this.grp_search.TabIndex = 3;
+            this.grp_search.TabStop = false;
+            this.grp_search.Text = "Recherche";
             // 
             // txt_search
             // 
@@ -121,15 +142,15 @@
             this.txt_search.TabIndex = 0;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
-            // groupBox3
+            // grp_liste
             // 
-            this.groupBox3.Controls.Add(this.dgv_liste);
-            this.groupBox3.Location = new System.Drawing.Point(6, 156);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(537, 206);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Liste";
+            this.grp_liste.Controls.Add(this.dgv_liste);
+            this.grp_liste.Location = new System.Drawing.Point(6, 156);
+            this.grp_liste.Name = "grp_liste";
+            this.grp_liste.Size = new System.Drawing.Size(537, 206);
+            this.grp_liste.TabIndex = 2;
+            this.grp_liste.TabStop = false;
+            this.grp_liste.Text = "Liste";
             // 
             // dgv_liste
             // 
@@ -186,18 +207,18 @@
             this.supp_.Name = "supp_";
             this.supp_.ReadOnly = true;
             // 
-            // groupBox2
+            // grp_infos
             // 
-            this.groupBox2.Controls.Add(this.txt_description);
-            this.groupBox2.Controls.Add(this.txt_designation);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(431, 136);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informations";
+            this.grp_infos.Controls.Add(this.txt_description);
+            this.grp_infos.Controls.Add(this.txt_designation);
+            this.grp_infos.Controls.Add(this.lb_description);
+            this.grp_infos.Controls.Add(this.lb_designation);
+            this.grp_infos.Location = new System.Drawing.Point(6, 14);
+            this.grp_infos.Name = "grp_infos";
+            this.grp_infos.Size = new System.Drawing.Size(431, 136);
+            this.grp_infos.TabIndex = 1;
+            this.grp_infos.TabStop = false;
+            this.grp_infos.Text = "Informations";
             // 
             // txt_description
             // 
@@ -209,40 +230,40 @@
             // 
             // txt_designation
             // 
-            this.txt_designation.Location = new System.Drawing.Point(103, 18);
+            this.txt_designation.Location = new System.Drawing.Point(110, 18);
             this.txt_designation.Name = "txt_designation";
             this.txt_designation.Size = new System.Drawing.Size(266, 20);
             this.txt_designation.TabIndex = 2;
             // 
-            // label2
+            // lb_description
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Déscription : ";
+            this.lb_description.AutoSize = true;
+            this.lb_description.Location = new System.Drawing.Point(25, 47);
+            this.lb_description.Name = "lb_description";
+            this.lb_description.Size = new System.Drawing.Size(69, 13);
+            this.lb_description.TabIndex = 1;
+            this.lb_description.Text = "Déscription : ";
             // 
-            // label1
+            // lb_designation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Désignation : ";
+            this.lb_designation.AutoSize = true;
+            this.lb_designation.Location = new System.Drawing.Point(25, 21);
+            this.lb_designation.Name = "lb_designation";
+            this.lb_designation.Size = new System.Drawing.Size(72, 13);
+            this.lb_designation.TabIndex = 0;
+            this.lb_designation.Text = "Désignation : ";
             // 
-            // groupBox1
+            // grp_action
             // 
-            this.groupBox1.Controls.Add(this.btn_delete);
-            this.groupBox1.Controls.Add(this.btn_cancel);
-            this.groupBox1.Controls.Add(this.btn_save);
-            this.groupBox1.Location = new System.Drawing.Point(443, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(100, 136);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
+            this.grp_action.Controls.Add(this.btn_delete);
+            this.grp_action.Controls.Add(this.btn_cancel);
+            this.grp_action.Controls.Add(this.btn_save);
+            this.grp_action.Location = new System.Drawing.Point(443, 14);
+            this.grp_action.Name = "grp_action";
+            this.grp_action.Size = new System.Drawing.Size(100, 136);
+            this.grp_action.TabIndex = 0;
+            this.grp_action.TabStop = false;
+            this.grp_action.Text = "Actions";
             // 
             // btn_delete
             // 
@@ -281,47 +302,187 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // tabPage3
+            // tab_parametre
             // 
-            this.tabPage3.Location = new System.Drawing.Point(23, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(554, 419);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Paramètres";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tab_parametre.Controls.Add(this.box_template);
+            this.tab_parametre.Controls.Add(this.box_langue);
+            this.tab_parametre.Controls.Add(this.grp_action_);
+            this.tab_parametre.Controls.Add(this.com_template);
+            this.tab_parametre.Controls.Add(this.lb_template);
+            this.tab_parametre.Controls.Add(this.com_langue);
+            this.tab_parametre.Controls.Add(this.lb_langue);
+            this.tab_parametre.Location = new System.Drawing.Point(23, 4);
+            this.tab_parametre.Name = "tab_parametre";
+            this.tab_parametre.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_parametre.Size = new System.Drawing.Size(554, 419);
+            this.tab_parametre.TabIndex = 2;
+            this.tab_parametre.Text = "Paramètres";
+            this.tab_parametre.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // box_template
             // 
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Controls.Add(this.txt_password);
-            this.tabPage2.Controls.Add(this.txt_users);
-            this.tabPage2.Controls.Add(this.txt_database);
-            this.tabPage2.Controls.Add(this.txt_port);
-            this.tabPage2.Controls.Add(this.txt_adresse);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(23, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(554, 419);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "Serveur";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.box_template.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.box_template.Location = new System.Drawing.Point(17, 107);
+            this.box_template.Name = "box_template";
+            this.box_template.Size = new System.Drawing.Size(531, 304);
+            this.box_template.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.box_template.TabIndex = 4;
+            this.box_template.TabStop = false;
             // 
-            // groupBox5
+            // box_langue
             // 
-            this.groupBox5.Controls.Add(this.btn_reset_serveur);
-            this.groupBox5.Controls.Add(this.btn_save_serveur);
-            this.groupBox5.Location = new System.Drawing.Point(418, 22);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(111, 131);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Actions";
+            this.box_langue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.box_langue.Location = new System.Drawing.Point(217, 16);
+            this.box_langue.Name = "box_langue";
+            this.box_langue.Size = new System.Drawing.Size(27, 21);
+            this.box_langue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.box_langue.TabIndex = 4;
+            this.box_langue.TabStop = false;
+            // 
+            // grp_action_
+            // 
+            this.grp_action_.Controls.Add(this.btn_reset_setting);
+            this.grp_action_.Controls.Add(this.btn_save_setting);
+            this.grp_action_.Location = new System.Drawing.Point(437, 8);
+            this.grp_action_.Name = "grp_action_";
+            this.grp_action_.Size = new System.Drawing.Size(109, 90);
+            this.grp_action_.TabIndex = 3;
+            this.grp_action_.TabStop = false;
+            this.grp_action_.Text = "Actions";
+            // 
+            // btn_reset_setting
+            // 
+            this.btn_reset_setting.Image = global::CATALOGUE_ARTICLE.Properties.Resources.reset;
+            this.btn_reset_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reset_setting.Location = new System.Drawing.Point(19, 48);
+            this.btn_reset_setting.Name = "btn_reset_setting";
+            this.btn_reset_setting.Size = new System.Drawing.Size(81, 23);
+            this.btn_reset_setting.TabIndex = 2;
+            this.btn_reset_setting.Text = "  Défaut";
+            this.btn_reset_setting.UseVisualStyleBackColor = true;
+            // 
+            // btn_save_setting
+            // 
+            this.btn_save_setting.Image = global::CATALOGUE_ARTICLE.Properties.Resources.save;
+            this.btn_save_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save_setting.Location = new System.Drawing.Point(19, 19);
+            this.btn_save_setting.Name = "btn_save_setting";
+            this.btn_save_setting.Size = new System.Drawing.Size(81, 23);
+            this.btn_save_setting.TabIndex = 2;
+            this.btn_save_setting.Text = "   Save";
+            this.btn_save_setting.UseVisualStyleBackColor = true;
+            this.btn_save_setting.Click += new System.EventHandler(this.btn_save_setting_Click);
+            // 
+            // com_template
+            // 
+            this.com_template.FormattingEnabled = true;
+            this.com_template.Items.AddRange(new object[] {
+            "Basique",
+            "Classique",
+            "BlackClass",
+            "BlueTrack"});
+            this.com_template.Location = new System.Drawing.Point(90, 77);
+            this.com_template.Name = "com_template";
+            this.com_template.Size = new System.Drawing.Size(121, 21);
+            this.com_template.TabIndex = 1;
+            this.com_template.SelectedIndexChanged += new System.EventHandler(this.com_template_SelectedIndexChanged);
+            // 
+            // lb_template
+            // 
+            this.lb_template.AutoSize = true;
+            this.lb_template.Location = new System.Drawing.Point(14, 80);
+            this.lb_template.Name = "lb_template";
+            this.lb_template.Size = new System.Drawing.Size(60, 13);
+            this.lb_template.TabIndex = 0;
+            this.lb_template.Text = "Template : ";
+            // 
+            // com_langue
+            // 
+            this.com_langue.FormattingEnabled = true;
+            this.com_langue.Items.AddRange(new object[] {
+            "Français",
+            "English"});
+            this.com_langue.Location = new System.Drawing.Point(90, 16);
+            this.com_langue.Name = "com_langue";
+            this.com_langue.Size = new System.Drawing.Size(121, 21);
+            this.com_langue.TabIndex = 1;
+            this.com_langue.SelectedIndexChanged += new System.EventHandler(this.com_langue_SelectedIndexChanged);
+            // 
+            // lb_langue
+            // 
+            this.lb_langue.AutoSize = true;
+            this.lb_langue.Location = new System.Drawing.Point(14, 19);
+            this.lb_langue.Name = "lb_langue";
+            this.lb_langue.Size = new System.Drawing.Size(52, 13);
+            this.lb_langue.TabIndex = 0;
+            this.lb_langue.Text = "Langue : ";
+            // 
+            // tab_serveur
+            // 
+            this.tab_serveur.Controls.Add(this.pictureBox3);
+            this.tab_serveur.Controls.Add(this.pictureBox2);
+            this.tab_serveur.Controls.Add(this.pictureBox1);
+            this.tab_serveur.Controls.Add(this.grp_action_s);
+            this.tab_serveur.Controls.Add(this.txt_password);
+            this.tab_serveur.Controls.Add(this.txt_users);
+            this.tab_serveur.Controls.Add(this.txt_database);
+            this.tab_serveur.Controls.Add(this.txt_port);
+            this.tab_serveur.Controls.Add(this.txt_adresse);
+            this.tab_serveur.Controls.Add(this.lb_password);
+            this.tab_serveur.Controls.Add(this.lb_user);
+            this.tab_serveur.Controls.Add(this.lb_database);
+            this.tab_serveur.Controls.Add(this.label2);
+            this.tab_serveur.Controls.Add(this.label1);
+            this.tab_serveur.Controls.Add(this.lb_port);
+            this.tab_serveur.Controls.Add(this.lb_adresse);
+            this.tab_serveur.Location = new System.Drawing.Point(23, 4);
+            this.tab_serveur.Name = "tab_serveur";
+            this.tab_serveur.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_serveur.Size = new System.Drawing.Size(554, 419);
+            this.tab_serveur.TabIndex = 3;
+            this.tab_serveur.Text = "Serveur";
+            this.tab_serveur.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CATALOGUE_ARTICLE.Properties.Resources.pc;
+            this.pictureBox3.Location = new System.Drawing.Point(23, 269);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CATALOGUE_ARTICLE.Properties.Resources.remote;
+            this.pictureBox2.Location = new System.Drawing.Point(214, 269);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CATALOGUE_ARTICLE.Properties.Resources.database;
+            this.pictureBox1.Location = new System.Drawing.Point(404, 269);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // grp_action_s
+            // 
+            this.grp_action_s.Controls.Add(this.btn_reset_serveur);
+            this.grp_action_s.Controls.Add(this.btn_save_serveur);
+            this.grp_action_s.Location = new System.Drawing.Point(418, 22);
+            this.grp_action_s.Name = "grp_action_s";
+            this.grp_action_s.Size = new System.Drawing.Size(111, 92);
+            this.grp_action_s.TabIndex = 6;
+            this.grp_action_s.TabStop = false;
+            this.grp_action_s.Text = "Actions";
             // 
             // btn_reset_serveur
             // 
@@ -389,57 +550,76 @@
             this.txt_adresse.Text = "127.0.0.1";
             this.txt_adresse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label7
+            // lb_password
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Password : ";
+            this.lb_password.AutoSize = true;
+            this.lb_password.Location = new System.Drawing.Point(20, 201);
+            this.lb_password.Name = "lb_password";
+            this.lb_password.Size = new System.Drawing.Size(62, 13);
+            this.lb_password.TabIndex = 4;
+            this.lb_password.Text = "Password : ";
             // 
-            // label6
+            // lb_user
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Utilisateur : ";
+            this.lb_user.AutoSize = true;
+            this.lb_user.Location = new System.Drawing.Point(20, 157);
+            this.lb_user.Name = "lb_user";
+            this.lb_user.Size = new System.Drawing.Size(62, 13);
+            this.lb_user.TabIndex = 3;
+            this.lb_user.Text = "Utilisateur : ";
             // 
-            // label5
+            // lb_database
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Database : ";
+            this.lb_database.AutoSize = true;
+            this.lb_database.Location = new System.Drawing.Point(20, 111);
+            this.lb_database.Name = "lb_database";
+            this.lb_database.Size = new System.Drawing.Size(62, 13);
+            this.lb_database.TabIndex = 2;
+            this.lb_database.Text = "Database : ";
             // 
-            // label4
+            // lb_port
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Port : ";
+            this.lb_port.AutoSize = true;
+            this.lb_port.Location = new System.Drawing.Point(20, 71);
+            this.lb_port.Name = "lb_port";
+            this.lb_port.Size = new System.Drawing.Size(35, 13);
+            this.lb_port.TabIndex = 1;
+            this.lb_port.Text = "Port : ";
             // 
-            // label3
+            // lb_adresse
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Adresse IP : ";
+            this.lb_adresse.AutoSize = true;
+            this.lb_adresse.Location = new System.Drawing.Point(20, 31);
+            this.lb_adresse.Name = "lb_adresse";
+            this.lb_adresse.Size = new System.Drawing.Size(67, 13);
+            this.lb_adresse.TabIndex = 0;
+            this.lb_adresse.Text = "Adresse IP : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 323);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = " ==>";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(349, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = " ==>";
             // 
             // Form_Setting
             // 
-            this.AcceptButton = this.btn_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btn_cancel;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(581, 427);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -452,17 +632,25 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Setting_FormClosed);
             this.Load += new System.EventHandler(this.Form_Setting_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.tab_niveau.ResumeLayout(false);
+            this.grp_search.ResumeLayout(false);
+            this.grp_search.PerformLayout();
+            this.grp_liste.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_liste)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
+            this.grp_infos.ResumeLayout(false);
+            this.grp_infos.PerformLayout();
+            this.grp_action.ResumeLayout(false);
+            this.tab_parametre.ResumeLayout(false);
+            this.tab_parametre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.box_template)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.box_langue)).EndInit();
+            this.grp_action_.ResumeLayout(false);
+            this.tab_serveur.ResumeLayout(false);
+            this.tab_serveur.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grp_action_s.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -470,16 +658,16 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TabPage tab_niveau;
+        private System.Windows.Forms.TabPage tab_parametre;
+        private System.Windows.Forms.GroupBox grp_search;
+        private System.Windows.Forms.GroupBox grp_liste;
+        private System.Windows.Forms.GroupBox grp_infos;
         private System.Windows.Forms.RichTextBox txt_description;
         private System.Windows.Forms.TextBox txt_designation;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lb_description;
+        private System.Windows.Forms.Label lb_designation;
+        private System.Windows.Forms.GroupBox grp_action;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_cancel;
@@ -489,19 +677,33 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn designation_;
         private System.Windows.Forms.DataGridViewTextBoxColumn description_;
         private System.Windows.Forms.DataGridViewTextBoxColumn supp_;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tab_serveur;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.TextBox txt_users;
         private System.Windows.Forms.TextBox txt_database;
         private System.Windows.Forms.TextBox txt_port;
         private System.Windows.Forms.TextBox txt_adresse;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label lb_password;
+        private System.Windows.Forms.Label lb_user;
+        private System.Windows.Forms.Label lb_database;
+        private System.Windows.Forms.Label lb_port;
+        private System.Windows.Forms.Label lb_adresse;
+        private System.Windows.Forms.GroupBox grp_action_s;
         private System.Windows.Forms.Button btn_reset_serveur;
         private System.Windows.Forms.Button btn_save_serveur;
+        private System.Windows.Forms.ComboBox com_langue;
+        private System.Windows.Forms.Label lb_langue;
+        private System.Windows.Forms.GroupBox grp_action_;
+        private System.Windows.Forms.Button btn_reset_setting;
+        private System.Windows.Forms.Button btn_save_setting;
+        private System.Windows.Forms.PictureBox box_langue;
+        private System.Windows.Forms.PictureBox box_template;
+        private System.Windows.Forms.ComboBox com_template;
+        private System.Windows.Forms.Label lb_template;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

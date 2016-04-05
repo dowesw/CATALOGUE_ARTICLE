@@ -21,8 +21,9 @@ namespace CATALOGUE_ARTICLE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Configuration.Return();
             //Licence.deleteLicence();
-            //Application.Run(new Form_Parent());
+            //Application.Run(new Form_Catalogue());
             start();
         }
 

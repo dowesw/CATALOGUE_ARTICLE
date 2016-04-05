@@ -1,4 +1,4 @@
-﻿namespace CATALOGUE_ARTICLE.IHM
+﻿namespace CATALOGUE_ARTICLE.IHM._2ND
 {
     partial class Form_Photo
     {

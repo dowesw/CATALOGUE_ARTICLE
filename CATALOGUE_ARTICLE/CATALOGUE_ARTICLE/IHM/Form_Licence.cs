@@ -36,12 +36,12 @@ namespace CATALOGUE_ARTICLE.IHM
                 }
                 else
                 {
-                    Messages.ShowErreur("Licence Incorrecte");
+                    Messages.ShowErreur(Mots.Msg_Licence_Erreur);
                 }
             }
             else
             {
-                Messages.Show("Vous avez déja activé votre compte");
+                Messages.Show(Mots.Msg_Activer_Licence_Erreur);
             }
         }
 

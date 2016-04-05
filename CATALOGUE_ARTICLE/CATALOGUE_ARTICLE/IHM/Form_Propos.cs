@@ -16,6 +16,7 @@ namespace CATALOGUE_ARTICLE.IHM
         public Form_Propos()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Propos_FormClosing(object sender, FormClosingEventArgs e)
@@ -28,6 +29,17 @@ namespace CATALOGUE_ARTICLE.IHM
         private void Form_Propos_Load(object sender, EventArgs e)
         {
             Utils.addFrom(this.Name);
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Propos;
         }
     }
 }

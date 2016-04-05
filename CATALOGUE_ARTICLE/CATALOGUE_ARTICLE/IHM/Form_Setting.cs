@@ -21,6 +21,7 @@ namespace CATALOGUE_ARTICLE.IHM
         public Form_Setting()
         {
             InitializeComponent();
+            Configuration.Load(this);
         }
 
         private void Form_Setting_FormClosed(object sender, FormClosedEventArgs e)
@@ -33,6 +34,67 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             LoadGrille();
             LoadServeur();
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
+            com_langue.Text = Configuration.langue.Equals(Constantes.LANGUE_ANGLAIS) ? Constantes.LANGUE_ANGLAIS_NAME : Constantes.LANGUE_FRANCAIS_NAME;
+            switch (com_langue.Text)
+            {
+                case Constantes.LANGUE_ANGLAIS_NAME:
+                    box_langue.Image = global::CATALOGUE_ARTICLE.Properties.Resources.En;
+                    break;
+                case Constantes.LANGUE_FRANCAIS_NAME:
+                    box_langue.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Fr;
+                    break;
+                default:
+                    break;
+            }
+
+            com_template.Text = Configuration.template.Equals("") ? "Basique" : Configuration.template;
+            if (com_template.Text.Equals("Basique"))
+            {
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Basique;
+            }
+            else if (com_template.Text.Equals("BlackClass"))
+            {
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.BlackClass;
+            }
+            else if (com_template.Text.Equals("BlueTrack"))
+            {
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.BlueTrack;
+
+            }
+            else if (com_template.Text.Equals("Classique"))
+            {
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Classique;
+            }
+
+            LoadLangue();
+        }
+
+        private void LoadLangue()
+        {
+            this.Text = Mots.Parametre;
+            tab_niveau.Text = Mots.Niveau_Access;
+            tab_parametre.Text = Mots.Parametre;
+            tab_serveur.Text = Mots.Serveur;
+            grp_action.Text = Mots.Actions;
+            grp_action_.Text = Mots.Actions;
+            grp_action_s.Text = Mots.Actions;
+            grp_infos.Text = Mots.Informations;
+            grp_liste.Text = Mots.Liste;
+            grp_search.Text = Mots.Recherche;
+            lb_langue.Text = Mots.Langue + " :";
+            description_.HeaderText = Mots.Description;
+            designation_.HeaderText = Mots.Designation;
+            lb_adresse.Text = Mots.Adresse_IP + " :";
+            lb_database.Text = Mots.Database + " :";
+            lb_password.Text = Mots.Password + " :";
+            lb_user.Text = Mots.Utilisateur + " :";
+            lb_description.Text = Mots.Description + " :";
+            lb_designation.Text = Mots.Designation + " :";
         }
 
         private void ResetServeur()
@@ -150,6 +212,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         Messages.Succes();
                     }
                 }
+                Reset();
             }
         }
 
@@ -161,7 +224,7 @@ namespace CATALOGUE_ARTICLE.IHM
             }
             else
             {
-                if (DialogResult.Yes == Messages.Confirmation("Annuler"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Annuler.ToLower()))
                 {
                     Reset();
                 }
@@ -172,7 +235,7 @@ namespace CATALOGUE_ARTICLE.IHM
         {
             if (current != null ? current.Id > 0 : false)
             {
-                if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer.ToLower()))
                 {
                     if (NiveauAccesBLL.Delete(current))
                     {
@@ -216,7 +279,7 @@ namespace CATALOGUE_ARTICLE.IHM
                         NiveauAcces f = NiveauAccesBLL.One(id);
                         if (e.ColumnIndex == 3)
                         {
-                            if (DialogResult.Yes == Messages.Confirmation("Supprimer"))
+                            if (DialogResult.Yes == Messages.Confirmation(Mots.Supprimer.ToLower()))
                             {
                                 if (NiveauAccesBLL.Delete(f))
                                 {
@@ -270,7 +333,7 @@ namespace CATALOGUE_ARTICLE.IHM
             }
             else
             {
-                if (DialogResult.Yes == Messages.Confirmation("Annuler"))
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Annuler.ToLower()))
                 {
                     ResetServeur();
                 }
@@ -279,12 +342,109 @@ namespace CATALOGUE_ARTICLE.IHM
 
         private void btn_save_serveur_Click(object sender, EventArgs e)
         {
-            RecopieServeur();
+             RecopieServeur();
             if (serveur.Control())
             {
                 if (ServeurBLL.CreateServeur(serveur))
                 {
                     Messages.Succes();
+                    Application.Restart();
+                }
+            }
+        }
+
+        private void com_langue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string langue = com_langue.Text;
+            switch (langue)
+            {
+                case Constantes.LANGUE_ANGLAIS_NAME:
+                    box_langue.Image = global::CATALOGUE_ARTICLE.Properties.Resources.En;
+                    Configuration.langue = Constantes.LANGUE_ANGLAIS;
+                    break;
+                case Constantes.LANGUE_FRANCAIS_NAME:
+                    box_langue.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Fr;
+                    Configuration.langue = Constantes.LANGUE_FRANCAIS;
+                    break;
+                default:
+                    Configuration.langue = Constantes.LANGUE_FRANCAIS;
+                    break;
+            }
+        }
+
+        private void com_template_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (com_template.Text.Equals("Basique"))
+            {
+                Configuration.template = "Basique";
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Basique;
+
+                Configuration.back_color_Form = "Control";
+                Configuration.fore_color_Label = "ControlText";
+                Configuration.police_Label = "Microsoft Sans Serif";
+                Configuration.taille_Label = float.Parse("8,25");
+
+                Configuration.back_color_Text = "Window";
+                Configuration.fore_color_Text = "WindowText";
+                Configuration.police_Text = "Microsoft Sans Serif";
+                Configuration.taille_Text = float.Parse("8,25");
+            }
+            else if (com_template.Text.Equals("BlackClass"))
+            {
+                Configuration.template = "BlackClass";
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.BlackClass;
+
+                Configuration.back_color_Form = "Black";
+                Configuration.fore_color_Label = "White";
+                Configuration.police_Label = "Arial Narrow";
+                Configuration.taille_Label = float.Parse("10,25");
+
+                Configuration.back_color_Text = "WindowText";
+                Configuration.fore_color_Text = "White";
+                Configuration.police_Text = "Arial Narrow";
+                Configuration.taille_Text = float.Parse("10,25");
+            }
+            else if (com_template.Text.Equals("BlueTrack"))
+            {
+                Configuration.template = "BlueTrack";
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.BlueTrack;
+
+                Configuration.back_color_Form = "GradientInactiveCaption";
+                Configuration.fore_color_Label = "Navy";
+                Configuration.police_Label = "Tahoma";
+                Configuration.taille_Label = float.Parse("9,75");
+
+                Configuration.back_color_Text = "Window";
+                Configuration.fore_color_Text = "WindowText";
+                Configuration.police_Text = "Tahoma";
+                Configuration.taille_Text = float.Parse("9,75");
+
+            }
+            else if (com_template.Text.Equals("Classique"))
+            {
+                Configuration.template = "Classique";
+                this.box_template.Image = global::CATALOGUE_ARTICLE.Properties.Resources.Classique;
+
+                Configuration.back_color_Form = "White";
+                Configuration.fore_color_Label = "Navy";
+                Configuration.police_Label = "Rockwell";
+                Configuration.taille_Label = float.Parse("9,75");
+
+                Configuration.back_color_Text = "Window";
+                Configuration.fore_color_Text = "WindowText";
+                Configuration.police_Text = "Rockwell";
+                Configuration.taille_Text = float.Parse("9,75");
+            }
+        }
+
+        private void btn_save_setting_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == Messages.Confirmation(Mots.Modifier.ToLower()))
+            {
+                Configuration.Save();
+                if (DialogResult.Yes == Messages.Confirmation(Mots.Restart_Now.ToLower()))
+                {
+                    Application.Restart();
                 }
             }
         }

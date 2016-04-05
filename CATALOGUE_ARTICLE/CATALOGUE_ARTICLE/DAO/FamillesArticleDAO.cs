@@ -45,7 +45,7 @@ namespace CATALOGUE_ARTICLE.DAO
             NpgsqlConnection con = Connexion.Connection();
             try
             {
-                String search = "select * from familles_article where id = " + id;
+                String search = "select f.*, p.designation as designation_ from familles_article f left join familles_article p on f.parent = p.id where f.id = " + id;
                 NpgsqlCommand Lcmd = new NpgsqlCommand(search, con);
                 NpgsqlDataReader lect = Lcmd.ExecuteReader();
                 FamillesArticle y = new FamillesArticle();
@@ -57,6 +57,9 @@ namespace CATALOGUE_ARTICLE.DAO
                         y.Reference = lect["reference"].ToString();
                         y.Designation = lect["designation"].ToString();
                         y.Description = lect["description"].ToString();
+                        Int32 id_ = (Int32)((lect["parent"] != null) ? (!lect["parent"].ToString().Trim().Equals("") ? lect["parent"] : 0) : 0);
+                        y.Parent = new FamillesArticle(id_, lect["designation_"].ToString());
+                        y.Sous = listFamillesArticle("select * from familles_article where parent = " + id);
                         y.Update = true;
                     }
                 }
@@ -108,6 +111,10 @@ namespace CATALOGUE_ARTICLE.DAO
             try
             {
                 string insert = "insert into familles_article (reference,designation,description) values ('" + f.Reference + "','" + f.Designation + "','" + f.Description + "')";
+                if (f.Parent != null ? f.Parent.Id > 0 : false)
+                {
+                    insert = "insert into familles_article (reference,designation,description,parent) values ('" + f.Reference + "','" + f.Designation + "','" + f.Description + "'," + f.Parent.Id + ")";
+                }
                 NpgsqlCommand cmd = new NpgsqlCommand(insert, con);
                 cmd.ExecuteNonQuery();
                 f.Id = currentFamillesArticle(f);
@@ -130,6 +137,10 @@ namespace CATALOGUE_ARTICLE.DAO
             try
             {
                 string update = "update familles_article set reference ='" + f.Reference + "' , designation ='" + f.Designation + "' , description = '" + f.Description + "' where id = " + f.Id;
+                if (f.Parent != null ? f.Parent.Id > 0 : false)
+                {
+                    update = "update familles_article set reference ='" + f.Reference + "' , designation ='" + f.Designation + "' , description = '" + f.Description + "' , parent = " + f.Parent.Id + " where id = " + f.Id;
+                }
                 NpgsqlCommand cmd = new NpgsqlCommand(update, con);
                 cmd.ExecuteNonQuery();
                 return true;
