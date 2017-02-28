@@ -15,7 +15,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
         }
         static public DialogResult ChampsVide()
         {
-            DialogResult reponse = MessageBox.Show(Mots.Msg_ChampsVides, Mots.Catalogue_Article, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            DialogResult reponse = MessageBox.Show(Mots.Msg_ChampsVides, Constantes.APP_NAME, MessageBoxButtons.OK, MessageBoxIcon.Error);
             return reponse;
         }
 

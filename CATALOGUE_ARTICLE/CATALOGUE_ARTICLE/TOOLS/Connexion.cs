@@ -32,7 +32,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
                 {
                     if (DialogResult.Retry == Messages.Erreur_Retry("Connexion impossible ! Entrer de nouveaux parametres"))
                     {
-                        new IHM.Form_Serveur().Show();
+                        new IHM.Form_Serveur().ShowDialog();
                     }
                     else
                     {
@@ -44,7 +44,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
             {
                 if (DialogResult.Retry == Messages.Erreur_Retry("Connexion impossible ! Entrer de nouveaux parametres"))
                 {
-                    new IHM.Form_Serveur().Show();
+                    new IHM.Form_Serveur().ShowDialog();
                 }
                 else
                 {
@@ -104,7 +104,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
                 {
                     if (DialogResult.Retry == Messages.Erreur_Retry("Connexion impossible ! Entrer de nouveaux parametres"))
                     {
-                        new IHM.Form_Serveur().Show();
+                        new IHM.Form_Serveur().ShowDialog();
                     }
                     else
                     {
@@ -116,7 +116,7 @@ namespace CATALOGUE_ARTICLE.TOOLS
             {
                 if (DialogResult.Retry == Messages.Erreur_Retry("Connexion impossible ! Entrer de nouveaux parametres"))
                 {
-                    new IHM.Form_Serveur().Show();
+                    new IHM.Form_Serveur().ShowDialog();
                 }
                 else
                 {
